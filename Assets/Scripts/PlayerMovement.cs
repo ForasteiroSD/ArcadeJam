@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D _rb;
-    [SerializeField] private bool _isPlayer1;
     [SerializeField] private float _speed = 3f;
+    [SerializeField] private bool _isPlayer1;
+    public bool isPlayer1 => _isPlayer1;
     private float _directionX;
     [SerializeField] private float _jumpHeight = 2.5f;
-    // [SerializeField] private float _jumpTime = 0.25f;
     [SerializeField] private float _fallGravityScaleMultiplier = 3f;
     [SerializeField] private float _timeToJump = .15f;
     private GameObject _ground;
@@ -18,14 +18,22 @@ public class PlayerMovement : MonoBehaviour {
     private float _fallGravityScale;
     private float _jumpForce;
     private bool _isJumping = false;
-    // private float _jumpStartTime;
+    private int _lookingDirection; //-1 -> left, 1 -> right
+    public int lookingDirection => _lookingDirection;
     
     private void Awake() {
+        //GetComponents
         _rb = GetComponent<Rigidbody2D>();
+
+        //Jump
         _gravityScale = _rb.gravityScale;
         _fallGravityScale = _rb.gravityScale * _fallGravityScaleMultiplier;
         _rb.gravityScale = _fallGravityScale;
         _ground = transform.GetChild(0).gameObject;
+
+        //Move
+        if(_isPlayer1) _lookingDirection = 1;
+        else _lookingDirection = -1;
     }
 
     private void Update() {
@@ -62,6 +70,8 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Move(float moveDirection) {
         _rb.velocity = new Vector2(moveDirection * _speed, _rb.velocity.y);
+        if(moveDirection > 0) _lookingDirection = 1;
+        else if(moveDirection < 0) _lookingDirection = -1;
     }
 
     private void Jump() {

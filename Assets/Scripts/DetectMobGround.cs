@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DetectMobGround : MonoBehaviour {
-    private MobsMovement _mob;
+    private GroundMobsMovement _mob;
 
     private void Start() {
-        _mob = this.transform.parent.gameObject.GetComponent<MobsMovement>();
+        _mob = this.transform.parent.gameObject.GetComponent<GroundMobsMovement>();
     }
 
     public void OnTriggerExit2D(Collider2D collider) {
