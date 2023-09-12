@@ -2,27 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-public class CameraFollowPlayer : MonoBehaviour
-{
+using TMPro;
+
+public class CameraFollowPlayer : MonoBehaviour {
     [SerializeField] private GameObject _player1;
     [SerializeField] private GameObject _player2;
-    [SerializeField] private CinemachineVirtualCamera vcam;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    [SerializeField] private CinemachineVirtualCamera _vcam;
+    [SerializeField] private float _time = 60;
+    [SerializeField] private float _cameraVelocity = 1f;
+    [SerializeField] private TMP_Text _timeText;
+    private float _currentMinutes;
+    private float _currentSeconds;
 
     // Update is called once per frame
-    void Update()
-    {
-        if (_player1.transform.position.y > _player2.transform.position.y)
-        {
-            vcam.Follow = _player1.transform;
-        }
-        else
-        {
-            vcam.Follow = _player2.transform;
+    void Update() {
+        if(_time - Time.time >= 0) {
+            if (_player1.transform.position.y > _player2.transform.position.y) _vcam.Follow = _player1.transform;
+            else _vcam.Follow = _player2.transform;
+
+            _currentMinutes = Mathf.Floor((_time - Time.time)/60);
+            _currentSeconds = Mathf.Floor(_time - Time.time - (_currentMinutes * 60));
+            _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
+        } else {
+            _vcam.Follow = null;
+            transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.fixedDeltaTime), transform.position.z);
         }
     }
 }
