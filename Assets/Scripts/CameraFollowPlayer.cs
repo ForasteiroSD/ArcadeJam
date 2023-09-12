@@ -25,7 +25,7 @@ public class CameraFollowPlayer : MonoBehaviour {
             _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
         } else {
             _vcam.Follow = null;
-            transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.fixedDeltaTime), transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
         }
     }
 }
