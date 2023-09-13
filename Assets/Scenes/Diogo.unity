@@ -499,7 +499,7 @@ MonoBehaviour:
   _player1: {fileID: 469991911}
   _player2: {fileID: 1860668170}
   _vcam: {fileID: 519420033}
-  _time: 10
+  _time: 300
   _cameraVelocity: 0.8
   _timeText: {fileID: 1782516621}
 --- !u!1001 &591409509
@@ -1348,7 +1348,7 @@ MonoBehaviour:
   m_BindingMode: 0
   m_FollowOffset: {x: 0, y: 0, z: -10}
   m_XDamping: 20
-  m_YDamping: 1
+  m_YDamping: 5
   m_ZDamping: 1
   m_AngularDampingMode: 0
   m_PitchDamping: 0

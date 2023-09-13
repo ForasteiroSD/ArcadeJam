@@ -49,8 +49,14 @@ public class PlayerMovement : MonoBehaviour {
         //Jump
         if(((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1)) && _canJump) Jump();
         if(_isJumping) {
-            if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.W) && _isPlayer1) _rb.gravityScale = _fallGravityScale;
-            else if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.UpArrow) && !_isPlayer1) _rb.gravityScale = _fallGravityScale;
+            if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.W) && _isPlayer1) {
+                _rb.velocity = new Vector2(_rb.velocity.x, 0);
+                _rb.gravityScale = _fallGravityScale;
+            }
+            else if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.UpArrow) && !_isPlayer1) {
+                _rb.velocity = new Vector2(_rb.velocity.x, 0);
+                _rb.gravityScale = _fallGravityScale;
+            }
             if(_rb.velocity.y < 1.7f) {
                 _rb.gravityScale = _fallGravityScale;
                 _isJumping = false;
