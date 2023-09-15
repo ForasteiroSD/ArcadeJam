@@ -11,12 +11,16 @@ public class CameraFollowPlayer : MonoBehaviour {
     [SerializeField] private float _time = 60;
     [SerializeField] private float _cameraVelocity = 1f;
     [SerializeField] private TMP_Text _timeText;
+    [SerializeField] private float _maxHigh = 71f;
+    private bool _canFollow = true;
     private float _currentMinutes;
     private float _currentSeconds;
 
     // Update is called once per frame
     void Update() {
-        if(_time - Time.time >= 0) {
+        if(_player1.transform.position.y > _maxHigh || _player2.transform.position.y > _maxHigh) _canFollow = false;
+
+        if(_time - Time.time >= 0 && _canFollow) {
             if (_player1.transform.position.y > _player2.transform.position.y) _vcam.Follow = _player1.transform;
             else _vcam.Follow = _player2.transform;
 

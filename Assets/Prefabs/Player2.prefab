@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4420263374584055437}
   - component: {fileID: 7820216570959691702}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5429288475628548564}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.8, y: -3.77, z: 0}
+  m_LocalPosition: {x: -2.051545, y: -3.8083043, z: 0}
   m_LocalScale: {x: 0.7435, y: 0.7435, z: 0.7435}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -220,10 +220,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
-  _isPlayer1: 1
+  _isPlayer1: 0
   _jumpHeight: 3.2
   _fallGravityScaleMultiplier: 2.7
   _timeToJump: 0.1
+  _doubleJump: 0
 --- !u!114 &7820216570959691702
 MonoBehaviour:
   m_ObjectHideFlags: 0

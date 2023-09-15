@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D _rb;
     [SerializeField] private float _speed = 3f;
+    private float _defaultSpeed;
     [SerializeField] private bool _isPlayer1;
     public bool isPlayer1 => _isPlayer1;
     private float _directionX;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     private float _fallGravityScale;
     private float _jumpForce;
     private bool _isJumping = false;
+    [SerializeField] private bool _doubleJump = false;
     private int _lookingDirection; //-1 -> left, 1 -> right
     public int lookingDirection => _lookingDirection;
     
@@ -34,6 +36,7 @@ public class PlayerMovement : MonoBehaviour {
         //Move
         if(_isPlayer1) _lookingDirection = 1;
         else _lookingDirection = -1;
+        _defaultSpeed = _speed;
     }
 
     private void Update() {
@@ -45,28 +48,33 @@ public class PlayerMovement : MonoBehaviour {
             _directionX = Input.GetAxis("Horizontal2");
             Move(_directionX);
         }
+
+        //Double jump
+        if(_doubleJump && !_canJump && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) DoubleJump();
         
-        //Jump
-        if(((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1)) && _canJump) Jump();
+        //Normal jump
+        if(_canJump && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) Jump();
+
+        //Start falling
         if(_isJumping) {
             if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.W) && _isPlayer1) {
-                _rb.velocity = new Vector2(_rb.velocity.x, 0);
+                _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y/2);
                 _rb.gravityScale = _fallGravityScale;
             }
             else if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.UpArrow) && !_isPlayer1) {
-                _rb.velocity = new Vector2(_rb.velocity.x, 0);
+                _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y/2);
                 _rb.gravityScale = _fallGravityScale;
             }
-            if(_rb.velocity.y < 1.7f) {
-                _rb.gravityScale = _fallGravityScale;
-                _isJumping = false;
-            }
+            if(_rb.velocity.y < 0) _rb.gravityScale = _fallGravityScale;
         }
     }
 
     private void OnTriggerStay2D(Collider2D collider) {
         //Reset canJump
-        if(collider.tag == "Ground") _canJump = true;
+        if(collider.tag == "Ground") {
+            _canJump = true;
+            _isJumping = false;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collider) {
@@ -80,17 +88,48 @@ public class PlayerMovement : MonoBehaviour {
         else if(moveDirection < 0) _lookingDirection = -1;
     }
 
+    public void Adrenaline(float duration, float multiplier) {
+        _speed = _speed * multiplier;
+        StartCoroutine(StopAdrenaline(duration));
+    }
+
+    private IEnumerator StopAdrenaline(float duration) {
+        yield return new WaitForSeconds(duration);
+
+        _speed = _defaultSpeed;
+        ResetBoostIcon();
+    }
+
     private void Jump() {
         _rb.gravityScale = _gravityScale;
-        _jumpForce = (float) Math.Sqrt(_jumpHeight * (Physics2D.gravity.y * _rb.gravityScale) * -2) *_rb.mass;
+        _jumpForce = (float) Math.Sqrt(_jumpHeight * (Physics2D.gravity.y * _rb.gravityScale) * -2) * _rb.mass;
         _rb.velocity = new Vector2(_rb.velocity.x, 0);
         _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
         _isJumping = true;
         _canJump = false;
     }
 
+    private void DoubleJump() {
+        _isJumping = true;
+        _rb.gravityScale = _gravityScale;
+        _jumpForce = (float) Math.Sqrt(_jumpHeight * (Physics2D.gravity.y * _rb.gravityScale) * -2) * _rb.mass;
+        _rb.velocity = new Vector2(_rb.velocity.x, 0);
+        _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        _doubleJump = false;
+        ResetBoostIcon();
+    }
+
+    public void EnableDoubleJump() {
+        _doubleJump = true;
+    }
+
     IEnumerator CancelCanJump() {
         yield return new WaitForSeconds(_timeToJump);
         _canJump = false;
+    }
+
+    private void ResetBoostIcon() {
+        if(_isPlayer1) GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "none");
+        else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "none");
     }
 }
