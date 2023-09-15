@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 5634626698817732763}
   m_Layer: 0
   m_Name: GroundEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.7
   m_Material: {fileID: 6200000, guid: 2c427662c803de44cba8a6214aaa92bc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
+  _canMove: 1
 --- !u!1 &7051750322848781972
 GameObject:
   m_ObjectHideFlags: 0

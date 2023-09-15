@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DetectMobGround : MonoBehaviour {
     private GroundMobsMovement _mob;
-
     private void Start() {
         _mob = this.transform.parent.gameObject.GetComponent<GroundMobsMovement>();
     }

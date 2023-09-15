@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7542735514143330293}
   - component: {fileID: 4420263374584055437}
   - component: {fileID: 7820216570959691702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -224,6 +224,7 @@ MonoBehaviour:
   _jumpHeight: 3.2
   _fallGravityScaleMultiplier: 2.7
   _timeToJump: 0.1
+  _canMove: 1
   _doubleJump: 0
 --- !u!114 &7820216570959691702
 MonoBehaviour:
@@ -238,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayToPunch: 2
-  _punchForce: 1.5
+  _punchForce: 2
   _punchRange: 1
 --- !u!1 &5607540360923834928
 GameObject:
@@ -250,7 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1018590460694616327}
   - component: {fileID: 6287024621931354408}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: IsOnGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -26,7 +26,7 @@ public class ChangeBoostIcon : MonoBehaviour {
                 if(player == 1) _boostPlayer1.sprite = _boot;
                 else _boostPlayer2.sprite = _boot;
                 break;
-            case "Batt":
+            case "baseballBatt":
                 if(player == 1) _boostPlayer1.sprite = _baseballBat;
                 else _boostPlayer2.sprite = _baseballBat;
                 break;
