@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7542735514143330293}
   - component: {fileID: 4420263374584055437}
   - component: {fileID: 7820216570959691702}
+  - component: {fileID: 7440449607097334060}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -240,6 +241,19 @@ MonoBehaviour:
   _delayToPunch: 2
   _punchForce: 1.5
   _punchRange: 1
+--- !u!114 &7440449607097334060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429288475628548564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95958c22ffa1a9b4eaa83218182292c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeStun: 5
 --- !u!1 &5607540360923834928
 GameObject:
   m_ObjectHideFlags: 0

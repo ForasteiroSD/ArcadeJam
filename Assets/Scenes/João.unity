@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &109888124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109888125}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &109888125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109888124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.934339, y: 3.6222143, z: 0.43007007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &308813651
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +250,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player1: {fileID: 1226342517}
   _player2: {fileID: 2139988687}
-  vcam: {fileID: 1164156801}
+  _vcam: {fileID: 0}
+  _time: 60
+  _cameraVelocity: 1
+  _timeText: {fileID: 0}
+  _maxHigh: 71
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +342,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7155933, y: -6.8975897, z: -10}
+  m_LocalPosition: {x: -15.17, y: -6.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1407,3 +1442,4 @@ SceneRoots:
   - {fileID: 308813652}
   - {fileID: 928982636429400446}
   - {fileID: 1918370684}
+  - {fileID: 109888125}
