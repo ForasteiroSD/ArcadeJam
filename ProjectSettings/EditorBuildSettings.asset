@@ -6,12 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/Jo\xE3o.unity"
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Main Menu.unity
+    guid: ebf51d7d0115dfd49a0d80eaa297054f
   - enabled: 1
-    path: Assets/Scenes/Player2Win.unity
+    path: Assets/Scenes/UmJogaodr/Player1.unity
+    guid: 4d8d88f77c31fc141a08e5414c91975c
+  - enabled: 1
+    path: Assets/Scenes/Multijogador/Player2.unity
+    guid: 39977c228f6e83e4eab78bec27ea73a8
+  - enabled: 1
+    path: Assets/Scenes/Multijogador/Player1Win.unity
+    guid: 05b1ff111d0346c4193f8adf894b1ed6
+  - enabled: 1
+    path: Assets/Scenes/Multijogador/Player2Win.unity
     guid: f1e045aad57863445831cc7c48c23fef
   - enabled: 1
-    path: Assets/Scenes/Player1Win.unity
-    guid: 05b1ff111d0346c4193f8adf894b1ed6
+    path: Assets/Scenes/UmJogaodr/Scoreboard.unity
+    guid: 3d298e3cf8ca4f5448caabfade1ffebe
   m_configObjects: {}
