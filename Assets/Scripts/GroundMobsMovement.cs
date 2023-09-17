@@ -18,8 +18,16 @@ public class GroundMobsMovement : MonoBehaviour {
         }
 
         float _direction;
-        if(_speed < 0) _direction = -1;
-        else _direction = 1;
+        if (_speed < 0)
+        {
+            _direction = -1;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else 
+        { 
+            _direction = 1;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        } 
 
         Debug.DrawRay(transform.position, Vector3.right * _direction * _changeDirectionRange, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.right * _direction, _changeDirectionRange);

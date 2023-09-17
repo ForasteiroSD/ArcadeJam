@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
+    [SerializeField] private Animator _anim;
     private Rigidbody2D _rb;
     [SerializeField] private float _speed = 3f;
     private float _defaultSpeed;
@@ -68,6 +69,21 @@ public class PlayerMovement : MonoBehaviour {
                 _rb.gravityScale = _fallGravityScale;
             }
             if(_rb.velocity.y < 0) _rb.gravityScale = _fallGravityScale;
+        }
+
+
+        // Animacao
+        if (lookingDirection == 1) gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        else gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        if (_isPlayer1)
+        {
+            if (Input.GetAxis("Horizontal1") != 0 && _canMove) _anim.SetBool("IsMoving", true);
+            else _anim.SetBool("IsMoving", false);
+        }
+        else
+        {
+            if (Input.GetAxis("Horizontal2") != 0 && _canMove) _anim.SetBool("IsMoving", true);
+            else _anim.SetBool("IsMoving", false);
         }
     }
 
