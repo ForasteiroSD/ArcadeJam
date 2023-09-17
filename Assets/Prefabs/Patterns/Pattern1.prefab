@@ -2569,7 +2569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203567174040278628, guid: aefe4bae91ca418479f7bd6505f43a30, type: 3}
       propertyPath: teleportRange
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4119076285687271624, guid: aefe4bae91ca418479f7bd6505f43a30, type: 3}
       propertyPath: teleportRange
