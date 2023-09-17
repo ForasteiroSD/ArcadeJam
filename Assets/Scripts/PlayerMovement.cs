@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float _fallGravityScaleMultiplier = 3f;
     [SerializeField] private float _timeToJump = .15f;
     private GameObject _ground;
+    public bool _canMove = true;
     private bool _canJump = true;
     private float _gravityScale;
     private float _fallGravityScale;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private bool _doubleJump = false;
     private int _lookingDirection; //-1 -> left, 1 -> right
     public int lookingDirection => _lookingDirection;
+    private Coroutine _adrenalineRoutine;
     
     private void Awake() {
         //GetComponents
@@ -41,10 +43,10 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Update() {
         //Move
-        if((Input.GetAxis("Horizontal1") != 0 && _isPlayer1)){
+        if(Input.GetAxis("Horizontal1") != 0 && _isPlayer1 && _canMove){
             _directionX = Input.GetAxis("Horizontal1");
             Move(_directionX);
-        } else if((Input.GetAxis("Horizontal2") != 0 && !_isPlayer1)){
+        } else if(Input.GetAxis("Horizontal2") != 0 && !_isPlayer1 && _canMove){
             _directionX = Input.GetAxis("Horizontal2");
             Move(_directionX);
         }
@@ -90,7 +92,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public void Adrenaline(float duration, float multiplier) {
         _speed = _speed * multiplier;
-        StartCoroutine(StopAdrenaline(duration));
+        _adrenalineRoutine = StartCoroutine(StopAdrenaline(duration));
     }
 
     private IEnumerator StopAdrenaline(float duration) {
@@ -98,6 +100,11 @@ public class PlayerMovement : MonoBehaviour {
 
         _speed = _defaultSpeed;
         ResetBoostIcon();
+    }
+
+    public void CancelAdrenaline() {
+        if(_adrenalineRoutine != null) StopCoroutine(_adrenalineRoutine);
+        _speed = _defaultSpeed;
     }
 
     private void Jump() {
@@ -121,6 +128,10 @@ public class PlayerMovement : MonoBehaviour {
 
     public void EnableDoubleJump() {
         _doubleJump = true;
+    }
+
+    public void CancelDoubleJump() {
+        _doubleJump = false;
     }
 
     IEnumerator CancelCanJump() {
