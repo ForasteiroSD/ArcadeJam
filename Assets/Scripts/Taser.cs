@@ -38,6 +38,8 @@ public class Taser : MonoBehaviour
             {
                 hit.collider.gameObject.GetComponent<Punch>().GetPunched(_punchDirection, _punchForce);
                 hit.collider.gameObject.GetComponent<StunController>().Stun(hit.collider.gameObject, _timeStun);
+                if (_isPlayer1) GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "none");
+                else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "none");
                 gameObject.GetComponent<Taser>().enabled = false;
             }
         }

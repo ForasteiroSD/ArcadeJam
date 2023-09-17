@@ -20,6 +20,8 @@ public class TaserCollider : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Taser>().enabled = true;
+            if (collision.gameObject.name == "Player1") GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "taser");
+            else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "taser");
             Destroy(gameObject);
         }
     }
