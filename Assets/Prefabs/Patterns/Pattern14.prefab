@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114057948002560439}
   m_Layer: 0
   m_Name: TeleporterLeft
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 2230319393757188966}
   m_Layer: 0
   m_Name: TeleporterRight
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1855,6 +1855,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 688707530371795649, guid: aefe4bae91ca418479f7bd6505f43a30, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 1211558684550240956, guid: aefe4bae91ca418479f7bd6505f43a30, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.2
@@ -1919,9 +1923,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6027715282594880511, guid: aefe4bae91ca418479f7bd6505f43a30, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8617950592433011363, guid: aefe4bae91ca418479f7bd6505f43a30, type: 3}
       propertyPath: m_Name
       value: Teleporter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617950592433011363, guid: aefe4bae91ca418479f7bd6505f43a30, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
