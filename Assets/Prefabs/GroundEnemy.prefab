@@ -103,9 +103,10 @@ GameObject:
   - component: {fileID: 8441167178576391097}
   - component: {fileID: 2162139610031830324}
   - component: {fileID: 5634626698817732763}
+  - component: {fileID: 6373838127478050162}
   m_Layer: 0
   m_Name: GroundEnemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +121,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.97, y: 0.16, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.7435}
+  m_LocalScale: {x: 0.7435, y: 0.7435, z: 0.7435}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5386629737350093018}
@@ -167,7 +168,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.8113208, g: 0.29595345, b: 0.29595345, a: 1}
   m_FlipX: 0
@@ -194,7 +195,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2.7
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 2c427662c803de44cba8a6214aaa92bc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -264,8 +265,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
-  _changeDirectionRange: 0.5
-  _canMove: 1
+--- !u!114 &6373838127478050162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949668098142808826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95958c22ffa1a9b4eaa83218182292c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeStun: 5
 --- !u!1 &7051750322848781972
 GameObject:
   m_ObjectHideFlags: 0

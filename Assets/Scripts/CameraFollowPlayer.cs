@@ -13,8 +13,8 @@ public class CameraFollowPlayer : MonoBehaviour {
     [SerializeField] private TMP_Text _timeText;
     [SerializeField] private float _maxHigh = 71f;
     private bool _canFollow = true;
-    private float _currentMinutes;
-    private float _currentSeconds;
+    public float _currentMinutes;
+    public float _currentSeconds;
 
     // Update is called once per frame
     void Update() {

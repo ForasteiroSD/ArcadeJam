@@ -7,5 +7,6 @@ public static class CancelBoosts {
         player.GetComponent<PlayerMovement>().CancelAdrenaline();
         player.GetComponent<PlayerMovement>().CancelDoubleJump();
         player.GetComponent<Punch>().CancelBaseballBat();
+        player.GetComponent<Taser>().CancelTaser(player);
     }
 }
