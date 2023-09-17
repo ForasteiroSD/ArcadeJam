@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5799393473977703014}
   - component: {fileID: 4414210987950010901}
   - component: {fileID: 8498744998358035476}
-  - component: {fileID: 2802057450292021657}
   m_Layer: 0
   m_Name: Taser
   m_TagString: Untagged
@@ -30,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.73, y: -3.85, z: 0}
-  m_LocalScale: {x: 3.9320002, y: 3.9320002, z: 3.9320002}
+  m_LocalScale: {x: 5.557756, y: 5.557756, z: 5.557756}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7367b30b8f440544696c1accf221f787, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -150,16 +149,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d58dadc0a9e34c47a27ad053ab3f4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2802057450292021657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7821940873396271061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f09873b93f715d49b08f197a5f69a74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _velocity: 1
