@@ -221,7 +221,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 4
   _isPlayer1: 0
+<<<<<<< Updated upstream
   _jumpHeight: 3.2
+=======
+  _jumpHeight: 1.8
+>>>>>>> Stashed changes
   _fallGravityScaleMultiplier: 2.7
   _timeToJump: 0.1
   _canMove: 1
