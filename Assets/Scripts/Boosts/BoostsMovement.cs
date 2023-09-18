@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class BoostsMovement : MonoBehaviour {
     [SerializeField] private Camera _cam;
-    [SerializeField] private float _velocity = 1f;
-
+    [SerializeField] private bool _isSinglePlayer;
+    [SerializeField] private float _velocity2P = 1f;
+    [SerializeField] private float _velocity1P = 2f;
+    private float _velocity;
+    
     private void Start() {
         _cam = Camera.main;
+
+        _isSinglePlayer = GameObject.Find("Zombies").GetComponent<ZombiesThrowBoost>().isSinglePlayer;
+
+        if(_isSinglePlayer) _velocity = _velocity1P;
+        else _velocity = _velocity2P;
     }
 
     private void Update() {

@@ -6,6 +6,8 @@ public class ZombiesThrowBoost : MonoBehaviour {
     [SerializeField] private GameObject[] _boosts;
     [SerializeField] private float _timeBetweenBoosts = 10f;
     [SerializeField] private float _zombiesLength = 7.77f;
+    [SerializeField] private bool _isSinglePlayer;
+    public bool isSinglePlayer => _isSinglePlayer;
     private float _currentTime = 0f;
     private float _spawPosition;
     private float _defaulIncrease;

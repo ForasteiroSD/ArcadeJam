@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 190115660}
   - component: {fileID: 190115659}
   - component: {fileID: 190115665}
+  - component: {fileID: 190115666}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -457,7 +458,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 253024249}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 5
@@ -545,7 +546,7 @@ Transform:
   m_GameObject: {fileID: 190115657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06359325, y: -5.369995, z: -10}
+  m_LocalPosition: {x: -0.07651745, y: -5.369995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -576,6 +577,21 @@ MonoBehaviour:
   _delayForCamera: 3
   _currentMinutes: 0
   _currentSeconds: 0
+--- !u!114 &190115666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190115657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69514f88b4396d744ae0c137cebab4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _velocityY: 0
+  _hud: {fileID: 0}
+  _gameOver: {fileID: 0}
 --- !u!1 &243720197
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,11 +747,6 @@ PrefabInstance:
 --- !u!1 &253024248 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5429288475628548564, guid: 24cff0f9563687740af43d54495a657b, type: 3}
-  m_PrefabInstance: {fileID: 253024247}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &253024249 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1003177023825501833, guid: 24cff0f9563687740af43d54495a657b, type: 3}
   m_PrefabInstance: {fileID: 253024247}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &253024250
@@ -1295,7 +1306,7 @@ GameObject:
   - component: {fileID: 521100199}
   - component: {fileID: 521100198}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Hud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18351,7 +18362,7 @@ GameObject:
   - component: {fileID: 765476128}
   - component: {fileID: 765476127}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19314,6 +19325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1580729320}
   - component: {fileID: 1580729321}
+  - component: {fileID: 1580729322}
   m_Layer: 0
   m_Name: Manager-GameOver
   m_TagString: Untagged
@@ -19349,6 +19361,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Score: {fileID: 123797566}
+--- !u!114 &1580729322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580729319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69667cc3df64437459b78d055626c75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1645319961
 GameObject:
   m_ObjectHideFlags: 0
@@ -19826,7 +19850,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1878480613}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1580729322}
+        m_TargetAssemblyTypeName: Restart, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1878480613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20138,6 +20174,8 @@ GameObject:
   - component: {fileID: 2114928375}
   - component: {fileID: 2114928377}
   - component: {fileID: 2114928376}
+  - component: {fileID: 2114928378}
+  - component: {fileID: 2114928379}
   m_Layer: 0
   m_Name: Zombies
   m_TagString: Ground
@@ -20257,6 +20295,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2114928378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114928374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5fa4186b3953b4387c488b5a34c1ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _boosts:
+  - {fileID: 2676097658922822778, guid: 39598ccec967d414aa2466a5bc0014a9, type: 3}
+  - {fileID: 1335198222787190993, guid: 443ba164f2a311f40968b613a9f88427, type: 3}
+  - {fileID: 2689799175837785244, guid: 1254d29b03c787a49b4ae9bb8d62a8f2, type: 3}
+  - {fileID: 7821940873396271061, guid: eee48c05417e8e34bb1d0c2bff88d55e, type: 3}
+  _timeBetweenBoosts: 10
+  _zombiesLength: 7.77
+  _isSinglePlayer: 1
+--- !u!114 &2114928379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114928374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69514f88b4396d744ae0c137cebab4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _velocityY: 0
+  _hud: {fileID: 521100196}
+  _gameOver: {fileID: 765476126}
 --- !u!1 &2131144147
 GameObject:
   m_ObjectHideFlags: 0

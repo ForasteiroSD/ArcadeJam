@@ -25,7 +25,6 @@ public class CameraFollowPlayer : MonoBehaviour {
             _currentSeconds = Mathf.Floor(_time - Time.time - (_currentMinutes * 60));
             _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
 
-            Debug.Log(Time.time);
             if(Time.time >= _delayForCamera) {
                 transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
             }
