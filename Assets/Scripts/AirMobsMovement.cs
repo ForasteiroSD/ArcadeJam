@@ -10,6 +10,8 @@ public class AirMobsMovement : MonoBehaviour {
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
         if(!_moveToRight) _speed = -_speed;
+        else gameObject.GetComponent<SpriteRenderer>().flipX = true;
+
     }
 
     private void Update() {

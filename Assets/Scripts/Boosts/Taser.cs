@@ -13,11 +13,13 @@ public class Taser : MonoBehaviour
     private float _lastPunchTime = 0f;
     private int _punchDirection = 1;
     private Rigidbody2D _rb;
-
+    private Animator _anim;
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         if (this.GetComponent<PlayerMovement>() != null) _isPlayer1 = this.GetComponent<PlayerMovement>().isPlayer1;
+        _anim = gameObject.GetComponent<Animator>();
+        _anim.SetBool("Taser", true);
     }
 
     private void Update()
@@ -35,7 +37,10 @@ public class Taser : MonoBehaviour
 
             if (hit.collider != null && (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Enemy"))
             {
+                hit.collider.gameObject.GetComponent<Punch>().GetPunched(_punchDirection, _punchForce);
+                _anim.SetTrigger("Taser0");
                 hit.collider.gameObject.GetComponent<StunController>().Stun(hit.collider.gameObject, _timeStun);
+                _anim.SetBool("Taser", false);
                 if (_isPlayer1) GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "none");
                 else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "none");
                 gameObject.GetComponent<Taser>().enabled = false;
