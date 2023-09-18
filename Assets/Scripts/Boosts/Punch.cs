@@ -66,7 +66,7 @@ public class Punch : MonoBehaviour {
     public void GetPunched(int direction, float punchForce) {
         _rb.velocity = new Vector2(0, _rb.velocity.y);
         _rb.AddForce(Vector2.right * punchForce * direction, ForceMode2D.Impulse);
-        _rb.AddForce(Vector2.up * 4, ForceMode2D.Impulse);
+        _rb.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
     }
 
     public void EnableBaseballBat(float newForce) {

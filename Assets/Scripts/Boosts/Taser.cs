@@ -5,7 +5,6 @@ using UnityEngine;
 public class Taser : MonoBehaviour
 {
     [SerializeField] private float _delayToPunch = 2f;
-    [SerializeField] private float _punchForce = 1f;
     [SerializeField] private float _punchRange = 1f;
     [SerializeField] private float _timeStun;
     private Ray _ray;
@@ -36,7 +35,6 @@ public class Taser : MonoBehaviour
 
             if (hit.collider != null && (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Enemy"))
             {
-                hit.collider.gameObject.GetComponent<Punch>().GetPunched(_punchDirection, _punchForce);
                 hit.collider.gameObject.GetComponent<StunController>().Stun(hit.collider.gameObject, _timeStun);
                 if (_isPlayer1) GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "none");
                 else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "none");

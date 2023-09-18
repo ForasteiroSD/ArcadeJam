@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1823545914882711218}
   - component: {fileID: 6673594297297235272}
   - component: {fileID: 6057411315022539777}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CanWalk (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2162139610031830324}
   - component: {fileID: 5634626698817732763}
   - component: {fileID: 6373838127478050162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 5386629737350093018}
   - component: {fileID: 6402282575777797869}
   - component: {fileID: 4311060038412300779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CanWalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}

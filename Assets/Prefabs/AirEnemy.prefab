@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1593382307393452946}
   - component: {fileID: 1452198899816471694}
   - component: {fileID: 9118737454781869966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AirEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

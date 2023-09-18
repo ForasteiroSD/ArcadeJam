@@ -6,7 +6,7 @@ public class StunController : MonoBehaviour
 {
     private float _timeStun;
     private float _timeElapsed;
-    private bool stun;
+    private bool stun = false;
     private GameObject _gameObject;
 
     // Start is called before the first frame update
@@ -40,12 +40,10 @@ public class StunController : MonoBehaviour
 
     public void Stun(GameObject obj, float _time)
     {
-        Debug.Log("stunado");
-        Debug.Log(obj.name);
+        // Debug.Log("stunado");
+        // Debug.Log(obj.name);
         stun = true;
         _gameObject = obj;
         _timeStun = _time; 
-
     }
-
 }

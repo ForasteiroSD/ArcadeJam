@@ -2542,6 +2542,7 @@ GameObject:
   - component: {fileID: 8441167178576391097}
   - component: {fileID: 2162139610031830324}
   - component: {fileID: 5634626698817732763}
+  - component: {fileID: 1061655567124024168}
   m_Layer: 0
   m_Name: GroundEnemy
   m_TagString: Enemy
@@ -2705,6 +2706,18 @@ MonoBehaviour:
   _speed: 2
   _changeDirectionRange: 0.5
   _canMove: 1
+--- !u!114 &1061655567124024168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949668098142808826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95958c22ffa1a9b4eaa83218182292c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5217147584214778928
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,6 +2879,7 @@ GameObject:
   - component: {fileID: 578132777936366588}
   - component: {fileID: 3974148958890443275}
   - component: {fileID: 3747171624524958218}
+  - component: {fileID: 6228786427480435780}
   m_Layer: 0
   m_Name: GroundEnemy (1)
   m_TagString: Enemy
@@ -3029,6 +3043,18 @@ MonoBehaviour:
   _speed: 2
   _changeDirectionRange: 0.5
   _canMove: 1
+--- !u!114 &6228786427480435780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7153633575809160239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95958c22ffa1a9b4eaa83218182292c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7920149299436940066
 GameObject:
   m_ObjectHideFlags: 0
