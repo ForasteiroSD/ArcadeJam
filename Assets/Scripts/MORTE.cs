@@ -5,36 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class MORTE : MonoBehaviour
 {
-    [SerializeField] private float _timewait;
     [SerializeField] private float _velocityY;
+    [SerializeField] private GameObject _hud;
+    [SerializeField] private GameObject _gameOver;
+    private bool _isSinglePlayer;
     private Rigidbody2D _rb;
     private float _timeElapsed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        _timeElapsed = Time.deltaTime;
-        _rb = gameObject.GetComponent<Rigidbody2D>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        _timeElapsed += Time.deltaTime;
-        if (_timeElapsed > _timewait)
-        {
-            _rb.velocity = new Vector3(0 ,_velocityY, 0);
-        }
+    private void Start() {
+        _isSinglePlayer = GameObject.Find("Zombies").GetComponent<ZombiesThrowBoost>().isSinglePlayer;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Player1")
-        {
-            SceneManager.LoadScene("Player1Win");
+        if(_isSinglePlayer) {
+            if(collision.gameObject.name == "Player1") {
+                _hud.SetActive(false);
+                _gameOver.SetActive(true);
+                Time.timeScale = 0;
+            }
+        } else {
+            if(collision.gameObject.name == "Player1") SceneManager.LoadScene("Player1Win");
+            if(collision.gameObject.name == "Player2") SceneManager.LoadScene("Player2Win");
         }
-        if(collision.gameObject.name == "Player2")
-        {
-            SceneManager.LoadScene("Player2Win");
-        }
+        
     }
 }
