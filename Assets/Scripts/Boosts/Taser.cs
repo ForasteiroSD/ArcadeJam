@@ -37,7 +37,6 @@ public class Taser : MonoBehaviour
 
             if (hit.collider != null && (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Enemy"))
             {
-                hit.collider.gameObject.GetComponent<Punch>().GetPunched(_punchDirection, _punchForce);
                 _anim.SetTrigger("Taser0");
                 hit.collider.gameObject.GetComponent<StunController>().Stun(hit.collider.gameObject, _timeStun);
                 _anim.SetBool("Taser", false);
