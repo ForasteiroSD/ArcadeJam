@@ -40,7 +40,7 @@ public class Punch : MonoBehaviour {
 
                 // animacao
                 if (_punchForce != _defaultPunchForce) _anim.SetTrigger("PunchBaseball");
-                else _anim.SetTrigger("Punch");
+                else _anim.SetTrigger("Punch"); 
                 //
                 player.GetComponent<Punch>().GetPunched(_punchDirection, _punchForce);
 

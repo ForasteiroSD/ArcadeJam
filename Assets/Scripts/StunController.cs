@@ -8,7 +8,6 @@ public class StunController : MonoBehaviour
     private float _timeElapsed;
     private bool stun;
     private GameObject _gameObject;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +29,7 @@ public class StunController : MonoBehaviour
                 if (_gameObject.name == "Player1" || _gameObject.name == "Player2") _gameObject.GetComponent<PlayerMovement>().enabled = true;
                 else _gameObject.GetComponent<GroundMobsMovement>().enabled = true;
                 stun = false;
+
             }
         }
         else
@@ -44,8 +44,7 @@ public class StunController : MonoBehaviour
         Debug.Log(obj.name);
         stun = true;
         _gameObject = obj;
-        _timeStun = _time; 
-
+        _timeStun = _time;
     }
 
 }
