@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 381034895}
   - component: {fileID: 381034894}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,6 +616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 447078353}
+  - component: {fileID: 447078354}
   m_Layer: 0
   m_Name: --------- Scenario ---------
   m_TagString: Untagged
@@ -639,6 +640,30 @@ Transform:
   - {fileID: 137018734}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &447078354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447078352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992d439a1f3b506449d88e2df9dfd54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patterns:
+  - {fileID: 4384612233702407596, guid: 81a20ff3607c09b4ebba47869b24f9e9, type: 3}
+  - {fileID: 4384612233702407596, guid: 12753be98b022954aacb156b711c6472, type: 3}
+  - {fileID: 4384612233702407596, guid: f65b1766e48770b409cc75faf71c7389, type: 3}
+  - {fileID: 4384612233702407596, guid: cca0c0fe456522a4982796b7394e7bc4, type: 3}
+  - {fileID: 4384612233702407596, guid: 8202e4499b54b5242be3df3e370a0434, type: 3}
+  - {fileID: 5296250721142951026, guid: 3e60165ce845dc1409bce7da078736ff, type: 3}
+  - {fileID: 8952452480080456623, guid: 61f2c9f87775f04419eff97615efac7e, type: 3}
+  - {fileID: 7015536219844355492, guid: 4f92ea4d70a288449b0056bf409ea917, type: 3}
+  - {fileID: 6750249576836380515, guid: da819e2923a32844f9d5663354eea9e2, type: 3}
+  - {fileID: 4384612233702407596, guid: a9fba50369974ee44b49e327352631db, type: 3}
+  _floorsNumber: 0
 --- !u!1 &657046106
 GameObject:
   m_ObjectHideFlags: 0
