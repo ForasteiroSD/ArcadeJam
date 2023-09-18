@@ -56,7 +56,10 @@ public class Punch : MonoBehaviour {
                 GameObject enemy = hit.collider.gameObject;
                 if(_punchForce != _defaultPunchForce) StartCoroutine(DelayToMoveMob(enemy, 0.9f));
                 else StartCoroutine(DelayToMoveMob(enemy, 0.6f));
-
+                // animacao
+                if (_punchForce != _defaultPunchForce) _anim.SetTrigger("PunchBaseball");
+                else _anim.SetTrigger("Punch");
+                //
                 enemy.GetComponent<GroundMobsMovement>().GetPunched(_punchDirection, _punchForce);
 
                 if(_punchForce != _defaultPunchForce) {
