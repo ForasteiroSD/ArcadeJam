@@ -78,10 +78,12 @@ public class Punch : MonoBehaviour {
     }
 
     public void EnableBaseballBat(float newForce) {
+        _anim.SetBool("Baseball", true);
         _punchForce = newForce;
     }
 
     public void CancelBaseballBat() {
+        _anim.SetBool("Baseball", false);
         _punchForce = _defaultPunchForce;
     }
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
+    
     [SerializeField] private Animator _anim;
     private Rigidbody2D _rb;
     [SerializeField] private float _speed = 3f;
@@ -107,6 +108,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void Adrenaline(float duration, float multiplier) {
+        _anim.SetTrigger("Adrenalina");
         _speed = _speed * multiplier;
         _adrenalineRoutine = StartCoroutine(StopAdrenaline(duration));
     }
