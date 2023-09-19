@@ -14,7 +14,7 @@ public class Punch : MonoBehaviour {
     private float _lastPunchTime = 0f;
     private int _punchDirection = 1;
     private Rigidbody2D _rb;
-
+    
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
         if(this.GetComponent<PlayerMovement>() != null) _isPlayer1 = this.GetComponent<PlayerMovement>().isPlayer1;
