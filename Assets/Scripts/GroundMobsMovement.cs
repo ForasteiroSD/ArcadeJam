@@ -6,6 +6,8 @@ public class GroundMobsMovement : MonoBehaviour {
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _changeDirectionRange = 0.5f;
     private Rigidbody2D _rb;
+    private int _direction;
+    public int direction => _direction;
     public bool _canMove = true;
 
     private void Start() {
@@ -17,7 +19,6 @@ public class GroundMobsMovement : MonoBehaviour {
             _rb.velocity = new Vector2(_speed, _rb.velocity.y);
         }
 
-        float _direction;
         if (_speed < 0)
         {
             _direction = -1;
