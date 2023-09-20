@@ -55,9 +55,9 @@ public class Taser : MonoBehaviour
         _rb.AddForce(Vector2.up * punchForce * 3, ForceMode2D.Impulse);
     }
 
-    public void CancelTaser(GameObject player)
+    public void CancelTaser()
     {
-        player.GetComponent<Taser>().enabled = false;
+        enabled = false;
     }
  
 }
