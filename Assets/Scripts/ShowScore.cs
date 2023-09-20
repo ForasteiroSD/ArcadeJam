@@ -7,6 +7,7 @@ using TMPro;
 public class ShowScore : MonoBehaviour
 {
     [SerializeField] private TMP_Text _Score;
+    [SerializeField] private bool _venceu;
     private float _currentMinutes;
     private float _currentSeconds;
     private void OnEnable()
@@ -17,6 +18,13 @@ public class ShowScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _Score.SetText("Seu Score foi: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
+        if (!_venceu)
+        {
+            _Score.SetText("Seu Score foi: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
+        }
+        else
+        {
+            _Score.SetText("Voce Venceu!! \n Seu Score foi: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
+        }
     }
 }
