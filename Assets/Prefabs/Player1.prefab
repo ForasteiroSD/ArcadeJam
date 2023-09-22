@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c760cbef24bd9b42b88221d274dccef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _anim: {fileID: 0}
+  _anim: {fileID: 3922651297040818003}
   _delayToPunch: 2
   _punchForce: 2
   _punchRange: 1

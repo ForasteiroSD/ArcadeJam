@@ -20,7 +20,7 @@ public class ShowScore : MonoBehaviour
     {
         if (!_venceu)
         {
-            _Score.SetText("Seu Score foi: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
+            _Score.SetText("You died");
         }
         else
         {
