@@ -39,7 +39,11 @@ public class Punch : MonoBehaviour {
                 else StartCoroutine(DelayToMovePlayer(player, 0.6f));
 
                 // animacao
-                if (_punchForce != _defaultPunchForce) _anim.SetTrigger("PunchBaseball");
+                if (_punchForce != _defaultPunchForce)
+                {
+                    _anim.SetTrigger("PunchBaseball");
+                    _anim.SetBool("Baseball", false);
+                }
                 else _anim.SetTrigger("Punch"); 
                 //
                 player.GetComponent<Punch>().GetPunched(_punchDirection, _punchForce);
@@ -57,7 +61,11 @@ public class Punch : MonoBehaviour {
                 if(_punchForce != _defaultPunchForce) StartCoroutine(DelayToMoveMob(enemy, 0.9f));
                 else StartCoroutine(DelayToMoveMob(enemy, 0.6f));
                 // animacao
-                if (_punchForce != _defaultPunchForce) _anim.SetTrigger("PunchBaseball");
+                if (_punchForce != _defaultPunchForce)
+                {
+                    _anim.SetTrigger("PunchBaseball");
+                    _anim.SetBool("Baseball", false);
+                }
                 else _anim.SetTrigger("Punch");
                 //
                 enemy.GetComponent<GroundMobsMovement>().GetPunched(_punchDirection, _punchForce);
