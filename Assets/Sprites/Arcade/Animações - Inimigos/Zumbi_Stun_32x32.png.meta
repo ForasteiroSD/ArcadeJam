@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 12da2eafdb05bd4408d20c70c9047cf0
+guid: a0b1716360e4f9c43aae23f3c4b76868
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -71,8 +71,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,169 +110,233 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StunJeff - 32x32_0
+      name: Zumbi_Stun_32x32_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
+        y: 0
         width: 32
-        height: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      physicsShape:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: 5b5076015b9d0a9438cdc69d0cbe2314
-      internalID: 1928381963
+      spriteID: e3d08be47df4901479002811028e8378
+      internalID: -493977598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StunJeff - 32x32_1
+      name: Zumbi_Stun_32x32_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 1
+        y: 0
         width: 32
-        height: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      physicsShape:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: 22d39bced9bf0264e92c850690dc6117
-      internalID: -1562053080
+      spriteID: 5b8c6a574802abd4da806f4ddf1a7b7e
+      internalID: -879279599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StunJeff - 32x32_2
+      name: Zumbi_Stun_32x32_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 1
+        y: 0
         width: 32
-        height: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      physicsShape:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: c007eab342eedda42844f2781500110a
-      internalID: 2048084803
+      spriteID: 99fd35b70ce08eb4aaf0e88f4699ef8a
+      internalID: 1830429195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StunJeff - 32x32_3
+      name: Zumbi_Stun_32x32_3
       rect:
         serializedVersion: 2
         x: 96
-        y: 1
+        y: 0
         width: 32
-        height: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      physicsShape:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: 5ba48029e35ff0449a5488457d48d7d0
-      internalID: 661807541
+      spriteID: 2f2e6f96579acc046bfc00a15f479488
+      internalID: 2047496500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StunJeff - 32x32_4
+      name: Zumbi_Stun_32x32_4
       rect:
         serializedVersion: 2
         x: 128
-        y: 1
+        y: 0
         width: 32
-        height: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      physicsShape:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: 9d0ac168efd813849b9132192dfcc803
-      internalID: -307793764
+      spriteID: 7dfc0af2b88b9bd479caf3c4b5451869
+      internalID: 715855440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StunJeff - 32x32_5
+      name: Zumbi_Stun_32x32_5
       rect:
         serializedVersion: 2
         x: 160
-        y: 1
+        y: 0
         width: 32
-        height: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      physicsShape:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: e1ccc599334a00642af53624f1fbafce
-      internalID: -296114840
+      spriteID: 3acf4006836fc6f4ab589daef04d3cd0
+      internalID: -568258630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StunJeff - 32x32_6
+      name: Zumbi_Stun_32x32_6
       rect:
         serializedVersion: 2
         x: 192
-        y: 1
+        y: 0
         width: 32
-        height: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      physicsShape:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: 92ecd2b0ab2a09547a23e5bd3b2cda6e
-      internalID: 1388410055
+      spriteID: 795dfcf0ccf1a30448b021949e3f2ba7
+      internalID: 421713626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StunJeff - 32x32_7
+      name: Zumbi_Stun_32x32_7
       rect:
         serializedVersion: 2
         x: 224
-        y: 1
+        y: 0
         width: 32
-        height: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
+      physicsShape:
+      - - {x: 0, y: -16}
+        - {x: 16, y: 0}
+        - {x: 0, y: 16}
+        - {x: -16, y: 0}
       tessellationDetail: 0
       bones: []
-      spriteID: e8c661c992b34764da8d169b5f3cf59c
-      internalID: 668502611
+      spriteID: b22defc3b8440ab41a50532160eef0cb
+      internalID: -1669281417
       vertices: []
       indices: 
       edges: []
@@ -288,14 +352,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      StunJeff - 32x32_0: 1928381963
-      StunJeff - 32x32_1: -1562053080
-      StunJeff - 32x32_2: 2048084803
-      StunJeff - 32x32_3: 661807541
-      StunJeff - 32x32_4: -307793764
-      StunJeff - 32x32_5: -296114840
-      StunJeff - 32x32_6: 1388410055
-      StunJeff - 32x32_7: 668502611
+      Zumbi_Stun_32x32_0: -493977598
+      Zumbi_Stun_32x32_1: -879279599
+      Zumbi_Stun_32x32_2: 1830429195
+      Zumbi_Stun_32x32_3: 2047496500
+      Zumbi_Stun_32x32_4: 715855440
+      Zumbi_Stun_32x32_5: -568258630
+      Zumbi_Stun_32x32_6: 421713626
+      Zumbi_Stun_32x32_7: -1669281417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

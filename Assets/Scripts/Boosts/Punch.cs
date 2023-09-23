@@ -39,7 +39,11 @@ public class Punch : MonoBehaviour {
                 else StartCoroutine(DelayToMovePlayer(player, 0.6f));
 
                 // animacao
-                if (_punchForce != _defaultPunchForce) _anim.SetTrigger("PunchBaseball");
+                if (_punchForce != _defaultPunchForce)
+                {
+                    _anim.SetTrigger("PunchBaseball");
+                    _anim.SetBool("Baseball", false);
+                }
                 else _anim.SetTrigger("Punch"); 
                 //
                 player.GetComponent<Punch>().GetPunched(_punchDirection, _punchForce);
@@ -53,11 +57,16 @@ public class Punch : MonoBehaviour {
 
             //HitZombie
             if(hit.collider != null && hit.collider.gameObject.tag == "Enemy") {
-                GameObject enemy = hit.collider.gameObject;
+                GameObject enemy = hit.collider.gameObject.transform.parent.gameObject;
+                Debug.Log(enemy.name);
                 if(_punchForce != _defaultPunchForce) StartCoroutine(DelayToMoveMob(enemy, 0.9f));
                 else StartCoroutine(DelayToMoveMob(enemy, 0.6f));
                 // animacao
-                if (_punchForce != _defaultPunchForce) _anim.SetTrigger("PunchBaseball");
+                if (_punchForce != _defaultPunchForce)
+                {
+                    _anim.SetTrigger("PunchBaseball");
+                    _anim.SetBool("Baseball", false);
+                }
                 else _anim.SetTrigger("Punch");
                 //
                 enemy.GetComponent<GroundMobsMovement>().GetPunched(_punchDirection, _punchForce);
@@ -88,14 +97,18 @@ public class Punch : MonoBehaviour {
     }
 
     private IEnumerator DelayToMovePlayer(GameObject target, float delay) {
+        target.GetComponent<Rigidbody2D>().velocity = new Vector2(0, target.GetComponent<Rigidbody2D>().velocity.y);
         target.GetComponent<PlayerMovement>()._canMove = false;
+        target.GetComponent<Animator>().SetBool("Stun", true);
 
         yield return new WaitForSeconds(delay);
 
         target.GetComponent<PlayerMovement>()._canMove = true;
+        target.GetComponent<Animator>().SetBool("Stun", false);
     }
 
     private IEnumerator DelayToMoveMob(GameObject target, float delay) {
+        target.GetComponent<Rigidbody2D>().velocity = new Vector2(0, target.GetComponent<Rigidbody2D>().velocity.y);
         target.GetComponent<GroundMobsMovement>()._canMove = false;
 
         yield return new WaitForSeconds(delay);

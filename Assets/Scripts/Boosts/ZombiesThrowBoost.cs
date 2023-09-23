@@ -15,6 +15,7 @@ public class ZombiesThrowBoost : MonoBehaviour {
 
     private void Start() {
         _defaulIncrease = _timeBetweenBoosts;
+        _timeBetweenBoosts += Time.time;
     }
 
     private void Update() {

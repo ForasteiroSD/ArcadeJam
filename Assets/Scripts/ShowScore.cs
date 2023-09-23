@@ -15,16 +15,8 @@ public class ShowScore : MonoBehaviour
         _currentMinutes = Camera.main.GetComponent<CameraFollowPlayer>()._currentMinutes;
         _currentSeconds = Camera.main.GetComponent<CameraFollowPlayer>()._currentSeconds;   
     }
-    // Update is called once per frame
-    void Update()
-    {
-        if (!_venceu)
-        {
-            _Score.SetText("Seu Score foi: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
-        }
-        else
-        {
-            _Score.SetText("Voce Venceu!! \n Seu Score foi: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
-        }
+
+    public void ShowScoreText() {
+        _Score.SetText("Voce Venceu!! \n Seu Score foi: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
     }
 }

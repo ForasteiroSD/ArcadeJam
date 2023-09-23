@@ -159,11 +159,13 @@ public class PlayerMovement : MonoBehaviour {
 
     public void Stun(float timeStuned) {
         _stuned = true;
+        _anim.SetBool("Stun", true);
         StartCoroutine(CancelStun(timeStuned));
     }
 
     IEnumerator CancelStun(float timeStuned) {
         yield return new WaitForSeconds(timeStuned);
+        _anim.SetBool("Stun", false);
         _stuned = false;
     }
 

@@ -9,14 +9,19 @@ public class GroundMobsMovement : MonoBehaviour {
     private int _direction;
     public int direction => _direction;
     public bool _canMove = true;
+    [SerializeField] private Animator _anim;
 
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
+        _anim.GetComponent<Animator>();
     }
 
     private void Update() {
         if(_canMove) {
             _rb.velocity = new Vector2(_speed, _rb.velocity.y);
+            _anim.SetBool("Stunned", false);
+        } else {
+            _anim.SetBool("Stunned", true);
         }
 
         if (_speed < 0)
@@ -44,6 +49,6 @@ public class GroundMobsMovement : MonoBehaviour {
         _rb.velocity = new Vector2(0, _rb.velocity.y);
         ChangeDirection();
         _rb.AddForce(Vector2.right * punchForce * direction, ForceMode2D.Impulse);
-        _rb.AddForce(Vector2.up * 4, ForceMode2D.Impulse);
+        _rb.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
     }
 }
