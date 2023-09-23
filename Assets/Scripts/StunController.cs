@@ -27,7 +27,7 @@ public class StunController : MonoBehaviour
                 _gameObject.GetComponent<PlayerMovement>().enabled = false;
                 _anim.SetBool("Stun", true);
             }
-            else _gameObject.GetComponent<GroundMobsMovement>().enabled = false;
+            else _gameObject.transform.parent.gameObject.GetComponent<GroundMobsMovement>()._canMove = false;
 
             if (_timeElapsed > _timeStun)
             {
@@ -37,7 +37,7 @@ public class StunController : MonoBehaviour
                     _anim.SetBool("Stun", false);
                     _gameObject.GetComponent<PlayerMovement>().enabled = true;
                 }
-                else _gameObject.GetComponent<GroundMobsMovement>().enabled = true;
+                else _gameObject.transform.parent.gameObject.GetComponent<GroundMobsMovement>()._canMove = true;
                 stun = false;
             }
         }
@@ -51,8 +51,10 @@ public class StunController : MonoBehaviour
     {
         // Debug.Log("stunado");
         // Debug.Log(obj.name);
-        stun = true;
+        if(obj.tag == "Player") obj.GetComponent<Rigidbody2D>().velocity = new Vector2(0, obj.GetComponent<Rigidbody2D>().velocity.y);
+        else if(obj.tag == "Enemy") obj.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, obj.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity.y);
         _gameObject = obj;
         _timeStun = _time;
+        stun = true;
     }
 }
