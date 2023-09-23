@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 795223685243783611}
   - component: {fileID: 1179079139076856201}
   - component: {fileID: 2083395344594830384}
+  - component: {fileID: 5280553408479288867}
   m_Layer: 0
   m_Name: BaseballBat
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.54, y: -3.75, z: 0}
-  m_LocalScale: {x: 7.574579, y: 7.574579, z: 7.574579}
+  m_LocalScale: {x: 4.449, y: 4.449, z: 4.449}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 52e34c5bdf6abec449fd382fb11b01c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -160,3 +161,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _newPunchForce: 10
+--- !u!114 &5280553408479288867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689799175837785244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f09873b93f715d49b08f197a5f69a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _velocity: 1

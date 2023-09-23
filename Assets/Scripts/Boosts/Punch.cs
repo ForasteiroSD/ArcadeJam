@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Punch : MonoBehaviour {
+    [SerializeField] private Animator _anim;
     [SerializeField] private float _delayToPunch = 2f;
     [SerializeField] private float _punchForce = 1f;
     [SerializeField] private float _punchRange = 1f;
@@ -37,6 +38,10 @@ public class Punch : MonoBehaviour {
                 if(_punchForce != _defaultPunchForce) StartCoroutine(DelayToMovePlayer(player, 0.9f));
                 else StartCoroutine(DelayToMovePlayer(player, 0.6f));
 
+                // animacao
+                if (_punchForce != _defaultPunchForce) _anim.SetTrigger("PunchBaseball");
+                else _anim.SetTrigger("Punch"); 
+                //
                 player.GetComponent<Punch>().GetPunched(_punchDirection, _punchForce);
 
                 if(_punchForce != _defaultPunchForce) {
@@ -51,7 +56,10 @@ public class Punch : MonoBehaviour {
                 GameObject enemy = hit.collider.gameObject;
                 if(_punchForce != _defaultPunchForce) StartCoroutine(DelayToMoveMob(enemy, 0.9f));
                 else StartCoroutine(DelayToMoveMob(enemy, 0.6f));
-
+                // animacao
+                if (_punchForce != _defaultPunchForce) _anim.SetTrigger("PunchBaseball");
+                else _anim.SetTrigger("Punch");
+                //
                 enemy.GetComponent<GroundMobsMovement>().GetPunched(_punchDirection, _punchForce);
 
                 if(_punchForce != _defaultPunchForce) {
@@ -66,14 +74,16 @@ public class Punch : MonoBehaviour {
     public void GetPunched(int direction, float punchForce) {
         _rb.velocity = new Vector2(0, _rb.velocity.y);
         _rb.AddForce(Vector2.right * punchForce * direction, ForceMode2D.Impulse);
-        _rb.AddForce(Vector2.up * 4, ForceMode2D.Impulse);
+        _rb.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
     }
 
     public void EnableBaseballBat(float newForce) {
+        _anim.SetBool("Baseball", true);
         _punchForce = newForce;
     }
 
     public void CancelBaseballBat() {
+        _anim.SetBool("Baseball", false);
         _punchForce = _defaultPunchForce;
     }
 

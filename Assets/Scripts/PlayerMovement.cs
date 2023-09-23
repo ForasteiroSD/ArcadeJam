@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
+    
+    [SerializeField] private Animator _anim;
     private Rigidbody2D _rb;
     [SerializeField] private float _speed = 3f;
     private float _defaultSpeed;
@@ -16,6 +18,7 @@ public class PlayerMovement : MonoBehaviour {
     private GameObject _ground;
     public bool _canMove = true;
     private bool _canJump = true;
+    private bool _stuned = false;
     private float _gravityScale;
     private float _fallGravityScale;
     private float _jumpForce;
@@ -43,19 +46,19 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Update() {
         //Move
-        if(Input.GetAxis("Horizontal1") != 0 && _isPlayer1 && _canMove){
+        if(Input.GetAxis("Horizontal1") != 0 && _isPlayer1 && _canMove && !_stuned){
             _directionX = Input.GetAxis("Horizontal1");
             Move(_directionX);
-        } else if(Input.GetAxis("Horizontal2") != 0 && !_isPlayer1 && _canMove){
+        } else if(Input.GetAxis("Horizontal2") != 0 && !_isPlayer1 && _canMove && !_stuned){
             _directionX = Input.GetAxis("Horizontal2");
             Move(_directionX);
         }
 
         //Double jump
-        if(_doubleJump && !_canJump && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) DoubleJump();
+        if(_doubleJump && !_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) DoubleJump();
         
         //Normal jump
-        if(_canJump && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) Jump();
+        if(_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) Jump();
 
         //Start falling
         if(_isJumping) {
@@ -68,6 +71,20 @@ public class PlayerMovement : MonoBehaviour {
                 _rb.gravityScale = _fallGravityScale;
             }
             if(_rb.velocity.y < 0) _rb.gravityScale = _fallGravityScale;
+        }
+
+        // Animacao
+        if (lookingDirection == 1) gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        else gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        if (_isPlayer1)
+        {
+            if (Input.GetAxis("Horizontal1") != 0 && _canMove && !_stuned) _anim.SetBool("IsMoving", true);
+            else _anim.SetBool("IsMoving", false);
+        }
+        else
+        {
+            if (Input.GetAxis("Horizontal2") != 0 && _canMove && !_stuned) _anim.SetBool("IsMoving", true);
+            else _anim.SetBool("IsMoving", false);
         }
     }
 
@@ -91,6 +108,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void Adrenaline(float duration, float multiplier) {
+        _anim.SetTrigger("Adrenalina");
         _speed = _speed * multiplier;
         _adrenalineRoutine = StartCoroutine(StopAdrenaline(duration));
     }
@@ -137,6 +155,16 @@ public class PlayerMovement : MonoBehaviour {
     IEnumerator CancelCanJump() {
         yield return new WaitForSeconds(_timeToJump);
         _canJump = false;
+    }
+
+    public void Stun(float timeStuned) {
+        _stuned = true;
+        StartCoroutine(CancelStun(timeStuned));
+    }
+
+    IEnumerator CancelStun(float timeStuned) {
+        yield return new WaitForSeconds(timeStuned);
+        _stuned = false;
     }
 
     private void ResetBoostIcon() {

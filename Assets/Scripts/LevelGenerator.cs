@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour {
     private Vector3 _lastEndPosition;
 
     private void Awake() {
-        _startPosition = this.transform.GetChild(0).transform;
+        _startPosition = GameObject.Find("StartPosition").transform;
         _lastEndPosition = _startPosition.position;
         for(int i = 0; i < _floorsNumber - 1; i++) {
             Transform lastPlatform = SpawnLevelPart(_lastEndPosition);

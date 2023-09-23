@@ -6,6 +6,8 @@ public class GroundMobsMovement : MonoBehaviour {
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _changeDirectionRange = 0.5f;
     private Rigidbody2D _rb;
+    private int _direction;
+    public int direction => _direction;
     public bool _canMove = true;
 
     private void Start() {
@@ -17,9 +19,16 @@ public class GroundMobsMovement : MonoBehaviour {
             _rb.velocity = new Vector2(_speed, _rb.velocity.y);
         }
 
-        float _direction;
-        if(_speed < 0) _direction = -1;
-        else _direction = 1;
+        if (_speed < 0)
+        {
+            _direction = -1;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else 
+        { 
+            _direction = 1;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        } 
 
         Debug.DrawRay(transform.position, Vector3.right * _direction * _changeDirectionRange, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.right * _direction, _changeDirectionRange);

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5799393473977703014}
   - component: {fileID: 4414210987950010901}
   - component: {fileID: 8498744998358035476}
+  - component: {fileID: 2886568543805429259}
   m_Layer: 0
   m_Name: Taser
   m_TagString: Untagged
@@ -149,3 +150,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d58dadc0a9e34c47a27ad053ab3f4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2886568543805429259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7821940873396271061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f09873b93f715d49b08f197a5f69a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cam: {fileID: 0}
+  _velocity: 1
