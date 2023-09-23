@@ -572,7 +572,7 @@ Transform:
   m_GameObject: {fileID: 391875389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.11, y: -3.91, z: 0}
+  m_LocalPosition: {x: -4.08, y: -3.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -785,6 +785,8 @@ MonoBehaviour:
   _cameraVelocity: 0.8
   _timeText: {fileID: 1782516621}
   _maxHigh: 71
+  _isSinglePlayer: 0
+  _delayForCamera: 3
   _currentMinutes: 0
   _currentSeconds: 0
 --- !u!1 &542112735
@@ -1022,6 +1024,8 @@ MonoBehaviour:
   _cameraVelocity: 1
   _timeText: {fileID: 0}
   _maxHigh: 71
+  _isSinglePlayer: 0
+  _delayForCamera: 3
   _currentMinutes: 0
   _currentSeconds: 0
 --- !u!60 &772680712
@@ -2219,8 +2223,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69514f88b4396d744ae0c137cebab4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timewait: 0
   _velocityY: 0
+  _hud: {fileID: 0}
+  _gameOver: {fileID: 0}
 --- !u!1 &2088994079
 GameObject:
   m_ObjectHideFlags: 0

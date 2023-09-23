@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5269202254472381969}
   - component: {fileID: 2747856349693025247}
   - component: {fileID: 4119076285687271624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 321471111700006707}
   - component: {fileID: 1387605903143143445}
   - component: {fileID: 3203567174040278628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1211558684550240956}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}

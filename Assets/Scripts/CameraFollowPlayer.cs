@@ -14,13 +14,12 @@ public class CameraFollowPlayer : MonoBehaviour {
     [SerializeField] private float _maxHigh = 71f;
     [SerializeField] private bool _isSinglePlayer;
     [SerializeField] private float _delayForCamera = 3f;
+    [SerializeField] private float _distanceToSpeedUpCamera = 3.5f;
     private float _initialTime;
     private float _currentTime = 0f;
     public float _currentMinutes;
     public float _currentSeconds;
     private bool _canFollow = true;
-
-    // Update is called once per frame
 
     private void Start() {
         if(_isSinglePlayer) _delayForCamera += _currentTime;
@@ -29,28 +28,86 @@ public class CameraFollowPlayer : MonoBehaviour {
 
     void Update() {
         _currentTime = Time.time - _initialTime;
+        //SinglePlayer
         if(_isSinglePlayer) {
+            //Change timer
             _currentMinutes = Mathf.Floor((_currentTime)/60);
             _currentSeconds = Mathf.Floor(_currentTime - (_currentMinutes * 60));
             _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
 
+            //Camera movement
             if(_currentTime >= _delayForCamera) {
-                transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
+                if(_player1.transform.position.y > transform.position.y + _distanceToSpeedUpCamera) {
+                    float distance = _player1.transform.position.y - transform.position.y;
+                    transform.position = new Vector3(transform.position.x, transform.position.y + ((_cameraVelocity + distance) * Time.deltaTime), transform.position.z);
+                }
+                else {
+                    transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
+                }
             }
-        } else {
-            if(_player1.transform.position.y > _maxHigh || _player2.transform.position.y > _maxHigh) _canFollow = false;
 
+        //MultiPlayer
+        } else {
+            //Check wich player is higher
+            if(_player1 != null && _player2 != null && (_player1.transform.position.y > _maxHigh || _player2.transform.position.y > _maxHigh)) _canFollow = false;
+
+            //If time is not over yet or any player died
             if(_time - _currentTime >= 0 && _canFollow) {
+                //Camera follow the highest player
                 if (_player1.transform.position.y > _player2.transform.position.y) _vcam.Follow = _player1.transform;
                 else _vcam.Follow = _player2.transform;
 
+                //Change timer
                 _currentMinutes = Mathf.Floor((_time - _currentTime)/60);
                 _currentSeconds = Mathf.Floor(_time - _currentTime - (_currentMinutes * 60));
                 _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
-            } else {
+            }
+            
+            //Time is over or nome player died
+            else {
                 _vcam.Follow = null;
-                transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
+                //Player 1 died
+                if(_player1 == null) {
+                    if(_player2.transform.position.y > transform.position.y + _distanceToSpeedUpCamera) {
+                        float distance = _player2.transform.position.y - transform.position.y;
+                        transform.position = new Vector3(transform.position.x, transform.position.y + ((_cameraVelocity + distance) * Time.deltaTime), transform.position.z);
+                    }
+                    else {
+                        transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
+                    }
+                }
+                //Player 2 died
+                else if(_player2 == null) {
+                    if(_player1.transform.position.y > transform.position.y + _distanceToSpeedUpCamera) {
+                        float distance = _player1.transform.position.y - transform.position.y;
+                        transform.position = new Vector3(transform.position.x, transform.position.y + ((_cameraVelocity + distance) * Time.deltaTime), transform.position.z);
+                    }
+                    else {
+                        transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
+                    }
+                }
+                //No player died
+                else {
+                    //Player 1 is higher
+                    if(_player1.transform.position.y > transform.position.y + _distanceToSpeedUpCamera) {
+                        float distance = _player1.transform.position.y - transform.position.y;
+                        transform.position = new Vector3(transform.position.x, transform.position.y + ((_cameraVelocity + distance) * Time.deltaTime), transform.position.z);
+                    }
+                    //Player 2 is higher
+                    else if(_player2.transform.position.y > transform.position.y + _distanceToSpeedUpCamera) {
+                        float distance = _player2.transform.position.y - transform.position.y;
+                        transform.position = new Vector3(transform.position.x, transform.position.y + ((_cameraVelocity + distance) * Time.deltaTime), transform.position.z);
+                    }
+                    //Default
+                    else {
+                        transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
+                    }
+                }
             }
         }
+    }
+
+    public void FirstPlayerDied() {
+        _canFollow =false;
     }
 }

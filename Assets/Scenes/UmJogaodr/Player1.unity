@@ -288,7 +288,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: You Died
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90ae1c086643628469473d427bc1fbbe, type: 2}
   m_sharedMaterial: {fileID: -5884130945430959367, guid: 90ae1c086643628469473d427bc1fbbe, type: 2}
@@ -441,7 +441,6 @@ GameObject:
   - component: {fileID: 190115660}
   - component: {fileID: 190115659}
   - component: {fileID: 190115665}
-  - component: {fileID: 190115666}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -635,24 +634,9 @@ MonoBehaviour:
   _timeText: {fileID: 1481272396}
   _maxHigh: 39
   _isSinglePlayer: 1
-  _delayForCamera: 600
+  _delayForCamera: 6
   _currentMinutes: 0
   _currentSeconds: 0
---- !u!114 &190115666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190115657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69514f88b4396d744ae0c137cebab4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _velocityY: 0
-  _hud: {fileID: 0}
-  _gameOver: {fileID: 0}
 --- !u!1 &243720197
 GameObject:
   m_ObjectHideFlags: 0
@@ -5813,9 +5797,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69514f88b4396d744ae0c137cebab4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocityY: 0
   _hud: {fileID: 521100196}
   _gameOver: {fileID: 765476126}
+  _firstPlayerDied: 0
 --- !u!114 &2133403201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5921,7 +5905,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 5bc05a6fe48078748858a4ed078d6ba6, type: 3}
   m_Color: {r: 0.08957815, g: 0.5754717, b: 0.10391758, a: 1}
   m_FlipX: 0
@@ -6702,7 +6686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8409505003163639245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6718,7 +6702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8409505002944598835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6734,7 +6718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8409505002853214341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6750,7 +6734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8409505002479836453}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6766,7 +6750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8409505004229921466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6782,7 +6766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8409505003719558697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6975,7 +6959,7 @@ GameObject:
   - component: {fileID: 6426310170706083544}
   - component: {fileID: 3896590386518876950}
   - component: {fileID: 2961335059422504961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -8527,7 +8511,7 @@ GameObject:
   - component: {fileID: 1873446222321976615}
   - component: {fileID: 5404173871050623978}
   - component: {fileID: 114057947229578340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9494,7 +9478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7434644826277467111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11148,7 +11132,7 @@ GameObject:
   - component: {fileID: 7665341266656529098}
   - component: {fileID: 1613101178526074852}
   - component: {fileID: 7976958207820423000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -32548,6 +32532,67 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &3678401380627061197
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 42.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988609150494183778, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_Name
+      value: Helicoptero
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439276823236815319, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: _canva
+      value: 
+      objectReference: {fileID: 765476126}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
 --- !u!50 &3698009747230434453
 Rigidbody2D:
   serializedVersion: 4
@@ -32651,7 +32696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3881638934182877606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32669,7 +32714,7 @@ GameObject:
   - component: {fileID: 6922835611415403430}
   - component: {fileID: 8585275124178883712}
   - component: {fileID: 5193100438177499889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -32687,7 +32732,7 @@ GameObject:
   - component: {fileID: 6922835611984025397}
   - component: {fileID: 8585275124683610131}
   - component: {fileID: 5193100438740878946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -32705,7 +32750,7 @@ GameObject:
   - component: {fileID: 6922835610540078346}
   - component: {fileID: 8585275125187918380}
   - component: {fileID: 5193100439310197853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -32723,7 +32768,7 @@ GameObject:
   - component: {fileID: 6922835610242351274}
   - component: {fileID: 8585275124814663564}
   - component: {fileID: 5193100439146697213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -32741,7 +32786,7 @@ GameObject:
   - component: {fileID: 6922835610884735042}
   - component: {fileID: 8585275125766377316}
   - component: {fileID: 5193100439806906645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -32759,7 +32804,7 @@ GameObject:
   - component: {fileID: 6922835610699288252}
   - component: {fileID: 8585275125549433242}
   - component: {fileID: 5193100439487242219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -35861,7 +35906,7 @@ GameObject:
   - component: {fileID: 5518163851386117914}
   - component: {fileID: 7391145942121117094}
   - component: {fileID: 8615048975627895119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -35879,7 +35924,7 @@ GameObject:
   - component: {fileID: 4283080207258556634}
   - component: {fileID: 1762219805578327569}
   - component: {fileID: 2230319394660196021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35897,7 +35942,7 @@ GameObject:
   - component: {fileID: 1461199005492199418}
   - component: {fileID: 247949435881713884}
   - component: {fileID: 4342732117733289645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -37106,7 +37151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 63457976303870581}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38444,7 +38489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6914183972487687489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Teleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38852,7 +38897,7 @@ GameObject:
   - component: {fileID: 3277271990485424772}
   - component: {fileID: 4775674604766758730}
   - component: {fileID: 6723069419701603421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -38870,7 +38915,7 @@ GameObject:
   - component: {fileID: 3277271989983974935}
   - component: {fileID: 4775674605263621081}
   - component: {fileID: 6723069420278022350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -38888,7 +38933,7 @@ GameObject:
   - component: {fileID: 3277271989039251848}
   - component: {fileID: 4775674605400972358}
   - component: {fileID: 6723069418527938385}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -38906,7 +38951,7 @@ GameObject:
   - component: {fileID: 3277271989345334312}
   - component: {fileID: 4775674605765831142}
   - component: {fileID: 6723069418834207473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -38924,7 +38969,7 @@ GameObject:
   - component: {fileID: 3277271988716539806}
   - component: {fileID: 4775674606126830160}
   - component: {fileID: 6723069418993752391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -38942,7 +38987,7 @@ GameObject:
   - component: {fileID: 3277271988868727136}
   - component: {fileID: 4775674606345870510}
   - component: {fileID: 6723069419145680825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -38979,7 +39024,7 @@ GameObject:
   - component: {fileID: 5755017828465781546}
   - component: {fileID: 7773984401329363228}
   - component: {fileID: 7263282235764535258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterLeft
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -39440,7 +39485,7 @@ GameObject:
   - component: {fileID: 9066036575589130298}
   - component: {fileID: 222583017664610391}
   - component: {fileID: 2480216149021842168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterRight
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -39556,4 +39601,5 @@ SceneRoots:
   - {fileID: 1176760407}
   - {fileID: 83452738}
   - {fileID: 253024247}
+  - {fileID: 3678401380627061197}
   - {fileID: 2131144150}

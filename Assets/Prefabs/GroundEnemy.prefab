@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 6464172771306542524}
   - component: {fileID: 3161578129647131775}
   - component: {fileID: 5605967724345814058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stun
   m_TagString: Enemy
   m_Icon: {fileID: 0}
