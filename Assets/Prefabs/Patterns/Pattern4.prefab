@@ -2068,6 +2068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5634626698817732763, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
+      propertyPath: _speed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2231,6 +2235,10 @@ PrefabInstance:
     - target: {fileID: 4949668098142808826, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_Name
       value: GroundEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5634626698817732763, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
+      propertyPath: _speed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
