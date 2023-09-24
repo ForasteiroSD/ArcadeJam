@@ -70,8 +70,18 @@ public class PlayerMovement : MonoBehaviour {
                 _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y/2);
                 _rb.gravityScale = _fallGravityScale;
             }
-            if(_rb.velocity.y < 0) _rb.gravityScale = _fallGravityScale;
+            if (_rb.velocity.y < 0) { 
+                _rb.gravityScale = _fallGravityScale;
+                _anim.SetBool("IsFalling", true);
+            }
+            else
+            {
+                _anim.SetBool("IsFalling", false);
+            }
         }
+
+        _anim.SetBool("CanJump", _canJump);
+        
 
         // Animacao
         if (lookingDirection == 1) gameObject.GetComponent<SpriteRenderer>().flipX = false;
@@ -127,6 +137,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Jump() {
         _rb.gravityScale = _gravityScale;
+        _anim.SetTrigger("JUMP");
         _jumpForce = (float) Math.Sqrt(_jumpHeight * (Physics2D.gravity.y * _rb.gravityScale) * -2) * _rb.mass;
         _rb.velocity = new Vector2(_rb.velocity.x, 0);
         _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
@@ -135,6 +146,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void DoubleJump() {
+        _anim.SetTrigger("DoblueJump");
         _isJumping = true;
         _rb.gravityScale = _gravityScale;
         _jumpForce = (float) Math.Sqrt(_jumpHeight * (Physics2D.gravity.y * _rb.gravityScale) * -2) * _rb.mass;
