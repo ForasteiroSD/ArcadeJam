@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundMobsMovement : MonoBehaviour {
+    public AudioSource SomZumbi;
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _changeDirectionRange = 0.5f;
     private Rigidbody2D _rb;
@@ -14,10 +15,11 @@ public class GroundMobsMovement : MonoBehaviour {
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
         _anim.GetComponent<Animator>();
+        SomZumbi = GameObject.Find("SomZumbi").GetComponent<AudioSource>();
     }
 
     private void Update() {
-        if(_canMove) {
+        if (_canMove) {
             _rb.velocity = new Vector2(_speed, _rb.velocity.y);
             _anim.SetBool("Stunned", false);
         } else {
@@ -46,6 +48,7 @@ public class GroundMobsMovement : MonoBehaviour {
     }
 
     public void GetPunched(int direction, float punchForce) {
+        SomZumbi.Play();
         _rb.velocity = new Vector2(0, _rb.velocity.y);
         ChangeDirection();
         _rb.AddForce(Vector2.right * punchForce * direction, ForceMode2D.Impulse);
