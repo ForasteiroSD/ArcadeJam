@@ -58,7 +58,6 @@ public class Punch : MonoBehaviour {
             //HitZombie
             if(hit.collider != null && hit.collider.gameObject.tag == "Enemy") {
                 GameObject enemy = hit.collider.gameObject.transform.parent.gameObject;
-                Debug.Log(enemy.name);
                 if(_punchForce != _defaultPunchForce) StartCoroutine(DelayToMoveMob(enemy, 0.9f));
                 else StartCoroutine(DelayToMoveMob(enemy, 0.6f));
                 // animacao

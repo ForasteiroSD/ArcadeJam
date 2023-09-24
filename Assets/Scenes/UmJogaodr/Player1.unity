@@ -3810,10 +3810,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _boostPlayer1: {fileID: 1201339381}
   _boostPlayer2: {fileID: 1645319962}
-  _adrenaline: {fileID: 21300000, guid: b3d64971347fb1a4caca9cd9c853d4f6, type: 3}
-  _boot: {fileID: 21300000, guid: 0c084d4254c9bf343bc24b33727fe32e, type: 3}
-  _baseballBat: {fileID: 21300000, guid: 52e34c5bdf6abec449fd382fb11b01c9, type: 3}
-  _taser: {fileID: 21300000, guid: 7367b30b8f440544696c1accf221f787, type: 3}
+  _adrenaline: {fileID: 21300000, guid: 8208509bb0419bc46ba3967c438b33d6, type: 3}
+  _boot: {fileID: 21300000, guid: 2a3e3599c8f208240a084ed4805fdcdf, type: 3}
+  _baseballBat: {fileID: 21300000, guid: 2e549693e5c965241a4b8741e81d9707, type: 3}
+  _taser: {fileID: 21300000, guid: 3fc8683d4925b4f4fad255eb22ddcc4f, type: 3}
 --- !u!1 &1623694724
 GameObject:
   m_ObjectHideFlags: 0
