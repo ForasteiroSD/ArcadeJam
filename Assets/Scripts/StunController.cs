@@ -50,7 +50,7 @@ public class StunController : MonoBehaviour
     public void Stun(GameObject obj, float _time)
     {
         // Debug.Log("stunado");
-        // Debug.Log(obj.name);
+        Debug.Log(obj.name);
         if(obj.tag == "Player") obj.GetComponent<Rigidbody2D>().velocity = new Vector2(0, obj.GetComponent<Rigidbody2D>().velocity.y);
         else if(obj.tag == "Enemy") obj.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, obj.transform.parent.gameObject.GetComponent<Rigidbody2D>().velocity.y);
         _gameObject = obj;
