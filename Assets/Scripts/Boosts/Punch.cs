@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Punch : MonoBehaviour {
+    public AudioSource SomSoco;
+    public AudioSource SomTaco;
     [SerializeField] private Animator _anim;
     [SerializeField] private float _delayToPunch = 2f;
     [SerializeField] private float _punchForce = 1f;
@@ -15,7 +17,10 @@ public class Punch : MonoBehaviour {
     private int _punchDirection = 1;
     private Rigidbody2D _rb;
 
+
     private void Start() {
+        SomSoco = GameObject.Find("SomSoco").GetComponent<AudioSource>();
+        SomTaco = GameObject.Find("SomTaco").GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody2D>();
         if(this.GetComponent<PlayerMovement>() != null) _isPlayer1 = this.GetComponent<PlayerMovement>().isPlayer1;
         _defaultPunchForce = _punchForce;
@@ -42,6 +47,7 @@ public class Punch : MonoBehaviour {
                 if (_punchForce != _defaultPunchForce)
                 {
                     _anim.SetTrigger("PunchBaseball");
+                    SomTaco.Play();
                     _anim.SetBool("Baseball", false);
                 }
                 else _anim.SetTrigger("Punch"); 
@@ -84,6 +90,7 @@ public class Punch : MonoBehaviour {
         _rb.velocity = new Vector2(0, _rb.velocity.y);
         _rb.AddForce(Vector2.right * punchForce * direction, ForceMode2D.Impulse);
         _rb.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
+        SomSoco.Play();
     }
 
     public void EnableBaseballBat(float newForce) {

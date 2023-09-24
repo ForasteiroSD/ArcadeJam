@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Taser : MonoBehaviour
 {
+    public AudioSource SomTaser;
     [SerializeField] private float _delayToPunch = 2f;
     [SerializeField] private float _punchRange = 1f;
     [SerializeField] private float _timeStun;
@@ -16,6 +17,7 @@ public class Taser : MonoBehaviour
     private Animator _anim;
     private void Start()
     {
+        SomTaser = GameObject.Find("SomTaser").GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody2D>();
         if (this.GetComponent<PlayerMovement>() != null) _isPlayer1 = this.GetComponent<PlayerMovement>().isPlayer1;
         _anim = gameObject.GetComponent<Animator>();
@@ -37,6 +39,7 @@ public class Taser : MonoBehaviour
 
             if (hit.collider != null && (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Enemy"))
             {
+                SomTaser.Play();
                 _anim.SetTrigger("Taser 0");
                 if(hit.collider.gameObject.tag == "Player") hit.collider.gameObject.GetComponent<StunController>().Stun(hit.collider.gameObject, _timeStun);
                 else hit.collider.gameObject.transform.parent.gameObject.GetComponent<StunController>().Stun(hit.collider.gameObject, _timeStun);

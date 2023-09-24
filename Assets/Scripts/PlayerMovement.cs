@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-    
+    public AudioSource SomJeff;
+    public AudioSource SomNicole;
+    public AudioSource SomMola;
     [SerializeField] private Animator _anim;
     private Rigidbody2D _rb;
     [SerializeField] private float _speed = 3f;
@@ -27,7 +29,14 @@ public class PlayerMovement : MonoBehaviour {
     private int _lookingDirection; //-1 -> left, 1 -> right
     public int lookingDirection => _lookingDirection;
     private Coroutine _adrenalineRoutine;
-    
+
+    private void Start()
+    {
+        SomMola = GameObject.Find("SomMola").GetComponent<AudioSource>();
+        SomJeff = GameObject.Find("SomJeff").GetComponent<AudioSource>();
+        SomNicole = GameObject.Find("SomNicole").GetComponent<AudioSource>();
+    }
+
     private void Awake() {
         //GetComponents
         _rb = GetComponent<Rigidbody2D>();
@@ -56,17 +65,19 @@ public class PlayerMovement : MonoBehaviour {
 
         //Double jump
         if(_doubleJump && !_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) DoubleJump();
-        
+
         //Normal jump
-        if(_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) Jump();
+        if (_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) Jump();
 
         //Start falling
         if(_isJumping) {
             if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.W) && _isPlayer1) {
+
                 _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y/2);
                 _rb.gravityScale = _fallGravityScale;
             }
             else if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.UpArrow) && !_isPlayer1) {
+               
                 _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y/2);
                 _rb.gravityScale = _fallGravityScale;
             }
@@ -127,6 +138,13 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Jump() {
         _rb.gravityScale = _gravityScale;
+        if (_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1)))
+        {
+            SomJeff.Play();
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1) {
+            SomNicole.Play();
+        }
         _jumpForce = (float) Math.Sqrt(_jumpHeight * (Physics2D.gravity.y * _rb.gravityScale) * -2) * _rb.mass;
         _rb.velocity = new Vector2(_rb.velocity.x, 0);
         _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
@@ -140,6 +158,7 @@ public class PlayerMovement : MonoBehaviour {
         _jumpForce = (float) Math.Sqrt(_jumpHeight * (Physics2D.gravity.y * _rb.gravityScale) * -2) * _rb.mass;
         _rb.velocity = new Vector2(_rb.velocity.x, 0);
         _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        SomMola.Play();
         _doubleJump = false;
         ResetBoostIcon();
     }
