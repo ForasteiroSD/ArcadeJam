@@ -2305,8 +2305,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1772123163935345218}
   - {fileID: 6919888159537960469}
-  - {fileID: 7891373749953432843}
   - {fileID: 4397783701272378671}
   - {fileID: 8321550207987638358}
   - {fileID: 63457975738897971}
@@ -2436,7 +2436,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1211558684550240956, guid: aefe4bae91ca418479f7bd6505f43a30, type: 3}
   m_PrefabInstance: {fileID: 1166749534324067471}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6470549278292676391
+--- !u!1001 &3231350823661406318
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2445,24 +2445,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 5296250721142951026}
     m_Modifications:
     - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9956493
+      value: 6.23
       objectReference: {fileID: 0}
     - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.52915
+      value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2498,15 +2486,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949668098142808826, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_Name
-      value: GroundEnemy
+      value: GroundEnemy (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
---- !u!4 &7891373749953432843 stripped
+--- !u!4 &1772123163935345218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
-  m_PrefabInstance: {fileID: 6470549278292676391}
+  m_PrefabInstance: {fileID: 3231350823661406318}
   m_PrefabAsset: {fileID: 0}

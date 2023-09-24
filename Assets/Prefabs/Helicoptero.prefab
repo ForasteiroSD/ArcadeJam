@@ -216,3 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canva: {fileID: 0}
+  _isSinglePlayer: 0
+  _winImage: {fileID: 21300000, guid: dbdb117d958e18a44ace45d8aca296eb, type: 3}
+  _imageBackground: {fileID: 0}

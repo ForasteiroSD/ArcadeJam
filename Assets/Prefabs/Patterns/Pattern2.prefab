@@ -1815,9 +1815,9 @@ Transform:
   m_Children:
   - {fileID: 6306605953977386932}
   - {fileID: 510039626282762955}
+  - {fileID: 8622273066195740539}
   - {fileID: 4488315590537747120}
   - {fileID: 8409505004266060639}
-  - {fileID: 226105253477520425}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &3291000405859645365
@@ -1842,7 +1842,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!1001 &3993709164982048261
+--- !u!1001 &4893090072386692439
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1851,24 +1851,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 4384612233702407596}
     m_Modifications:
     - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.329
+      value: 8.3363495
       objectReference: {fileID: 0}
     - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.56
+      value: 3.6090775
       objectReference: {fileID: 0}
     - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1904,17 +1892,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949668098142808826, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_Name
-      value: GroundEnemy
+      value: GroundEnemy (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
---- !u!4 &226105253477520425 stripped
+--- !u!4 &8622273066195740539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
-  m_PrefabInstance: {fileID: 3993709164982048261}
+  m_PrefabInstance: {fileID: 4893090072386692439}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7234120252572688867
 PrefabInstance:
