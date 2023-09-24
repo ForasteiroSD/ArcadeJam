@@ -28,7 +28,7 @@ public class Taser : MonoBehaviour
         Debug.DrawRay(transform.position, Vector3.right * _punchDirection * _punchRange, Color.green);
         if (Time.time - _lastPunchTime > _delayToPunch) _canPunch = true;
 
-        if (((_isPlayer1 && Input.GetKeyDown(KeyCode.E)) || (!_isPlayer1 && Input.GetKeyDown(KeyCode.RightControl))) && _canPunch)
+        if (((_isPlayer1 && Input.GetKeyDown(KeyCode.Space)) || (!_isPlayer1 && Input.GetKeyDown(KeyCode.Return))) && _canPunch)
         {
             _canPunch = false;
             _lastPunchTime = Time.time;
