@@ -27,6 +27,16 @@ public class PlayerMovement : MonoBehaviour {
     private int _lookingDirection; //-1 -> left, 1 -> right
     public int lookingDirection => _lookingDirection;
     private Coroutine _adrenalineRoutine;
+    public AudioSource SomJeff;
+    public AudioSource SomNicole;
+    public AudioSource SomMola;
+
+    private void Start()
+    {
+        SomMola = GameObject.Find("SomMola").GetComponent<AudioSource>();
+        SomJeff = GameObject.Find("SomJeff").GetComponent<AudioSource>();
+        SomNicole = GameObject.Find("SomNicole").GetComponent<AudioSource>();
+    }
     
     private void Awake() {
         //GetComponents
@@ -137,6 +147,15 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Jump() {
         _rb.gravityScale = _gravityScale;
+
+        if (_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1)))
+        {
+            SomJeff.Play();
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1) {
+            SomNicole.Play();
+        }
+
         _anim.SetTrigger("JUMP");
         _jumpForce = (float) Math.Sqrt(_jumpHeight * (Physics2D.gravity.y * _rb.gravityScale) * -2) * _rb.mass;
         _rb.velocity = new Vector2(_rb.velocity.x, 0);
@@ -152,6 +171,7 @@ public class PlayerMovement : MonoBehaviour {
         _jumpForce = (float) Math.Sqrt(_jumpHeight * (Physics2D.gravity.y * _rb.gravityScale) * -2) * _rb.mass;
         _rb.velocity = new Vector2(_rb.velocity.x, 0);
         _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        SomMola.Play();
         _doubleJump = false;
         ResetBoostIcon();
     }
