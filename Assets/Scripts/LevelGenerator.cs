@@ -13,7 +13,8 @@ public class LevelGenerator : MonoBehaviour {
         _startPosition = GameObject.Find("StartPosition").transform;
         _lastEndPosition = _startPosition.position;
         for(int i = 0; i < _floorsNumber - 1; i++) {
-            if(i != _floorsNumber - 2) _pattern = _patterns[UnityEngine.Random.Range(0, _patterns.Length - 2)];
+            if(i == 0) _pattern = _patterns[0];
+            else if(i != _floorsNumber - 2) _pattern = _patterns[UnityEngine.Random.Range(0, _patterns.Length - 2)];
             else _pattern = _patterns[_patterns.Length - 1];
             Transform lastPlatform = SpawnLevelPart(_lastEndPosition);
             _lastEndPosition = lastPlatform.Find("EndPosition").position;
