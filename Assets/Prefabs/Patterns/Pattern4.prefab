@@ -160,7 +160,7 @@ Tilemap:
   m_GameObject: {fileID: 4307144671464463504}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: -4, y: 3, z: 0}
+  - first: {x: -4, y: 2, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 22
@@ -170,7 +170,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -3, y: 3, z: 0}
+  - first: {x: -3, y: 2, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 21
@@ -180,7 +180,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -2, y: 3, z: 0}
+  - first: {x: -2, y: 2, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 9
@@ -1631,17 +1631,17 @@ CompositeCollider2D:
       - X: -32500000
         Y: 26875000
     - - X: -6875000
-        Y: 17500000
+        Y: 12500000
       - X: -6875000
-        Y: 17812500
+        Y: 12812500
       - X: -18125000
-        Y: 17812500
+        Y: 12812500
       - X: -18125000
-        Y: 17500000
+        Y: 12500000
       - X: -17500000
-        Y: 16875000
+        Y: 11875000
       - X: -7500000
-        Y: 16875000
+        Y: 11875000
   m_CompositePaths:
     m_Paths:
     - - {x: 10.49997, y: 2.84375}
@@ -1707,12 +1707,12 @@ CompositeCollider2D:
       - {x: -6.3125, y: 2.781221}
       - {x: -6.3124924, y: 2.7499924}
       - {x: -6.2499895, y: 2.6875}
-    - - {x: -0.7500108, y: 1.6875}
-      - {x: -0.6875, y: 1.7500108}
-      - {x: -0.6875293, y: 1.78125}
-      - {x: -1.8125, y: 1.7812208}
-      - {x: -1.8124924, y: 1.7499924}
-      - {x: -1.7499893, y: 1.6875}
+    - - {x: -0.7500108, y: 1.1875}
+      - {x: -0.6875, y: 1.2500108}
+      - {x: -0.6875293, y: 1.28125}
+      - {x: -1.8125, y: 1.2812207}
+      - {x: -1.8124924, y: 1.2499924}
+      - {x: -1.7499893, y: 1.1875}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
