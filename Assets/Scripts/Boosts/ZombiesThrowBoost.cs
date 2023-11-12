@@ -15,6 +15,7 @@ public class ZombiesThrowBoost : MonoBehaviour {
 
     private void Start() {
         _defaulIncrease = _timeBetweenBoosts;
+        _timeBetweenBoosts += Time.time;
     }
 
     private void Update() {
@@ -24,7 +25,7 @@ public class ZombiesThrowBoost : MonoBehaviour {
             _spawPosition = Random.Range(-_zombiesLength, _zombiesLength);
             _boostNumber = Random.Range(0, _boosts.Length);
 
-            Instantiate(_boosts[_boostNumber], new Vector3(_spawPosition, transform.position.y + 1, transform.position.z), Quaternion.identity);
+            Instantiate(_boosts[_boostNumber], new Vector3(_spawPosition, transform.position.y, transform.position.z), Quaternion.identity);
 
             _timeBetweenBoosts += _defaulIncrease;
         }

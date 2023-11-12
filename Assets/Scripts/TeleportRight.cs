@@ -8,6 +8,6 @@ public class TeleportRight : MonoBehaviour
     [SerializeField] private float teleportRange;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.transform.position = new Vector3(otherTeleport.transform.position.x + teleportRange, collision.transform.position.y, otherTeleport.transform.position.z);
+        collision.gameObject.transform.position = new Vector3(otherTeleport.transform.position.x + teleportRange, collision.transform.position.y, otherTeleport.transform.position.z);
     }
 }
