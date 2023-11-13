@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24886ae802f99e84c94687f9a7203e4c
+guid: bb27cfec71855d542a478e1a7b2a9709
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 13
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NickIdle 32x32_0
+      name: Nick_Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c94f5619343a7174b8f75de148b607a1
-      internalID: -1820272052
+      spriteID: 590f373bf2c8a61499d32f6d61ffb657
+      internalID: -739427035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_1
+      name: Nick_Idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72d2264bc0092b84ebfcfc022ab098c7
-      internalID: 694594451
+      spriteID: 4f4261cbe0a4fea41942d8bed601b8a8
+      internalID: 1345606842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_2
+      name: Nick_Idle_2
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed999d4470f626f48972b0507506c011
-      internalID: -2085906298
+      spriteID: 84e687a5b7432dc4b9fc02b76feb5ef2
+      internalID: 1816078154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_3
+      name: Nick_Idle_3
       rect:
         serializedVersion: 2
         x: 96
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9133e0a4d092fe740a38ef280675d413
-      internalID: -492380024
+      spriteID: dc42a98d06d906143bce881e71dc72cf
+      internalID: -1471458791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_4
+      name: Nick_Idle_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3c2781cdb6e71d4ba4d8fe193935722
-      internalID: 585275082
+      spriteID: 0860938a71945db43bdd20fbf6569869
+      internalID: 815707351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_5
+      name: Nick_Idle_5
       rect:
         serializedVersion: 2
         x: 160
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b149499a36bbe264bad27197ca188418
-      internalID: -1485555241
+      spriteID: 311abbaa968c4ca4394d8854b8c19e07
+      internalID: -1062989798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_6
+      name: Nick_Idle_6
       rect:
         serializedVersion: 2
         x: 192
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfd154e1741940d44900b72f91a4e0b8
-      internalID: -812099579
+      spriteID: 0d4d4e7348e51904bb1c2aac5b215be5
+      internalID: 573478022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_7
+      name: Nick_Idle_7
       rect:
         serializedVersion: 2
         x: 224
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a734ed337bf0fb24a862905936374d03
-      internalID: -626808148
+      spriteID: f33cb8b65902ef047b93a16581c54895
+      internalID: -1213639395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_8
+      name: Nick_Idle_8
       rect:
         serializedVersion: 2
         x: 256
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23689e448f54d174ba27353cf2c206f4
-      internalID: -468982206
+      spriteID: 489dface4159cdd45a9d1a7b3b9c9f3e
+      internalID: -1423034638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_9
+      name: Nick_Idle_9
       rect:
         serializedVersion: 2
         x: 288
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a8091e01481c40439141776245d60ec
-      internalID: 579488600
+      spriteID: 1ad64094b1c9b4c41b37ed9b27798d3d
+      internalID: 1088291761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_10
+      name: Nick_Idle_10
       rect:
         serializedVersion: 2
         x: 320
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3f0e044b839ed14e93b7535245aa1e2
-      internalID: 675935529
+      spriteID: 5b5fa8df4732e9447b6e1e7beb22f6ff
+      internalID: 1105208832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NickIdle 32x32_11
+      name: Nick_Idle_11
       rect:
         serializedVersion: 2
         x: 352
@@ -355,8 +355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dd33b63bea0c9c41a99f5ab33c3efb8
-      internalID: -206672354
+      spriteID: b4db7928df142534abc5003826641a55
+      internalID: 831589010
       vertices: []
       indices: 
       edges: []
@@ -374,18 +374,18 @@ TextureImporter:
     - texture: {fileID: 2800000, guid: 9954b6d404d73934aa57b9f6765a7ac4, type: 3}
       name: _NormalMap
     nameFileIdTable:
-      NickIdle 32x32_0: -1820272052
-      NickIdle 32x32_1: 694594451
-      NickIdle 32x32_10: 675935529
-      NickIdle 32x32_11: -206672354
-      NickIdle 32x32_2: -2085906298
-      NickIdle 32x32_3: -492380024
-      NickIdle 32x32_4: 585275082
-      NickIdle 32x32_5: -1485555241
-      NickIdle 32x32_6: -812099579
-      NickIdle 32x32_7: -626808148
-      NickIdle 32x32_8: -468982206
-      NickIdle 32x32_9: 579488600
+      Nick_Idle_0: -739427035
+      Nick_Idle_1: 1345606842
+      Nick_Idle_10: 1105208832
+      Nick_Idle_11: 831589010
+      Nick_Idle_2: 1816078154
+      Nick_Idle_3: -1471458791
+      Nick_Idle_4: 815707351
+      Nick_Idle_5: -1062989798
+      Nick_Idle_6: 573478022
+      Nick_Idle_7: -1213639395
+      Nick_Idle_8: -1423034638
+      Nick_Idle_9: 1088291761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
