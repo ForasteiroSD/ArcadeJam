@@ -43,6 +43,16 @@ public class GroundMobsMovement : MonoBehaviour {
         if(hit.collider != null && hit.collider.gameObject.tag == "Ground") ChangeDirection();
     }
 
+    public void Stun(float timeStuned) {
+        _canMove = false;
+        StartCoroutine(CancelStun(timeStuned));
+    }
+
+    IEnumerator CancelStun(float timeStuned) {
+        yield return new WaitForSeconds(timeStuned);
+        _canMove = true;
+    }
+
     public void ChangeDirection() {
         _speed = -_speed;
     }

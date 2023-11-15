@@ -40,15 +40,15 @@ public class Punch : MonoBehaviour {
             //HitPlayer
             if(hit.collider != null && hit.collider.gameObject.tag == "Player") {
                 GameObject player = hit.collider.gameObject;
-                if(_punchForce != _defaultPunchForce) StartCoroutine(DelayToMovePlayer(player, 0.9f));
-                else StartCoroutine(DelayToMovePlayer(player, 0.6f));
+                if(_punchForce != _defaultPunchForce) DelayToMovePlayer(player, 1f);
+                else DelayToMovePlayer(player, 0.5f);
 
                 // animacao
                 if (_punchForce != _defaultPunchForce)
                 {
                     _anim.SetTrigger("PunchBaseball");
-                    SomTaco.Play();
                     _anim.SetBool("Baseball", false);
+                    SomTaco.Play();
                 }
                 else _anim.SetTrigger("Punch"); 
                 //
@@ -62,15 +62,16 @@ public class Punch : MonoBehaviour {
             }
 
             //HitZombie
-            if(hit.collider != null && hit.collider.gameObject.tag == "Enemy") {
+            else if(hit.collider != null && hit.collider.gameObject.tag == "Enemy") {
                 GameObject enemy = hit.collider.gameObject.transform.parent.gameObject;
-                if(_punchForce != _defaultPunchForce) StartCoroutine(DelayToMoveMob(enemy, 0.9f));
-                else StartCoroutine(DelayToMoveMob(enemy, 0.6f));
+                if(_punchForce != _defaultPunchForce) DelayToMoveMob(enemy, 1f);
+                else DelayToMoveMob(enemy, 0.5f);
                 // animacao
                 if (_punchForce != _defaultPunchForce)
                 {
                     _anim.SetTrigger("PunchBaseball");
                     _anim.SetBool("Baseball", false);
+                    SomTaco.Play();
                 }
                 else _anim.SetTrigger("Punch");
                 //
@@ -81,6 +82,20 @@ public class Punch : MonoBehaviour {
                     if(_isPlayer1) GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "none");
                     else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "none");
                 }
+            }
+
+            //No one was hit
+            else {
+                // animacao
+                if (_punchForce != _defaultPunchForce)
+                {
+                    _punchForce = _defaultPunchForce;
+                    if(_isPlayer1) GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "none");
+                    else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "none");
+                    _anim.SetTrigger("PunchBaseball");
+                    _anim.SetBool("Baseball", false);
+                }
+                else _anim.SetTrigger("Punch");
             }
         }
     }
@@ -102,23 +117,25 @@ public class Punch : MonoBehaviour {
         _punchForce = _defaultPunchForce;
     }
 
-    private IEnumerator DelayToMovePlayer(GameObject target, float delay) {
+    private void DelayToMovePlayer(GameObject target, float delay) {
         target.GetComponent<Rigidbody2D>().velocity = new Vector2(0, target.GetComponent<Rigidbody2D>().velocity.y);
-        target.GetComponent<PlayerMovement>()._canMove = false;
-        target.GetComponent<Animator>().SetBool("Stun", true);
+        target.GetComponent<PlayerMovement>().Stun(delay);
+        // target.GetComponent<PlayerMovement>()._canMove = false;
+        // target.GetComponent<Animator>().SetBool("Stun", true);
 
-        yield return new WaitForSeconds(delay);
+        // yield return new WaitForSeconds(delay);
 
-        target.GetComponent<PlayerMovement>()._canMove = true;
-        target.GetComponent<Animator>().SetBool("Stun", false);
+        // target.GetComponent<Animator>().SetBool("Stun", false);
+        // target.GetComponent<PlayerMovement>()._canMove = true;
     }
 
-    private IEnumerator DelayToMoveMob(GameObject target, float delay) {
+    private void DelayToMoveMob(GameObject target, float delay) {
         target.GetComponent<Rigidbody2D>().velocity = new Vector2(0, target.GetComponent<Rigidbody2D>().velocity.y);
-        target.GetComponent<GroundMobsMovement>()._canMove = false;
+        target.GetComponent<GroundMobsMovement>().Stun(delay);
+        // target.GetComponent<GroundMobsMovement>()._canMove = false;
 
-        yield return new WaitForSeconds(delay);
+        // yield return new WaitForSeconds(delay);
 
-        target.GetComponent<GroundMobsMovement>()._canMove = true;
+        // target.GetComponent<GroundMobsMovement>()._canMove = true;
     }
 }
