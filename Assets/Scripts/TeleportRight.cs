@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TeleportRight : MonoBehaviour
 {
+    
     [SerializeField] private GameObject otherTeleport;
     [SerializeField] private float teleportRange;
     private void OnTriggerEnter2D(Collider2D collision)
