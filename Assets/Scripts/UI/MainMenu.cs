@@ -17,4 +17,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Player2");
     }
+    public void HighScores()
+    {
+        SceneManager.LoadScene("HighScores");
+    }
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }
