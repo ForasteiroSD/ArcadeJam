@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim_Nick: {fileID: 9100000, guid: 7dab90ca2b515c348a0305520ff42298, type: 2}
-  anim_Jane: {fileID: 9100000, guid: 7b14f71d42bc978429f0effcfa1570ee, type: 2}
+  anim_Jeff: {fileID: 9100000, guid: 7b14f71d42bc978429f0effcfa1570ee, type: 2}
   player1: {fileID: 925067930}
   player2: {fileID: 2016751003}
 --- !u!1 &381034893

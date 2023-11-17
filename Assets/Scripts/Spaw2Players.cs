@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spaw2Players : MonoBehaviour
 {
     [SerializeField] RuntimeAnimatorController anim_Nick;
-    [SerializeField] RuntimeAnimatorController anim_Jane;
+    [SerializeField] RuntimeAnimatorController anim_Jeff;
     // Add more Animator Controllers as needed
 
     [SerializeField] Animator player1;
@@ -23,9 +23,9 @@ public class Spaw2Players : MonoBehaviour
         }
         // Add more conditions for other characters and players
 
-        if (selectedCharacterPlayer2 == "Jane")
+        if (selectedCharacterPlayer2 == "Jeff")
         {
-            player2.runtimeAnimatorController = anim_Jane;
+            player2.runtimeAnimatorController = anim_Jeff;
         }
         // Add more conditions for other characters and players
     }

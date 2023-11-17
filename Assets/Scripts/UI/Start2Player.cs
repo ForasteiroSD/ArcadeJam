@@ -27,7 +27,7 @@ public class Start2Player : MonoBehaviour
             // Save the selected characters and load the next scene
             PlayerPrefs.SetString("SelectedCharacterPlayer1", selectedCharacterPlayer1);
             PlayerPrefs.SetString("SelectedCharacterPlayer2", selectedCharacterPlayer2);
-            SceneManager.LoadScene("MultiplayerScene");
+            SceneManager.LoadScene("Player2");
         }
     }
 
