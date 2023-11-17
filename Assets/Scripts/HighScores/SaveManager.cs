@@ -79,10 +79,10 @@ public class SaveManager : MonoBehaviour {
         string scoresText = "";
 
         for(i = 0; i < _highScores.Count; i++) {
-            scoresText = string.Concat(scoresText, "Top " + i + ": " + _highScores[i].nickName + " - " + _highScores[i].score + "s\n");
+            scoresText = string.Concat(scoresText, "Top " + (i+1) + ": " + _highScores[i].nickName + " - " + _highScores[i].score + "s\n");
         }
         for(i = i; i < _maxHighScoresNumber; i++) {
-            scoresText = string.Concat(scoresText, "Top " + i + ": Ainda não alcançado\n");
+            scoresText = string.Concat(scoresText, "Top " + (i+1) + ": Ainda não alcançado\n");
         }
         
         _highScoresText.SetText(scoresText);
