@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Start1Player : MonoBehaviour
 {
-    public void gamejeff(string character)
+    public void game(string character)
     {
         PlayerPrefs.SetString("SelectedCharacter", character);
         SceneManager.LoadScene("Player1");

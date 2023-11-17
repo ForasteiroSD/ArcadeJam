@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class SpawnPlayer : MonoBehaviour
 {
-    [SerializeField] GameObject Nick;
-    [SerializeField] GameObject Jeff;
+    [SerializeField] RuntimeAnimatorController anim_Nick;
+    
+    [SerializeField] Animator player1;
     // Start is called before the first frame update
     void Start()
     {
         string selectedCharacter = PlayerPrefs.GetString("SelectedCharacter", "");
 
-        if (selectedCharacter == "Jeff")
+        if (selectedCharacter == "Nick")
         {
-            Jeff.SetActive(true);
-            Nick.SetActive(false);
-        }
-        else if (selectedCharacter == "Nick")
-        {
-            Jeff.SetActive(false);
-            Nick.SetActive(true);
+            player1.runtimeAnimatorController = anim_Nick;
         }
     }
 
