@@ -26,8 +26,9 @@ public static class FileManager {
             return true;
         }
         catch (Exception e) {
-            Debug.LogError($"Failed to read from {fullPath} with exception {e}");
-            result = "";
+            File.WriteAllText(fullPath, "{\"highScores\":[]}");
+            // Debug.LogError($"Failed to read from {fullPath} with exception {e}");
+            result = "{\"highScores\":[]}";
             return false;
         }
     }

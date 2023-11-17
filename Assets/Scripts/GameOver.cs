@@ -53,29 +53,4 @@ public class GameOver : MonoBehaviour
         }
         return null;
     }
-
-    // private static void SaveJsonData() {
-    //     SaveData = SaveJsonData = new SaveData();
-    //     PopulateSaveData(sd);
-
-    //     if(FileManager.WriteToFile("SaveData.dat", sd.ToJson())) Debug.Log("Saved");
-    // }
-
-    // public void PopulateSaveData(SaveData a_SaveData) {
-    //     a_SaveData.
-    // }
-
-    // private static void LoadJsonData() {
-    //     if(FileManager.LoadFromFile("SaveData.dat", out var json)) {
-    //         SaveData sd = new SaveData();
-    //         sd.LoadFromJson(json);
-
-    //         LoadFromSaveData(sd);
-    //         Debug.Log("Loaded");
-    //     }
-    // }
-
-    // public void LoadFromSaveData(SaveData a_SaveData) {
-    //     CurrentScore
-    // }
 }

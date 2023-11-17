@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 [System.Serializable]
 public class SaveManager : MonoBehaviour {
@@ -9,76 +10,81 @@ public class SaveManager : MonoBehaviour {
         public float score;
     }
 
-    public static int _maxHighScoresNumber = 3;
-    public List<HighScore> highScores = new List<HighScore>();
+    [SerializeField] private bool _writeHighScores = false;
+    [SerializeField] private TMP_Text _highScoresText;
+    [SerializeField] private int _maxHighScoresNumber = 3;
+    [SerializeField] private List<HighScore> _highScores = new List<HighScore>();
 
-    private static void SaveJsonData(SaveManager a_SaveManager) {
-        if(FileManager.WriteToFile("SaveData.dat", a_SaveManager.ToJson())) Debug.Log("Saved");
+    private void Start() {
+        LoadJsonData();
+        if(_writeHighScores) WriteHighScores();
     }
 
-    private static void LoadJsonData(SaveManager a_SaveManager) {
+    private void SaveJsonData() {
+        FileManager.WriteToFile("SaveData.dat", ToJson());
+    }
+
+    private void LoadJsonData() {
         if(FileManager.LoadFromFile("SaveData.dat", out var json)) {
-            a_SaveManager.LoadFromJson(json);
-            Debug.Log("Loaded");
+            LoadFromJson(json);
         }
     }
 
-    private void UpdateHighScores(string nickName, float score) {
+    public void UpdateHighScores(string nickName, float score) {
         int position = GetPosition(score);
 
-        if(highScores.Count < _maxHighScoresNumber) {
+        if(_highScores.Count < _maxHighScoresNumber) {
             HighScore highScore = new HighScore();
-            highScores.Add(highScore);
+            _highScores.Add(highScore);
         }
         
-        for(int i = highScores.Count - 1; i >= position; i--) {
+        for(int i = _highScores.Count - 1; i >= position; i--) {
             if(i > position) {
-                highScores[i] = highScores[i-1];
+                _highScores[i] = _highScores[i-1];
             } else {
                 HighScore highScore = new HighScore();
                 highScore.nickName = nickName;
                 highScore.score = score;
-                highScores[i] = highScore;
+                _highScores[i] = highScore;
             }
         }
-        Debug.Log("Updated");
+
+        SaveJsonData();
     }
 
     private int GetPosition(float score) {
-        for(int i = 0; i < highScores.Count; i++) {
-            if(highScores[i].score > score) return i;
+        for(int i = 0; i < _highScores.Count; i++) {
+            if(_highScores[i].score > score) return i;
         }
-        return highScores.Count;
+        return _highScores.Count;
     }
 
-    public string ToJson() {
-        string a = "{\n\"highScores\":[\n";
-        for(int i = 0; i < highScores.Count; i++) {
-            a = string.Concat(a, JsonUtility.ToJson(highScores[i], true));
-            if(i != highScores.Count-1) a = string.Concat(a, ",\n");
+    private string ToJson() {
+        string a = "{\n\"_highScores\":[\n";
+        for(int i = 0; i < _highScores.Count; i++) {
+            a = string.Concat(a, JsonUtility.ToJson(_highScores[i], true));
+            if(i != _highScores.Count-1) a = string.Concat(a, ",\n");
             a = string.Concat(a, "\n");
         }
         a = string.Concat(a, "]\n}");
         return a;
     }
 
-    public void LoadFromJson(string a_Json) {
+    private void LoadFromJson(string a_Json) {
         JsonUtility.FromJsonOverwrite(a_Json, this);
     }
 
-    public void Save() {
-        SaveJsonData(this);
-    }
+    private void WriteHighScores() {
+        int i;
+        string scoresText = "";
 
-    public void Load() {
-        LoadJsonData(this);
-    }
-
-    public void Upload() {
-        UpdateHighScores("QIJO", 30);
-        UpdateHighScores("FRST", 20);
-        UpdateHighScores("ABRT", 40);
-        UpdateHighScores("CRLS", 50);
-        UpdateHighScores("FDRC", 10);
+        for(i = 0; i < _highScores.Count; i++) {
+            scoresText = string.Concat(scoresText, "Top " + i + ": " + _highScores[i].nickName + " - " + _highScores[i].score + "s\n");
+        }
+        for(i = i; i < _maxHighScoresNumber; i++) {
+            scoresText = string.Concat(scoresText, "Top " + i + ": Ainda não alcançado\n");
+        }
+        
+        _highScoresText.SetText(scoresText);
     }
 }
