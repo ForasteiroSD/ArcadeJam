@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 232127658}
   - component: {fileID: 232127657}
   - component: {fileID: 232127660}
+  - component: {fileID: 232127661}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -249,6 +250,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &232127661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232127655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c94dda8197c634db7c87f904f3ed86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &369400480
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +826,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1561137190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232127661}
+        m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
+        m_MethodName: BroadcastMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Jeff
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1561137190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,7 +979,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1575896836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 232127661}
+        m_TargetAssemblyTypeName: Start1Player, Assembly-CSharp
+        m_MethodName: gamejeff
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Nick
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1575896836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,7 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1561137188}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1683898124
