@@ -11,7 +11,9 @@ public class PlayerName : MonoBehaviour {
 
     public void UpdatePlayerName(string newChar) {
         //Delete
-        if(newChar == "delete") playerName = playerName.Substring(0, playerName.Length-1);
+        if(newChar == "delete") {
+            if(playerName.Length > 0) playerName = playerName.Substring(0, playerName.Length-1);
+        }
         else if(newChar == "aceitar") Debug.Log("pronto");
         else if(playerName.Length < _maxNameSize) playerName = string.Concat(playerName, newChar);
         else StartCoroutine(MaxSizeReached(2f));
