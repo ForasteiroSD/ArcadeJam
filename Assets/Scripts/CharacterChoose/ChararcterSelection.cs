@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
+
 public class ChararcterSelection : MonoBehaviour
 {
     public Button characterButton1; // Assign in the Inspector
@@ -11,6 +13,7 @@ public class ChararcterSelection : MonoBehaviour
 
     private SpriteRenderer character1Renderer;
     private SpriteRenderer character2Renderer;
+    private List<GameObject> selectedObjects = new List<GameObject>();
 
     private void Start()
     {
@@ -32,26 +35,44 @@ public class ChararcterSelection : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(EventSystem.current.currentSelectedGameObject);
-        // Check if a button is currently selected
-        if (EventSystem.current.currentSelectedGameObject != null)
+        // Check if a UI element is currently selected
+        GameObject selectedObject = EventSystem.current.currentSelectedGameObject;
+
+        if (selectedObject != null)
         {
-            if (EventSystem.current.currentSelectedGameObject == characterButton1.gameObject)
+            // Check if the object is not already in the list
+            if (!selectedObjects.Contains(selectedObject))
             {
-                // Activate the SpriteRenderer for character 1 when the button is selected
-                character1Renderer.enabled = true;
+                // Add the selected object to the list
+                selectedObjects.Add(selectedObject);
 
-                // Deactivate the SpriteRenderer for character 2
-                character2Renderer.enabled = false;
+                // Perform actions or handle the selection as needed
+                Debug.Log("Object selected: " + selectedObject.name);
             }
-            else if (EventSystem.current.currentSelectedGameObject == characterButton2.gameObject)
+        
+
+            Debug.Log(EventSystem.current.currentSelectedGameObject);
+            // Check if a button is currently selected
+            if (EventSystem.current.currentSelectedGameObject != null)
             {
-                // Activate the SpriteRenderer for character 2 when the button is selected
-                character2Renderer.enabled = true;
+                if (selectedObjects.Contains(characterButton1.gameObject))
+                {
+                    // Activate the SpriteRenderer for character 1 when the button is selected
+                    character1Renderer.enabled = true;
 
-                // Deactivate the SpriteRenderer for character 1
-                character1Renderer.enabled = false;
+                    // Deactivate the SpriteRenderer for character 2
+                    character2Renderer.enabled = false;
+                }
+                else if (selectedObjects.Contains(characterButton2.gameObject))
+                {
+                    // Activate the SpriteRenderer for character 2 when the button is selected
+                    character2Renderer.enabled = true;
+
+                    // Deactivate the SpriteRenderer for character 1
+                    character1Renderer.enabled = false;
+                }
             }
+            selectedObjects.Clear();
         }
     }
 }
