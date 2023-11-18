@@ -32,6 +32,7 @@ public class ChararcterSelection : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(EventSystem.current.currentSelectedGameObject);
         // Check if a button is currently selected
         if (EventSystem.current.currentSelectedGameObject != null)
         {
