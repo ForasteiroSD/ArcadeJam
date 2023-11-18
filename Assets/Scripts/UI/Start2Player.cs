@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Start2Player : MonoBehaviour
 {
-    private string selectedCharacterPlayer1;
-    private string selectedCharacterPlayer2;
+    private static string selectedCharacterPlayer1;
+    private static string selectedCharacterPlayer2;
 
     public void SelectCharacterPlayer1(string character)
     {
