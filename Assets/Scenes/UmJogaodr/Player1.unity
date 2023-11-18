@@ -1486,6 +1486,7 @@ MonoBehaviour:
   _isSinglePlayer: 1
   _delayForCamera: 3
   _distanceToSpeedUpCamera: 3.5
+  _currentTime: 0
   _currentMinutes: 0
   _currentSeconds: 0
   _gameEnded: 0
@@ -6423,6 +6424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1176760407}
   - component: {fileID: 1176760408}
+  - component: {fileID: 1176760409}
   m_Layer: 0
   m_Name: ---------- Scripts ----------
   m_TagString: Untagged
@@ -6473,6 +6475,20 @@ MonoBehaviour:
   - {fileID: 4384612233702407596, guid: a9fba50369974ee44b49e327352631db, type: 3}
   - {fileID: 6750249576836380515, guid: dfa4b89e8418c864786e988cc7e54317, type: 3}
   _floorsNumber: 0
+--- !u!114 &1176760409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176760406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1308ed8aedd05b64caabc4d83873ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim_Nick: {fileID: 9100000, guid: 7dab90ca2b515c348a0305520ff42298, type: 2}
+  player1: {fileID: 253024259}
 --- !u!1 &1176882347
 GameObject:
   m_ObjectHideFlags: 0

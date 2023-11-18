@@ -16,7 +16,7 @@ public class CameraFollowPlayer : MonoBehaviour {
     [SerializeField] private float _delayForCamera = 3f;
     [SerializeField] private float _distanceToSpeedUpCamera = 3.5f;
     private float _initialTime;
-    private float _currentTime = 0f;
+    public float _currentTime = 0f;
     public float _currentMinutes;
     public float _currentSeconds;
     public bool _gameEnded = false;
