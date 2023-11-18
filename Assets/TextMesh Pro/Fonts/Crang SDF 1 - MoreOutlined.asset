@@ -70,7 +70,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.17
+    - _OutlineWidth: 0.338
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
@@ -118,11 +118,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Crang SDF 1 - Outlined
+  m_Name: Crang SDF 1 - MoreOutlined
   m_EditorClassIdentifier: 
-  hashCode: -241186992
+  hashCode: 13175813
   material: {fileID: -1738617615299608026}
-  materialHashCode: 130310512
+  materialHashCode: 1879509637
   m_Version: 1.1.0
   m_SourceFontFileGUID: da47c5de23328f54da1aa175e47beb6a
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: da47c5de23328f54da1aa175e47beb6a, type: 3}
