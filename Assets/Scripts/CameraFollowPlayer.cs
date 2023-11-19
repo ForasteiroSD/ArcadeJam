@@ -16,10 +16,9 @@ public class CameraFollowPlayer : MonoBehaviour {
     [SerializeField] private float _delayForCamera = 3f;
     [SerializeField] private float _distanceToSpeedUpCamera = 3.5f;
     private float _initialTime;
-    public float _currentTime = 0f;
+    private float _currentTime = 0f;
     public float _currentMinutes;
     public float _currentSeconds;
-    public bool _gameEnded = false;
     private bool _canFollow = true;
 
     private void Start() {
@@ -31,21 +30,19 @@ public class CameraFollowPlayer : MonoBehaviour {
         _currentTime = Time.time - _initialTime;
         //SinglePlayer
         if(_isSinglePlayer) {
-            if(!_gameEnded) {
-                //Change timer
-                _currentMinutes = Mathf.Floor((_currentTime)/60);
-                _currentSeconds = Mathf.Floor(_currentTime - (_currentMinutes * 60));
-                _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
+            //Change timer
+            _currentMinutes = Mathf.Floor((_currentTime)/60);
+            _currentSeconds = Mathf.Floor(_currentTime - (_currentMinutes * 60));
+            _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
 
-                //Camera movement
-                if(_currentTime >= _delayForCamera) {
-                    if(_player1.transform.position.y > transform.position.y + _distanceToSpeedUpCamera) {
-                        float distance = _player1.transform.position.y - transform.position.y;
-                        transform.position = new Vector3(transform.position.x, transform.position.y + ((_cameraVelocity + distance) * Time.deltaTime), transform.position.z);
-                    }
-                    else {
-                        transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
-                    }
+            //Camera movement
+            if(_currentTime >= _delayForCamera) {
+                if(_player1.transform.position.y > transform.position.y + _distanceToSpeedUpCamera) {
+                    float distance = _player1.transform.position.y - transform.position.y;
+                    transform.position = new Vector3(transform.position.x, transform.position.y + ((_cameraVelocity + distance) * Time.deltaTime), transform.position.z);
+                }
+                else {
+                    transform.position = new Vector3(transform.position.x, transform.position.y + (_cameraVelocity * Time.deltaTime), transform.position.z);
                 }
             }
 
