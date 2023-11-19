@@ -224,13 +224,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anim: {fileID: 3922651297040818003}
-  _speed: 4
+  _speed: 5
   _isPlayer1: 1
-  _jumpHeight: 1.8
-  _fallGravityScaleMultiplier: 2.7
-  _timeToJump: 0.1
+  _jumpHeight: 1.4
+  _fallGravityScaleMultiplier: 5
+  _timeToJump: 0
   _canMove: 1
   _doubleJump: 0
+  SomJeff: {fileID: 0}
+  SomNicole: {fileID: 0}
+  SomMola: {fileID: 0}
 --- !u!114 &7820216570959691702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c760cbef24bd9b42b88221d274dccef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SomSoco: {fileID: 0}
+  SomTaco: {fileID: 0}
   _anim: {fileID: 3922651297040818003}
   _delayToPunch: 2
   _punchForce: 2
@@ -259,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23f860d0e12b1c42943c46a78dd8b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SomTaser: {fileID: 0}
   _delayToPunch: 2
   _punchRange: 1
   _timeStun: 3
