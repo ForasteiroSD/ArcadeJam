@@ -1116,8 +1116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854772985}
-  - component: {fileID: 854772984}
-  - component: {fileID: 854772987}
+  - component: {fileID: 854772989}
   - component: {fileID: 854772988}
   m_Layer: 0
   m_Name: ----- Script -------
@@ -1126,18 +1125,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &854772984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854772983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa0ff0f1af9bee149b2c8c9c661dd324, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &854772985
 Transform:
   m_ObjectHideFlags: 0
@@ -1153,22 +1140,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &854772987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854772983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcc13f522414d3340b8837c7fde749a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterButton1: {fileID: 1561137189}
-  characterButton2: {fileID: 1575896835}
-  character1: {fileID: 1419393420}
-  character2: {fileID: 613555607}
 --- !u!114 &854772988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1185,6 +1156,22 @@ MonoBehaviour:
   characterButton2: {fileID: 1979133154}
   character1: {fileID: 338575313}
   character2: {fileID: 941996072}
+--- !u!114 &854772989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854772983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc13f522414d3340b8837c7fde749a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterButton1: {fileID: 1561137189}
+  characterButton2: {fileID: 1575896835}
+  character1: {fileID: 1419393420}
+  character2: {fileID: 613555607}
 --- !u!1 &864862410
 GameObject:
   m_ObjectHideFlags: 0
