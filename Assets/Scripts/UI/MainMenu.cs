@@ -11,18 +11,10 @@ public class MainMenu : MonoBehaviour
 
     public void Player1()
     {
-        SceneManager.LoadScene("Player1Chosse");
+        SceneManager.LoadScene("Player1");
     }
     public void Player2()
     {
-        SceneManager.LoadScene("Player2Chosse 1");
-    }
-    public void HighScores()
-    {
-        SceneManager.LoadScene("HighScores");
-    }
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Player2");
     }
 }
