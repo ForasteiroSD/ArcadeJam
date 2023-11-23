@@ -26,6 +26,18 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void GotToMainMenu() {
+        transition.SetTrigger("Exit");
+
+        StartCoroutine(LoadLevel("Main Menu"));
+    }
+
+    public void HighScores() {
+        transition.SetTrigger("LeaderBoard");
+
+        StartCoroutine(LoadLevel("HighScores"));
+    }
+
     public void Player2()
     {
         transition.SetTrigger("Multiplayer");

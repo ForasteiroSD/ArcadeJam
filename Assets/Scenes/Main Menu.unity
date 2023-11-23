@@ -232,8 +232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1600, y: 0}
-  m_SizeDelta: {x: 1777.7777, y: 1155.5555}
+  m_AnchoredPosition: {x: 2019, y: -0.0606}
+  m_SizeDelta: {x: 2240.129, y: 1456.0839}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211809652
 MonoBehaviour:
@@ -527,10 +527,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 380207307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.577, y: 0.08420001}
-  m_AnchorMax: {x: 0.7885208, y: 0.27400002}
-  m_AnchoredPosition: {x: -0.49993896, y: -0.5}
-  m_SizeDelta: {x: 232.51343, y: 118.24939}
+  m_AnchorMin: {x: 0.59669113, y: 0.10223608}
+  m_AnchorMax: {x: 0.7681274, y: 0.25500003}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_SizeDelta: {x: 303.51343, y: 155.24939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949667377
 MonoBehaviour:
@@ -795,10 +795,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 380207307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.19100001, y: 0.08420001}
-  m_AnchorMax: {x: 0.40124592, y: 0.27400002}
-  m_AnchoredPosition: {x: -0.5, y: -0.5}
-  m_SizeDelta: {x: 233.51343, y: 118.24939}
+  m_AnchorMin: {x: 0.21074523, y: 0.10223608}
+  m_AnchorMax: {x: 0.38156372, y: 0.25500003}
+  m_AnchoredPosition: {x: -0.5, y: 0}
+  m_SizeDelta: {x: 303.51343, y: 155.24939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1999867716
 MonoBehaviour:
@@ -949,10 +949,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 380207307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.38500002, y: 0.08420001}
-  m_AnchorMax: {x: 0.5947125, y: 0.27400002}
-  m_AnchoredPosition: {x: 0.30000305, y: -0.5}
-  m_SizeDelta: {x: 234.51343, y: 118.24939}
+  m_AnchorMin: {x: 0.40481856, y: 0.10223608}
+  m_AnchorMax: {x: 0.577, y: 0.25500003}
+  m_AnchoredPosition: {x: -1.699997, y: 0}
+  m_SizeDelta: {x: 300.51343, y: 155.24939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2106356765
 MonoBehaviour:
@@ -1007,9 +1007,9 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: HighScores
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!114 &2106356766
 MonoBehaviour:
   m_ObjectHideFlags: 0

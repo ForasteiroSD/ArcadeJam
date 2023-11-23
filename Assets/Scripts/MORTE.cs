@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MORTE : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class MORTE : MonoBehaviour
     private Rigidbody2D _rb;
     private float _timeElapsed;
     [SerializeField] private bool _firstPlayerDied = false;
+    [SerializeField] private Button _restartButton;
 
     private void OnEnable() {
         _firstPlayerDied = false;
@@ -25,6 +27,7 @@ public class MORTE : MonoBehaviour
                 _hud.SetActive(false);
                 _gameOver.SetActive(true);
                 Time.timeScale = 0;
+                _restartButton.Select();
             }
         } else {
             if(collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2") {
@@ -39,6 +42,7 @@ public class MORTE : MonoBehaviour
                     _hud.SetActive(false);
                     _gameOver.SetActive(true);
                     Time.timeScale = 0;
+                    _restartButton.Select();
                 }
             } 
         }
