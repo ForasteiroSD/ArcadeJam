@@ -565,6 +565,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5429288475628548564, guid: 24cff0f9563687740af43d54495a657b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 469991926}
+    - targetCorrespondingSourceObject: {fileID: 5429288475628548564, guid: 24cff0f9563687740af43d54495a657b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 469991927}
   m_SourcePrefab: {fileID: 100100000, guid: 24cff0f9563687740af43d54495a657b, type: 3}
 --- !u!1 &469991911 stripped
 GameObject:
@@ -588,10 +591,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23f860d0e12b1c42943c46a78dd8b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SomTaser: {fileID: 0}
   _delayToPunch: 2
-  _punchForce: 1
   _punchRange: 1
   _timeStun: 0
+--- !u!114 &469991927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469991911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25c79fbc2fd0594cbc5751c6af82525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffActivationInterval: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +698,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.058703, y: -3.790001, z: -10}
+  m_LocalPosition: {x: -0.06359339, y: -3.790001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -799,6 +815,13 @@ MonoBehaviour:
   _cameraVelocity: 0.8
   _timeText: {fileID: 1782516621}
   _maxHigh: 71
+  _isSinglePlayer: 0
+  _delayForCamera: 3
+  _distanceToSpeedUpCamera: 3.5
+  _currentTime: 0
+  _currentMinutes: 0
+  _currentSeconds: 0
+  _gameEnded: 0
 --- !u!1001 &591409509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1180,6 +1203,13 @@ MonoBehaviour:
   _cameraVelocity: 1
   _timeText: {fileID: 1782516621}
   _maxHigh: 71
+  _isSinglePlayer: 0
+  _delayForCamera: 3
+  _distanceToSpeedUpCamera: 3.5
+  _currentTime: 0
+  _currentMinutes: 0
+  _currentSeconds: 0
+  _gameEnded: 0
 --- !u!60 &772680712
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1449,6 +1479,7 @@ MonoBehaviour:
   minX: -9
   maxX: 8.4
   spawnInterval: 1
+  _fistSpawnDelay: 0
 --- !u!1 &1143882551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,8 +2208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23f860d0e12b1c42943c46a78dd8b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SomTaser: {fileID: 0}
   _delayToPunch: 2
-  _punchForce: 1
   _punchRange: 1
   _timeStun: 0
 --- !u!1 &1894321698
@@ -2880,7 +2911,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &719643578416874350
@@ -3160,6 +3191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1ca443d023e8b4a8484c29dd03c581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SomAdrenalina: {fileID: 0}
   _duration: 7
   _speedMultiplier: 1.3
 --- !u!1001 &8158358857420432564

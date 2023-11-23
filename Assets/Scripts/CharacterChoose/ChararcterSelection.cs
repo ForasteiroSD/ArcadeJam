@@ -48,7 +48,7 @@ public class ChararcterSelection : MonoBehaviour
 
                 // Perform actions or handle the selection as needed
                 Debug.Log("Object selected: " + selectedObject.name);
-            }
+            }   
         
 
             Debug.Log(EventSystem.current.currentSelectedGameObject);
