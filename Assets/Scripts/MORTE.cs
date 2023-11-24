@@ -30,7 +30,7 @@ public class MORTE : MonoBehaviour
                 _hud.SetActive(false);
                 _gameOver.SetActive(true);
                 // _cameraFollowPlayer._gameEnded = true;
-                Time.timeScale = 0;
+                // Time.timeScale = 0;
                 SceneManager.LoadScene("YouDied");
                 _restartButton.Select();
             }
@@ -47,7 +47,7 @@ public class MORTE : MonoBehaviour
                     _hud.SetActive(false);
                     _gameOver.SetActive(true);
                     // _cameraFollowPlayer._gameEnded = true;
-                    Time.timeScale = 0;
+                    // Time.timeScale = 0;
                     SceneManager.LoadScene("YouDied");
                     _restartButton.Select();
                 }
