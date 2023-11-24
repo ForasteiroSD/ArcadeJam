@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     {
         transition.SetTrigger("SinglePlayer");
 
-        StartCoroutine(LoadLevel("Player1"));
+        StartCoroutine(LoadLevel("Player1Chosse"));
     }
 
     IEnumerator LoadLevel(string sceneName)
@@ -26,10 +26,22 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void GotToMainMenu() {
+        transition.SetTrigger("Exit");
+
+        StartCoroutine(LoadLevel("Main Menu"));
+    }
+
+    public void HighScores() {
+        transition.SetTrigger("LeaderBoard");
+
+        StartCoroutine(LoadLevel("HighScores"));
+    }
+
     public void Player2()
     {
         transition.SetTrigger("Multiplayer");
 
-        StartCoroutine(LoadLevel("Player2"));
+        StartCoroutine(LoadLevel("Player2Chosse"));
     }
 }

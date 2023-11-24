@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MORTE : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class MORTE : MonoBehaviour
     private bool _isSinglePlayer;
     private Rigidbody2D _rb;
     private float _timeElapsed;
+    // private CameraFollowPlayer _cameraFollowPlayer;
     [SerializeField] private bool _firstPlayerDied = false;
+    [SerializeField] private Button _restartButton;
 
     private void OnEnable() {
         _firstPlayerDied = false;
@@ -17,6 +20,7 @@ public class MORTE : MonoBehaviour
 
     private void Start() {
         _isSinglePlayer = GameObject.Find("Zombies").GetComponent<ZombiesThrowBoost>().isSinglePlayer;
+        // _cameraFollowPlayer = Camera.main.GetComponent<CameraFollowPlayer>();
     }
 
     private void OnTriggerStay2D(Collider2D collision) {
@@ -25,6 +29,8 @@ public class MORTE : MonoBehaviour
                 _hud.SetActive(false);
                 _gameOver.SetActive(true);
                 Time.timeScale = 0;
+                // _cameraFollowPlayer._gameEnded = true;
+                _restartButton.Select();
             }
         } else {
             if(collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2") {
@@ -39,6 +45,8 @@ public class MORTE : MonoBehaviour
                     _hud.SetActive(false);
                     _gameOver.SetActive(true);
                     Time.timeScale = 0;
+                    // _cameraFollowPlayer._gameEnded = true;
+                    _restartButton.Select();
                 }
             } 
         }
