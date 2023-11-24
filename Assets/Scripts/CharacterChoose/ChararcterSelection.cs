@@ -24,7 +24,7 @@ public class ChararcterSelection : MonoBehaviour
         if (character1 != null && character2 != null && character1Renderer != null && character2Renderer != null)
         {
             // Deactivate the SpriteRenderers initially
-            character1Renderer.enabled = false;
+            character1Renderer.enabled = true;
             character2Renderer.enabled = false;
         }
         else
