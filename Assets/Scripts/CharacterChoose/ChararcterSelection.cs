@@ -5,31 +5,15 @@ using System.Collections.Generic;
 
 public class ChararcterSelection : MonoBehaviour
 {
-    public Button characterButton1; // Assign in the Inspector
-    public Button characterButton2; // Assign in the Inspector
-
-    public GameObject character1; // Assign in the Inspector
-    public GameObject character2; // Assign in the Inspector
-
-    private SpriteRenderer character1Renderer;
-    private SpriteRenderer character2Renderer;
+    public Button[] characterButtons; // Assign in the Inspector
+    public SpriteRenderer[] charactersRenderer; // Assign in the Inspector
     private List<GameObject> selectedObjects = new List<GameObject>();
 
     private void Start()
     {
-        character1Renderer = character1.GetComponent<SpriteRenderer>();
-        character2Renderer = character2.GetComponent<SpriteRenderer>();
-
-        // Ensure that the associated GameObjects and SpriteRenderers are not null
-        if (character1 != null && character2 != null && character1Renderer != null && character2Renderer != null)
-        {
-            // Deactivate the SpriteRenderers initially
-            character1Renderer.enabled = false;
-            character2Renderer.enabled = false;
-        }
-        else
-        {
-            Debug.LogError("Please assign the character GameObjects and ensure they have SpriteRenderer components.");
+        for(int i = 0; i < charactersRenderer.Length; i++) {
+            if(charactersRenderer[i] != null) charactersRenderer[i].enabled = false;
+            else Debug.LogError("Please assign the" + i + "° character Sprite Render and ensure they have SpriteRenderer components.");
         }
     }
 
@@ -55,21 +39,14 @@ public class ChararcterSelection : MonoBehaviour
             // Check if a button is currently selected
             if (EventSystem.current.currentSelectedGameObject != null)
             {
-                if (selectedObjects.Contains(characterButton1.gameObject))
-                {
-                    // Activate the SpriteRenderer for character 1 when the button is selected
-                    character1Renderer.enabled = true;
-
-                    // Deactivate the SpriteRenderer for character 2
-                    character2Renderer.enabled = false;
-                }
-                else if (selectedObjects.Contains(characterButton2.gameObject))
-                {
-                    // Activate the SpriteRenderer for character 2 when the button is selected
-                    character2Renderer.enabled = true;
-
-                    // Deactivate the SpriteRenderer for character 1
-                    character1Renderer.enabled = false;
+                for(int i = 0; i < characterButtons.Length; i++) {
+                    if (selectedObjects.Contains(characterButtons[i].gameObject)) {
+                        // Activate the SpriteRenderer for the character when the button is selected
+                        charactersRenderer[i].enabled = true;
+                    } else {
+                        // Deactivate the SpriteRenderer for the character
+                        charactersRenderer[i].enabled = false;
+                    }
                 }
             }
             selectedObjects.Clear();
