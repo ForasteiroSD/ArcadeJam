@@ -73,6 +73,10 @@ public class BuffSelector : MonoBehaviour
         // Generate two random buffs and activate them
         randomBuff1 = Random.Range(1, 5); // Assuming you have two buffs (Buff 1 and Buff 2)
         randomBuff2 = Random.Range(1, 5);
+        while (randomBuff1 == randomBuff2)
+        {
+            randomBuff2 = Random.Range(1, 5);
+        }
         Debug.Log(randomBuff1);
         Debug.Log(randomBuff2);
         ActivateBuff(randomBuff1, spriteRenderer1);
