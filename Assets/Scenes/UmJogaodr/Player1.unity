@@ -6582,7 +6582,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1308ed8aedd05b64caabc4d83873ed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim_Jeff: {fileID: 9100000, guid: 7b14f71d42bc978429f0effcfa1570ee, type: 2}
   anim_Nick: {fileID: 9100000, guid: 7dab90ca2b515c348a0305520ff42298, type: 2}
+  anim_Poli: {fileID: 9100000, guid: 7cebd72c3a71ad0468f1d43d800ff04a, type: 2}
+  anim_Tim: {fileID: 9100000, guid: 3cca30159f5248742871972e4e086605, type: 2}
   player1: {fileID: 253024259}
 --- !u!1 &1176882347
 GameObject:
@@ -12526,8 +12529,8 @@ Transform:
   m_GameObject: {fileID: 2133403198}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1297, y: -5.25, z: 10.028269}
-  m_LocalScale: {x: 0.96805274, y: 0.96805274, z: 0.439019}
+  m_LocalPosition: {x: -0.2201, y: -4.3, z: 10.028269}
+  m_LocalScale: {x: 0.56360734, y: 0.56360734, z: 0.25560004}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 190115664}
@@ -12555,7 +12558,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133403198}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef5fa4186b3953b4387c488b5a34c1ca, type: 3}
   m_Name: 
