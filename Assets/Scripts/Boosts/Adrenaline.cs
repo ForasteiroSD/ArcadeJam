@@ -9,7 +9,20 @@ public class Adrenaline : MonoBehaviour {
     private void Start () {
         SomAdrenalina = GameObject.Find("AdrenalinaSom").GetComponent<AudioSource>();
     }
-    private void OnTriggerEnter2D(Collider2D collider) {
+    // private void OnTriggerEnter2D(Collider2D collider) {
+    //     if(collider.tag == "Player") {
+    //         CancelBoosts.CancelAllBoosts(collider.gameObject);
+    //         collider.gameObject.GetComponent<PlayerMovement>().Adrenaline(_duration, _speedMultiplier);
+            
+
+    //         if(collider.gameObject.name == "Player1") GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "adrenaline");
+    //         else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "adrenaline");
+    //         SomAdrenalina.Play();
+    //         Destroy(this.gameObject);
+    //     }
+    // }
+
+    public void Adrenalina(Collider2D collider) {
         if(collider.tag == "Player") {
             CancelBoosts.CancelAllBoosts(collider.gameObject);
             collider.gameObject.GetComponent<PlayerMovement>().Adrenaline(_duration, _speedMultiplier);
@@ -18,7 +31,7 @@ public class Adrenaline : MonoBehaviour {
             if(collider.gameObject.name == "Player1") GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "adrenaline");
             else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "adrenaline");
             SomAdrenalina.Play();
-            Destroy(this.gameObject);
+            
         }
     }
 }
