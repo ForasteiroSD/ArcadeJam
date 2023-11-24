@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MORTE : MonoBehaviour
 {
@@ -28,8 +29,9 @@ public class MORTE : MonoBehaviour
             if(collision.gameObject.name == "Player1") {
                 _hud.SetActive(false);
                 _gameOver.SetActive(true);
-                Time.timeScale = 0;
+                // Time.timeScale = 0;
                 // _cameraFollowPlayer._gameEnded = true;
+                SceneManager.LoadScene("YouDied");
                 _restartButton.Select();
             }
         } else {
@@ -44,8 +46,9 @@ public class MORTE : MonoBehaviour
                 else if(_firstPlayerDied == true && Time.time >= _timeElapsed + 0.2f) {
                     _hud.SetActive(false);
                     _gameOver.SetActive(true);
-                    Time.timeScale = 0;
+                    // Time.timeScale = 0;
                     // _cameraFollowPlayer._gameEnded = true;
+                    SceneManager.LoadScene("YouDied");
                     _restartButton.Select();
                 }
             } 
