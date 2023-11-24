@@ -6582,7 +6582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1308ed8aedd05b64caabc4d83873ed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim_Nick: {fileID: 9100000, guid: 7dab90ca2b515c348a0305520ff42298, type: 2}
+  anim_Nick: {fileID: 9100000, guid: 7b14f71d42bc978429f0effcfa1570ee, type: 2}
   player1: {fileID: 253024259}
 --- !u!1 &1176882347
 GameObject:
