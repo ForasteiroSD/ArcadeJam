@@ -554,7 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1: 1
   _colliderPlayer: {fileID: 5985330500113428653}
-  buffActivationInterval: 5
+  buffActivationInterval: 10
   _adrenaline: {fileID: 21300000, guid: ba5596d832fdaf348b59bd1d0d1197bb, type: 3}
   _boot: {fileID: 21300000, guid: 9e16dc6b4d80ccc47a2056bd00b41369, type: 3}
   _baseballBat: {fileID: 21300000, guid: 8bc4401b5b2cd9a41bbfed5f02b1c546, type: 3}
