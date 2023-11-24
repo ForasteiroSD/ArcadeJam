@@ -10,6 +10,7 @@ public class MORTE : MonoBehaviour
     private bool _isSinglePlayer;
     private Rigidbody2D _rb;
     private float _timeElapsed;
+    // private CameraFollowPlayer _cameraFollowPlayer;
     [SerializeField] private bool _firstPlayerDied = false;
     [SerializeField] private Button _restartButton;
 
@@ -19,6 +20,7 @@ public class MORTE : MonoBehaviour
 
     private void Start() {
         _isSinglePlayer = GameObject.Find("Zombies").GetComponent<ZombiesThrowBoost>().isSinglePlayer;
+        // _cameraFollowPlayer = Camera.main.GetComponent<CameraFollowPlayer>();
     }
 
     private void OnTriggerStay2D(Collider2D collision) {
@@ -27,6 +29,7 @@ public class MORTE : MonoBehaviour
                 _hud.SetActive(false);
                 _gameOver.SetActive(true);
                 Time.timeScale = 0;
+                // _cameraFollowPlayer._gameEnded = true;
                 _restartButton.Select();
             }
         } else {
@@ -42,6 +45,7 @@ public class MORTE : MonoBehaviour
                     _hud.SetActive(false);
                     _gameOver.SetActive(true);
                     Time.timeScale = 0;
+                    // _cameraFollowPlayer._gameEnded = true;
                     _restartButton.Select();
                 }
             } 
