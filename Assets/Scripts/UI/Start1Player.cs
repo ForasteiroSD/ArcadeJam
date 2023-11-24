@@ -4,10 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Start1Player : MonoBehaviour
 {
+    public Animator transition;
+    [SerializeField] private float transitionTime = 1f;
+
     public void game(string character)
     {
         PlayerPrefs.SetString("SelectedCharacter", character);
-        SceneManager.LoadScene("Player1");
+
+        transition.SetTrigger("Play");
+        StartCoroutine(LoadLevel("Player1"));
     }
 
+    IEnumerator LoadLevel(string sceneName)
+    {
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(sceneName);
+    }
 }

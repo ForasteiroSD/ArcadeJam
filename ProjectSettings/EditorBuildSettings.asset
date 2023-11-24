@@ -8,15 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: ebf51d7d0115dfd49a0d80eaa297054f
-  - enabled: 0
-    path: Assets/Scenes/UmJogaodr/ChoosePlayer1.unity
-    guid: 55b933c3ba00d6342a7586278a697449
-  - enabled: 1
-    path: Assets/Scenes/Multijogador/Player2Chosse 1.unity
-    guid: 37c2bc40b2a9c2f49868d78fa62e9c66
-  - enabled: 1
-    path: Assets/Scenes/UmJogaodr/Player1Chosse.unity
-    guid: 5b0e2d6111605ea4bb3dafefd2beb228
   - enabled: 1
     path: Assets/Scenes/UmJogaodr/Player1.unity
     guid: 4d8d88f77c31fc141a08e5414c91975c
@@ -32,6 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HighScores.unity
     guid: a75c2ab37df25d444beac1f7befb8d3d
+  - enabled: 1
+    path: Assets/Scenes/Multijogador/Player2Chosse.unity
+    guid: 37c2bc40b2a9c2f49868d78fa62e9c66
+  - enabled: 1
+    path: Assets/Scenes/UmJogaodr/Player1Chosse.unity
+    guid: 5b0e2d6111605ea4bb3dafefd2beb228
+  - enabled: 1
+    path: Assets/Scenes/YouDied.unity
+    guid: 879dac20928bf664f99cc7aa5e892635
   - enabled: 0
     path: Assets/Scenes/UmJogaodr/1PLoose.unity
     guid: 14cf2efc947afe7488384664ad724942

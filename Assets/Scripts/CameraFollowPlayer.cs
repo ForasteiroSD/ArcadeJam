@@ -66,7 +66,7 @@ public class CameraFollowPlayer : MonoBehaviour {
                 _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
             }
             
-            //Time is over or nome player died
+            //Time is over or some player died
             else {
                 _vcam.Follow = null;
                 //Player 1 died
