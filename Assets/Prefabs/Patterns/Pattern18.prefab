@@ -469,7 +469,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 17
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -732,10 +732,10 @@ Tilemap:
     m_Data: {fileID: -1385105299, guid: 14f0bbbfd0bd56d4b96647b728eaa9d1, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -647680738, guid: 14f0bbbfd0bd56d4b96647b728eaa9d1, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -647680738, guid: 14f0bbbfd0bd56d4b96647b728eaa9d1, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -159489483, guid: 14f0bbbfd0bd56d4b96647b728eaa9d1, type: 3}
   - m_RefCount: 1
@@ -3416,7 +3416,7 @@ Transform:
   m_GameObject: {fileID: 7619949610454618937}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00008106232, y: 1.600015, z: 0}
+  m_LocalPosition: {x: -0.0000081, y: 1.6000032, z: 0}
   m_LocalScale: {x: 0.81109375, y: 0.8300888, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3486,7 +3486,7 @@ MonoBehaviour:
   - {x: -4.1564856, y: -1.7872928, z: 0.000000007450581}
   m_ShapePathHash: 565624235
   m_Mesh: {fileID: 0}
-  m_InstanceId: 47060
+  m_InstanceId: 158514
   m_LocalBounds:
     m_Center: {x: -1.8515978, y: -0.18780684, z: 0}
     m_Extent: {x: 3.0537777, y: 1.599486, z: 0}
@@ -3550,7 +3550,7 @@ MonoBehaviour:
   - {x: 4.0569835, y: 0.37203455, z: 0}
   m_ShapePathHash: -942734944
   m_Mesh: {fileID: 0}
-  m_InstanceId: 47088
+  m_InstanceId: 158542
   m_LocalBounds:
     m_Center: {x: 3.9191086, y: -0.82283163, z: 0}
     m_Extent: {x: 0.902333, y: 1.5982108, z: 0}
