@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class BuffSelector : MonoBehaviour
 {
+    [SerializeField] bool isSinglePlayer;
     [SerializeField] bool Player1;
     [SerializeField] BoxCollider2D  _colliderPlayer;
     [SerializeField] float buffActivationInterval = 10f; // Time interval for activating buffs
@@ -13,6 +14,7 @@ public class BuffSelector : MonoBehaviour
     [SerializeField] Sprite _boot; //Buff 2
     [SerializeField] Sprite _baseballBat; //Buff 3
     [SerializeField] Sprite _taser; // Buff 4
+    [SerializeField] Sprite _missil; // Buff 5
     [SerializeField] Sprite none;
     
     [SerializeField] SpriteRenderer spriteRenderer1; 
@@ -24,6 +26,7 @@ public class BuffSelector : MonoBehaviour
     private BaseballBat baseballBatInstance;
     private TaserCollider taserColliderInstance;
     private DoubleJump doubleJumpInstance;
+    private MissilFire missilShotterInstance;
 
     void Start()
     {
@@ -33,6 +36,7 @@ public class BuffSelector : MonoBehaviour
         baseballBatInstance = GetComponent<BaseballBat>();
         taserColliderInstance = GetComponent<TaserCollider>();
         doubleJumpInstance = GetComponent<DoubleJump>();
+        missilShotterInstance = GetComponent<MissilFire>();
     }
 
     void Update()
@@ -70,17 +74,33 @@ public class BuffSelector : MonoBehaviour
 
     void ActivateRandomBuffs()
     {
+        // LEMBRANDO QUE O RANGE(INCLUSIVO, EXCLUSIVO) 
+        if (!isSinglePlayer){
         // Generate two random buffs and activate them
-        randomBuff1 = Random.Range(1, 5); // Assuming you have two buffs (Buff 1 and Buff 2)
-        randomBuff2 = Random.Range(1, 5);
+        randomBuff1 = Random.Range(1, 6); // Assuming you have two buffs (Buff 1 and Buff 2)
+        randomBuff2 = Random.Range(1, 6);
         while (randomBuff1 == randomBuff2)
         {
-            randomBuff2 = Random.Range(1, 5);
+            randomBuff2 = Random.Range(1, 6);
         }
         Debug.Log(randomBuff1);
         Debug.Log(randomBuff2);
         ActivateBuff(randomBuff1, spriteRenderer1);
         ActivateBuff(randomBuff2, spriteRenderer2);
+        }
+        else{
+            randomBuff1 = Random.Range(1, 5); // Assuming you have two buffs (Buff 1 and Buff 2)
+            randomBuff2 = Random.Range(1, 5);
+            while (randomBuff1 == randomBuff2)
+            {
+                randomBuff2 = Random.Range(1, 5);
+            }
+            Debug.Log(randomBuff1);
+            Debug.Log(randomBuff2);
+            ActivateBuff(randomBuff1, spriteRenderer1);
+            ActivateBuff(randomBuff2, spriteRenderer2);
+        }
+        
     }
 
     void ActivateBuff(int buffNumber, SpriteRenderer spriteRenderer)
@@ -99,6 +119,9 @@ public class BuffSelector : MonoBehaviour
                 break;
             case 4:
                 spriteRenderer.sprite = _taser;
+                break;
+            case 5:
+                spriteRenderer.sprite = _missil;
                 break;
             default:
                 spriteRenderer.sprite = none;
@@ -128,6 +151,11 @@ public class BuffSelector : MonoBehaviour
                 break;
             case 4:
                 taserColliderInstance.taser_choosed(_colliderPlayer);
+                ActivateBuff(0, spriteRenderer1);
+                ActivateBuff(0, spriteRenderer2);
+                break;
+            case 5:
+                missilShotterInstance.enableFire();
                 ActivateBuff(0, spriteRenderer1);
                 ActivateBuff(0, spriteRenderer2);
                 break;
