@@ -3007,6 +3007,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3853699971984040805, guid: 24cff0f9563687740af43d54495a657b, type: 3}
+      propertyPath: _missil
+      value: 
+      objectReference: {fileID: -1155150935, guid: 21ca96773b1d4f747a86d117d1da249b, type: 3}
     - target: {fileID: 5429288475628548564, guid: 24cff0f9563687740af43d54495a657b, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -7455,7 +7459,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1841361835
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -1706873460, guid: 065167500db43914c8faa3e1879e8397, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8622,6 +8626,7 @@ MonoBehaviour:
   _boot: {fileID: 21300000, guid: 2a3e3599c8f208240a084ed4805fdcdf, type: 3}
   _baseballBat: {fileID: 21300000, guid: 2e549693e5c965241a4b8741e81d9707, type: 3}
   _taser: {fileID: 21300000, guid: 3fc8683d4925b4f4fad255eb22ddcc4f, type: 3}
+  _missil: {fileID: 0}
 --- !u!1 &2129319493
 GameObject:
   m_ObjectHideFlags: 0
