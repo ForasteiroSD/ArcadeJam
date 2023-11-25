@@ -142,7 +142,7 @@ MonoBehaviour:
   - {x: 1.25, y: -1.25, z: 0}
   m_ShapePathHash: -1891209927
   m_Mesh: {fileID: 0}
-  m_InstanceId: 99096
+  m_InstanceId: 38318
   m_LocalBounds:
     m_Center: {x: 0.35388684, y: 2.7426171, z: 0}
     m_Extent: {x: 0.9624684, y: 3.9926171, z: 0}
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   - {x: 5.407275, y: 4.255584, z: 0}
   m_ShapePathHash: -2045549325
   m_Mesh: {fileID: 0}
-  m_InstanceId: 99042
+  m_InstanceId: 38264
   m_LocalBounds:
     m_Center: {x: 1.2560501, y: 4.635687, z: 0}
     m_Extent: {x: 4.392705, y: 0.41416526, z: 0}
@@ -1490,8 +1490,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17975, y: -0.1388, z: 0}
-    m_Extent: {x: 0.30645, y: 0.8248, z: 0}
+    m_Center: {x: 0.1816, y: -0.13950002, z: 0}
+    m_Extent: {x: 0.3155, y: 0.8265, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3758,8 +3758,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.54805, y: -0.14604998, z: 0}
-    m_Extent: {x: 0.58255, y: 0.83725, z: 0}
+    m_Center: {x: -0.5491, y: -0.14275002, z: 0}
+    m_Extent: {x: 0.58100003, y: 0.83515, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3836,7 +3836,7 @@ MonoBehaviour:
   - {x: 1.25, y: -1.25, z: 0}
   m_ShapePathHash: -1891209927
   m_Mesh: {fileID: 0}
-  m_InstanceId: 99100
+  m_InstanceId: 38322
   m_LocalBounds:
     m_Center: {x: 0.35388684, y: 2.7426171, z: 0}
     m_Extent: {x: 0.9624684, y: 3.9926171, z: 0}
@@ -3930,7 +3930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.80999756
+      value: 0.733
       objectReference: {fileID: 0}
     - target: {fileID: 3769452229239145004, guid: 6567bd3f6aa8e0745a66a6b0cbce918d, type: 3}
       propertyPath: m_LocalPosition.z
