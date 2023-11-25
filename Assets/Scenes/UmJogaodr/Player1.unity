@@ -8137,6 +8137,8 @@ MonoBehaviour:
   anim_Poli: {fileID: 9100000, guid: 7cebd72c3a71ad0468f1d43d800ff04a, type: 2}
   anim_Tim: {fileID: 9100000, guid: 3cca30159f5248742871972e4e086605, type: 2}
   player1: {fileID: 253024259}
+  player2: {fileID: 0}
+  _isSinglePlayer: 1
 --- !u!1 &1176882347
 GameObject:
   m_ObjectHideFlags: 0
