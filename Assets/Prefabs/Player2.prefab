@@ -638,7 +638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSinglePlayer: 0
   Player1: 0
-  _colliderPlayer: {fileID: 0}
+  _colliderPlayer: {fileID: 7542735514143330293}
   buffActivationInterval: 10
   _adrenaline: {fileID: 21300000, guid: ba5596d832fdaf348b59bd1d0d1197bb, type: 3}
   _boot: {fileID: -2089428218, guid: 21ca96773b1d4f747a86d117d1da249b, type: 3}
