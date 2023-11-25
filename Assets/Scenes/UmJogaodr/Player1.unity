@@ -2531,6 +2531,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3853699971984040805, guid: 24cff0f9563687740af43d54495a657b, type: 3}
+      propertyPath: isSinglePlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4420263374584055437, guid: 24cff0f9563687740af43d54495a657b, type: 3}
       propertyPath: _anim
       value: 
@@ -2550,6 +2554,10 @@ PrefabInstance:
     - target: {fileID: 7440449607097334060, guid: 24cff0f9563687740af43d54495a657b, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706684757579310164, guid: 24cff0f9563687740af43d54495a657b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7820216570959691702, guid: 24cff0f9563687740af43d54495a657b, type: 3}
       propertyPath: _anim
@@ -11765,6 +11773,7 @@ MonoBehaviour:
   _boot: {fileID: 21300000, guid: 2a3e3599c8f208240a084ed4805fdcdf, type: 3}
   _baseballBat: {fileID: 21300000, guid: 2e549693e5c965241a4b8741e81d9707, type: 3}
   _taser: {fileID: 21300000, guid: 3fc8683d4925b4f4fad255eb22ddcc4f, type: 3}
+  _missil: {fileID: 0}
 --- !u!1 &1513001458
 GameObject:
   m_ObjectHideFlags: 0
@@ -15740,7 +15749,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1841361835
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -529471463, guid: 3ec9068b4a232074795d268bc5997fbb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
