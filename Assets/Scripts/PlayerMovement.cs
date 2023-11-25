@@ -205,4 +205,10 @@ public class PlayerMovement : MonoBehaviour {
         if(_isPlayer1) GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "none");
         else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "none");
     }
+
+    public void GetPunched(float direction, float punchForce)
+    {
+        _rb.AddForce(Vector2.right * punchForce * direction, ForceMode2D.Impulse);
+        _rb.AddForce(Vector2.up * punchForce * 3, ForceMode2D.Impulse);
+    }
 }
