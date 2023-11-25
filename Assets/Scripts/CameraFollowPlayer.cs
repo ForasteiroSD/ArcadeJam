@@ -17,7 +17,6 @@ public class CameraFollowPlayer : MonoBehaviour {
     [SerializeField] private float _distanceToSpeedUpCamera = 3.5f;
     private float _initialTime;
     public float _currentTime = 0f;
-    public float _currentMinutes;
     public float _currentSeconds;
     public bool _gameEnded = false;
     private bool _canFollow = true;
@@ -33,9 +32,8 @@ public class CameraFollowPlayer : MonoBehaviour {
         if(_isSinglePlayer) {
             if(!_gameEnded) {
                 //Change timer
-                _currentMinutes = Mathf.Floor((_currentTime)/60);
-                _currentSeconds = Mathf.Floor(_currentTime - (_currentMinutes * 60));
-                _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
+                _currentSeconds = (float) System.Math.Round(_currentTime, 1);
+                _timeText.SetText("Time: " + _currentSeconds + "s");
 
                 //Camera movement
                 if(_currentTime >= _delayForCamera) {
@@ -61,9 +59,8 @@ public class CameraFollowPlayer : MonoBehaviour {
                 else _vcam.Follow = _player2.transform;
 
                 //Change timer
-                _currentMinutes = Mathf.Floor((_time - _currentTime)/60);
-                _currentSeconds = Mathf.Floor(_time - _currentTime - (_currentMinutes * 60));
-                _timeText.SetText("Time: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
+                _currentSeconds = (float) System.Math.Round(_currentTime, 1);
+                _timeText.SetText("Time: " + _currentSeconds + "s");
             }
             
             //Time is over or some player died
