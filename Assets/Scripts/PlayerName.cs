@@ -18,7 +18,6 @@ public class PlayerName : MonoBehaviour {
     }
 
     public void UpdatePlayerName(string newChar) {
-        //Delete
         if(newChar == "delete") {
             if(_playerName.Length > 0) _playerName = _playerName.Substring(0, _playerName.Length-1);
         }

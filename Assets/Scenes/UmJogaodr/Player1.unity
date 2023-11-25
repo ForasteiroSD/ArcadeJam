@@ -6559,16 +6559,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _patterns:
+  - {fileID: 4384612233702407596, guid: 2284686fd4fd08f448d4c6a950dfcadd, type: 3}
+  - {fileID: 4384612233702407596, guid: f84310cb26c58664b8f472a9dab228b5, type: 3}
+  - {fileID: 4384612233702407596, guid: 23a5d70e70c37124790ebd57a1d5f3e6, type: 3}
+  - {fileID: 4384612233702407596, guid: b9526ef2fee7f274b8fb1992d985db67, type: 3}
+  - {fileID: 4384612233702407596, guid: 759ab0126e720db4b98a0c972a34ec6b, type: 3}
+  - {fileID: 4384612233702407596, guid: 4a9f1acb572979b45894979b750c1566, type: 3}
+  - {fileID: 4384612233702407596, guid: 9986e9e164d0e444fa169c07bea1abff, type: 3}
+  - {fileID: 4384612233702407596, guid: f609a12a07289f34bb75cb85da1df637, type: 3}
+  - {fileID: 4384612233702407596, guid: 502e4a76f71cbe844af45463fe7f2ee8, type: 3}
+  - {fileID: 4384612233702407596, guid: 5e90273b39821634c9814b3d0eb6e055, type: 3}
   - {fileID: 4384612233702407596, guid: 0e6b010150501294bb55d99bdcbe6ed6, type: 3}
   - {fileID: 4384612233702407596, guid: d55e10a087d00e9448a462f1ece106a8, type: 3}
   - {fileID: 4384612233702407596, guid: fca9173f709bc2a4884402edccc93cd3, type: 3}
   - {fileID: 4384612233702407596, guid: 3e6616fe76f83454d92a30dc884627d4, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4384612233702407596, guid: 7d048dbd86f449a4db67973bcc5bfdc2, type: 3}
+  - {fileID: 4384612233702407596, guid: 02f09af9191ac7c47aa547ca830ed304, type: 3}
+  - {fileID: 4384612233702407596, guid: 0189e7e33976bf642a3c71df9e646348, type: 3}
+  - {fileID: 4384612233702407596, guid: 1638d3e9e1b45c44790d4dcd0b041a7e, type: 3}
+  - {fileID: 4384612233702407596, guid: 2da505e732a9cf54f9b7267a577298c2, type: 3}
+  - {fileID: 4384612233702407596, guid: b06184288723d004590881e4db6c5db8, type: 3}
   _floorsNumber: 4
 --- !u!114 &1176760409
 MonoBehaviour:
@@ -12603,7 +12613,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21589088, y: -0.64498067}
+  m_Offset: {x: 0.9288635, y: -0.64498067}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12614,7 +12624,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18.636948, y: 1.603229}
+  m_Size: {x: 365.40533, y: 1.603229}
   m_EdgeRadius: 0
 --- !u!212 &2133403203
 SpriteRenderer:
@@ -12699,7 +12709,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.43
+      value: -9.3
       objectReference: {fileID: 0}
     - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
       propertyPath: m_LocalPosition.y
