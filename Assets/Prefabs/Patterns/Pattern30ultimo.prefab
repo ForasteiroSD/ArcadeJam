@@ -1358,7 +1358,7 @@ MonoBehaviour:
   - {x: 1.25, y: -1.25, z: 0}
   m_ShapePathHash: -1891209927
   m_Mesh: {fileID: 0}
-  m_InstanceId: 159408
+  m_InstanceId: 88146
   m_LocalBounds:
     m_Center: {x: 0.35388684, y: 2.7426171, z: 0}
     m_Extent: {x: 0.9624684, y: 3.9926171, z: 0}
@@ -3519,7 +3519,7 @@ MonoBehaviour:
   - {x: 1.25, y: -1.25, z: 0}
   m_ShapePathHash: -1891209927
   m_Mesh: {fileID: 0}
-  m_InstanceId: 159386
+  m_InstanceId: 88120
   m_LocalBounds:
     m_Center: {x: 0.35388684, y: 2.7426171, z: 0}
     m_Extent: {x: 0.9624684, y: 3.9926171, z: 0}
@@ -3678,7 +3678,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 463548882, guid: 93409ce6eb04db64e864eeb664f32734, type: 3}
+  m_Sprite: {fileID: -1896522529, guid: 816e82faaff826e45bf2af78fd1af522, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
