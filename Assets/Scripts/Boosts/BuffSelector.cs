@@ -83,8 +83,8 @@ public class BuffSelector : MonoBehaviour
         {
             randomBuff2 = Random.Range(1, 6);
         }
-        Debug.Log(randomBuff1);
-        Debug.Log(randomBuff2);
+        // Debug.Log(randomBuff1);
+        // Debug.Log(randomBuff2);
         ActivateBuff(randomBuff1, spriteRenderer1);
         ActivateBuff(randomBuff2, spriteRenderer2);
         }
@@ -95,8 +95,8 @@ public class BuffSelector : MonoBehaviour
             {
                 randomBuff2 = Random.Range(1, 5);
             }
-            Debug.Log(randomBuff1);
-            Debug.Log(randomBuff2);
+            // Debug.Log(randomBuff1);
+            // Debug.Log(randomBuff2);
             ActivateBuff(randomBuff1, spriteRenderer1);
             ActivateBuff(randomBuff2, spriteRenderer2);
         }

@@ -8,10 +8,12 @@ public class MissilFire : MonoBehaviour
     [SerializeField] Transform aim;
     [SerializeField] bool _isPlayer1;
     // Start is called before the first frame update
-    private bool _canShoot;
+    [SerializeField] bool _canShoot;
 
     public void enableFire()
     {
+        if(GetComponent<Collider>().gameObject.name == "Player1") GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "missil");
+            else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "missil");
         _canShoot = true;
     }
 
@@ -24,7 +26,7 @@ public class MissilFire : MonoBehaviour
     {
         if (_canShoot)
         {
-            CancelBoosts.CancelAllBoosts(gameObject);
+            // CancelBoosts.CancelAllBoosts(gameObject);
             if (((_isPlayer1 && Input.GetKeyDown(KeyCode.Space)) || (!_isPlayer1 && Input.GetKeyDown(KeyCode.Return))))
             {
                 Fire();
@@ -45,7 +47,7 @@ public class MissilFire : MonoBehaviour
             prefabScript.SetTarget(aim); // Set an initial value
             prefabScript.SetPlayerShotting(gameObject);
         }
-        _canShoot = false;
+        // _canShoot = false;
     }
 
 }

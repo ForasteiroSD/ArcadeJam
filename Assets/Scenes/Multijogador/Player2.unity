@@ -8626,7 +8626,7 @@ MonoBehaviour:
   _boot: {fileID: 21300000, guid: 2a3e3599c8f208240a084ed4805fdcdf, type: 3}
   _baseballBat: {fileID: 21300000, guid: 2e549693e5c965241a4b8741e81d9707, type: 3}
   _taser: {fileID: 21300000, guid: 3fc8683d4925b4f4fad255eb22ddcc4f, type: 3}
-  _missil: {fileID: 0}
+  _missil: {fileID: -1155150935, guid: 21ca96773b1d4f747a86d117d1da249b, type: 3}
 --- !u!1 &2129319493
 GameObject:
   m_ObjectHideFlags: 0

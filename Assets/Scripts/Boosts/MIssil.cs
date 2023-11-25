@@ -20,17 +20,17 @@ public class MIssil : MonoBehaviour
     {
         if (target != null)
         {
-            // Calculate the direction to the player
-            direction = (target.position - transform.position).normalized;
-            // Set the velocity of the Rigidbody2D to move towards the player
-            rb.velocity = direction * speed;
+            float step = speed * Time.deltaTime;
+
+            // move sprite towards the target location
+            transform.position = Vector3.MoveTowards(transform.position, target, step);
         }
 
-        if (direction.y < 0)
-        {  
-            PlayerShotting.GetComponent<PlayerMovement>().GetPunched(-direction.y, _forceExplosion);
-            Destroy(this.gameObject);
-        }
+        // if (direction.y < 0)
+        // {  
+        //     PlayerShotting.GetComponent<PlayerMovement>().GetPunched(-direction.y, _forceExplosion);
+        //     Destroy(this.gameObject);
+        // }
 
     }
     public void SetPlayerShotting(GameObject _PlayerShotting)
