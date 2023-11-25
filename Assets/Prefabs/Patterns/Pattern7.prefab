@@ -58,7 +58,7 @@ MonoBehaviour:
   - {x: 1.25, y: -1.25, z: 0}
   m_ShapePathHash: -483846215
   m_Mesh: {fileID: 0}
-  m_InstanceId: -334104
+  m_InstanceId: 100720
   m_LocalBounds:
     m_Center: {x: 0.3434, y: 2.7173433, z: 0}
     m_Extent: {x: 0.90660095, y: 3.9673433, z: 0}
@@ -3065,7 +3065,7 @@ MonoBehaviour:
   - {x: 1.25, y: -1.25, z: 0}
   m_ShapePathHash: 2009597283
   m_Mesh: {fileID: 0}
-  m_InstanceId: -334110
+  m_InstanceId: 100726
   m_LocalBounds:
     m_Center: {x: -6.464886, y: 2.7472034, z: 0}
     m_Extent: {x: 7.714887, y: 3.9972034, z: 0}
@@ -3222,7 +3222,7 @@ Transform:
   m_GameObject: {fileID: 5217147584214778928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.310818, y: -7.839455, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -46,6 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: player
+    uniqueID: 2708156325
+    locked: 0
   - name: Zombie Wave
     uniqueID: 1841361835
     locked: 0
