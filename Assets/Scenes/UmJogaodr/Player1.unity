@@ -1807,7 +1807,7 @@ Transform:
   m_GameObject: {fileID: 190115657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.051678047, y: -1.6568601, z: -10}
+  m_LocalPosition: {x: -0.051678523, y: -1.6568601, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11765,6 +11765,7 @@ MonoBehaviour:
   _boot: {fileID: 21300000, guid: 2a3e3599c8f208240a084ed4805fdcdf, type: 3}
   _baseballBat: {fileID: 21300000, guid: 2e549693e5c965241a4b8741e81d9707, type: 3}
   _taser: {fileID: 21300000, guid: 3fc8683d4925b4f4fad255eb22ddcc4f, type: 3}
+  _missil: {fileID: 0}
 --- !u!1 &1513001458
 GameObject:
   m_ObjectHideFlags: 0
@@ -15740,7 +15741,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1841361835
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -529471463, guid: 3ec9068b4a232074795d268bc5997fbb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
