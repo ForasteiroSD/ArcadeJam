@@ -27,8 +27,8 @@ public class MORTE : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision) {
         if(_isSinglePlayer) {
             if(collision.gameObject.name == "Player1") {
-                _hud.SetActive(false);
-                _gameOver.SetActive(true);
+                // _hud.SetActive(false);
+                // _gameOver.SetActive(true);
                 // _cameraFollowPlayer._gameEnded = true;
                 // Time.timeScale = 0;
                 SceneManager.LoadScene("YouDied");
@@ -44,8 +44,8 @@ public class MORTE : MonoBehaviour
                     return;
                 }
                 else if(_firstPlayerDied == true && Time.time >= _timeElapsed + 0.2f) {
-                    _hud.SetActive(false);
-                    _gameOver.SetActive(true);
+                    // _hud.SetActive(false);
+                    // _gameOver.SetActive(true);
                     // _cameraFollowPlayer._gameEnded = true;
                     // Time.timeScale = 0;
                     SceneManager.LoadScene("YouDied");
