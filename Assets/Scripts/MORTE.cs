@@ -32,7 +32,7 @@ public class MORTE : MonoBehaviour
                 // _cameraFollowPlayer._gameEnded = true;
                 // Time.timeScale = 0;
                 SceneManager.LoadScene("YouDied");
-                _restartButton.Select();
+                // _restartButton.Select();
             }
         } else {
             if(collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2") {
@@ -49,7 +49,7 @@ public class MORTE : MonoBehaviour
                     // _cameraFollowPlayer._gameEnded = true;
                     // Time.timeScale = 0;
                     SceneManager.LoadScene("YouDied");
-                    _restartButton.Select();
+                    // _restartButton.Select();
                 }
             } 
         }

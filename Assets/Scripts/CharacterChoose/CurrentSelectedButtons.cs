@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CurrentSelectedButtons : MonoBehaviour {
-    public GameObject[] currentSelectedButtons = new GameObject[2];
+public static class CurrentSelectedButtons {
+    public static GameObject[] currentSelectedButtons = new GameObject[2];
 }
