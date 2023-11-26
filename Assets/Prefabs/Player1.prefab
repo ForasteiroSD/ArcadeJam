@@ -458,7 +458,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06775004, y: -0.13435057}
+  m_Offset: {x: -0.06775004, y: -0.1264132}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -469,7 +469,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8798051, y: 1.7172837}
+  m_Size: {x: 0.8798051, y: 1.7014091}
   m_EdgeRadius: 0
 --- !u!114 &4420263374584055437
 MonoBehaviour:
@@ -491,8 +491,7 @@ MonoBehaviour:
   _timeToJump: 0.1
   _canMove: 1
   _doubleJump: 0
-  SomJeff: {fileID: 0}
-  SomNicole: {fileID: 0}
+  SomPulo: {fileID: 0}
   SomMola: {fileID: 0}
 --- !u!114 &7820216570959691702
 MonoBehaviour:
@@ -662,7 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479dba5e268a8f44bbd4ca442992b3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 117479022634903436, guid: 3f7ad0dc5bfad464dba61dcf7d1380b1, type: 3}
+  projectile: {fileID: 4775075715087459385, guid: f0e0d689cd17f1c4697294856f750f5c, type: 3}
   aim: {fileID: 1003177023825501833, guid: 6612b354b0580064b863b158254be64c, type: 3}
   _isPlayer1: 1
   _canShoot: 0

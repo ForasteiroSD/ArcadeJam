@@ -7,6 +7,7 @@ public class SpawnPlayer : MonoBehaviour {
     [SerializeField] private RuntimeAnimatorController anim_Nick;
     [SerializeField] private RuntimeAnimatorController anim_Poli;
     [SerializeField] private RuntimeAnimatorController anim_Tim;
+    [SerializeField] private RuntimeAnimatorController anim_Cat;
 
     [SerializeField] private Animator player1;
     [SerializeField] private Animator player2;
@@ -20,6 +21,7 @@ public class SpawnPlayer : MonoBehaviour {
             else if (selectedCharacter == "Nick") player1.runtimeAnimatorController = anim_Nick;
             else if (selectedCharacter == "Poli") player1.runtimeAnimatorController = anim_Poli;
             else if (selectedCharacter == "Tim") player1.runtimeAnimatorController = anim_Tim;
+            else if (selectedCharacter == "Cat") player1.runtimeAnimatorController = anim_Cat;
         }
         
         else {
@@ -30,11 +32,13 @@ public class SpawnPlayer : MonoBehaviour {
             else if (selectedCharacter1 == "Nick") player1.runtimeAnimatorController = anim_Nick;
             else if (selectedCharacter1 == "Poli") player1.runtimeAnimatorController = anim_Poli;
             else if (selectedCharacter1 == "Tim") player1.runtimeAnimatorController = anim_Tim;
+            else if (selectedCharacter1 == "Cat") player1.runtimeAnimatorController = anim_Cat;
 
             if (selectedCharacter2 == "Jeff") player2.runtimeAnimatorController = anim_Jeff;
             else if (selectedCharacter2 == "Nick") player2.runtimeAnimatorController = anim_Nick;
             else if (selectedCharacter2 == "Poli") player2.runtimeAnimatorController = anim_Poli;
             else if (selectedCharacter2 == "Tim") player2.runtimeAnimatorController = anim_Tim;
+            else if (selectedCharacter2 == "Cat") player2.runtimeAnimatorController = anim_Cat;
         }
     }
 }

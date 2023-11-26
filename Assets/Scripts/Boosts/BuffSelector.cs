@@ -30,6 +30,8 @@ public class BuffSelector : MonoBehaviour
     private MissilFire missilShotterInstance;
     private ZarabataFire ZarabataShotterInstance;
 
+    private bool canChosebuff = false;
+
     void Start()
     {
         // Set the initial buff activation time
@@ -51,25 +53,28 @@ public class BuffSelector : MonoBehaviour
             // Set the next buff activation time
             nextBuffActivationTime = Time.time + buffActivationInterval;
         }
-        if (Player1)
-        {    // Check for player input to select buffs
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                SelectBuff(randomBuff1); // Player chooses Buff 1
-            }
-            else if (Input.GetKeyDown(KeyCode.E))
-            {
-                SelectBuff(randomBuff2); // Player chooses Buff 2
-            }}
-        else
+        if(canChosebuff)
         {
-             if (Input.GetKeyDown(KeyCode.U))
+            if (Player1)
+            {    // Check for player input to select buffs
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    SelectBuff(randomBuff1); // Player chooses Buff 1
+                }
+                else if (Input.GetKeyDown(KeyCode.E))
+                {
+                    SelectBuff(randomBuff2); // Player chooses Buff 2
+                }}
+            else
             {
-                SelectBuff(randomBuff1); // Player chooses Buff 1
-            }
-            else if (Input.GetKeyDown(KeyCode.O))
-            {
-                SelectBuff(randomBuff2); // Player chooses Buff 2
+                if (Input.GetKeyDown(KeyCode.U))
+                {
+                    SelectBuff(randomBuff1); // Player chooses Buff 1
+                }
+                else if (Input.GetKeyDown(KeyCode.O))
+                {
+                    SelectBuff(randomBuff2); // Player chooses Buff 2
+                }
             }
         }
         
@@ -77,14 +82,15 @@ public class BuffSelector : MonoBehaviour
 
     void ActivateRandomBuffs()
     {
+        canChosebuff = true;
         // LEMBRANDO QUE O RANGE(INCLUSIVO, EXCLUSIVO) 
         if (!isSinglePlayer){
         // Generate two random buffs and activate them
-        randomBuff1 = Random.Range(1, 6); // Assuming you have two buffs (Buff 1 and Buff 2)
-        randomBuff2 = Random.Range(1, 6);
+        randomBuff1 = Random.Range(1, 5); // Assuming you have two buffs (Buff 1 and Buff 2)
+        randomBuff2 = Random.Range(1, 5);
         while (randomBuff1 == randomBuff2)
         {
-            randomBuff2 = Random.Range(1, 6);
+            randomBuff2 = Random.Range(1, 5);
         }
         // Debug.Log(randomBuff1);
         // Debug.Log(randomBuff2);
@@ -92,11 +98,11 @@ public class BuffSelector : MonoBehaviour
         ActivateBuff(randomBuff2, spriteRenderer2);
         }
         else{
-            randomBuff1 = Random.Range(1, 5); // Assuming you have two buffs (Buff 1 and Buff 2)
-            randomBuff2 = Random.Range(1, 5);
+            randomBuff1 = Random.Range(1, 4); // Assuming you have two buffs (Buff 1 and Buff 2)
+            randomBuff2 = Random.Range(1, 4);
             while (randomBuff1 == randomBuff2)
             {
-                randomBuff2 = Random.Range(1, 5);
+                randomBuff2 = Random.Range(1, 4);
             }
             // Debug.Log(randomBuff1);
             // Debug.Log(randomBuff2);
@@ -134,6 +140,7 @@ public class BuffSelector : MonoBehaviour
 
     void SelectBuff(int buffNumber)
     {
+        canChosebuff = false;
         Debug.Log("NUMERO DO BUFFER " + buffNumber);
         switch (buffNumber)
         {

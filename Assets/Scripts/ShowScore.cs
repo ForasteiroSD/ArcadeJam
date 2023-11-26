@@ -12,8 +12,7 @@ public class ShowScore : MonoBehaviour
     private float _currentSeconds;
 
     public void ShowScoreText() {
-        _currentMinutes = Camera.main.GetComponent<CameraFollowPlayer>()._currentMinutes;
         _currentSeconds = Camera.main.GetComponent<CameraFollowPlayer>()._currentSeconds;
-        _Score.SetText("Voce Venceu!! \n Seu Score foi: " + _currentMinutes + ":" + _currentSeconds.ToString("00"));
+        _Score.SetText("Voce Venceu!! \n Seu Score foi: " + _currentSeconds.ToString("00.00") + "s");
     }
 }

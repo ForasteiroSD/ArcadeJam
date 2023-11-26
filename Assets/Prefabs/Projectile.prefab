@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8846448530450731234}
   - component: {fileID: 306159707302514227}
+  - component: {fileID: 1748261994679083104}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -86,6 +87,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1748261994679083104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4775075715087459385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a3c4fd610a38e4ba61c42a9936501c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 5
+  _timeStun: 5
+  _forceExplosion: 0
+  PlayerShotting: {fileID: 0}
 --- !u!1001 &5972231008914067782
 PrefabInstance:
   m_ObjectHideFlags: 0
