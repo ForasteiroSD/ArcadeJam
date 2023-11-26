@@ -9,7 +9,7 @@ public class ChangeBoostIcon : MonoBehaviour {
     [SerializeField] Sprite _adrenaline;
     [SerializeField] Sprite _boot;
     [SerializeField] Sprite _baseballBat;
-    [SerializeField] Sprite _taser;
+    [SerializeField] Sprite _zarabatana;
     [SerializeField] Sprite _missil;
 
     public void ChangeIcon(int player, string boost) {
@@ -31,9 +31,9 @@ public class ChangeBoostIcon : MonoBehaviour {
                 if(player == 1) _boostPlayer1.sprite = _baseballBat;
                 else _boostPlayer2.sprite = _baseballBat;
                 break;
-            case "taser":
-                if(player == 1) _boostPlayer1.sprite = _taser;
-                else _boostPlayer2.sprite = _taser;
+            case "zarabatana":
+                if(player == 1) _boostPlayer1.sprite = _zarabatana;
+                else _boostPlayer2.sprite = _zarabatana;
                 break;
             case "missil":
                 if(player == 1) _boostPlayer1.sprite = _missil;    

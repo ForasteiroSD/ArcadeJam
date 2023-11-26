@@ -13,8 +13,8 @@ public class ZarabataFire : MonoBehaviour
 
     public void enableFire()
     {
-        if(GetComponent<Collider>().gameObject.name == "Player1") GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "missil");
-            else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "missil");
+        if(GetComponent<Collider>().gameObject.name == "Player1") GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "zarabatana");
+            else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "zarabatana");
         _canShoot = true;
     }
 
