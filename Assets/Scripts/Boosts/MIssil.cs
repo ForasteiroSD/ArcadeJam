@@ -23,7 +23,7 @@ public class MIssil : MonoBehaviour
             float step = speed * Time.deltaTime;
 
             // move sprite towards the target location
-            transform.position = Vector3.MoveTowards(transform.position, target, step);
+            // transform.position = Vector3.MoveTowards(transform.position, target, step);
         }
 
         // if (direction.y < 0)

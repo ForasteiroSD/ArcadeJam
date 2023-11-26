@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour
             // _imageBackground.sprite = _winImage;
             _cameraFollowPlayer._gameEnded = true;
             _currentSeconds = _cameraFollowPlayer._currentSeconds;
-            _Score.SetText("Voce Venceu!! \n Seu Score foi: " + _currentSeconds.ToString("00") + "s");
+            _Score.SetText("Voce Venceu!! \n Seu Score foi: " + _currentSeconds.ToString("00.00") + "s");
 
             _canva.SetActive(true);
             _startButton.Select();

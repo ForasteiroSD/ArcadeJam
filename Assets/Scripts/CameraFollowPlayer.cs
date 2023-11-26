@@ -32,8 +32,8 @@ public class CameraFollowPlayer : MonoBehaviour {
         if(_isSinglePlayer) {
             if(!_gameEnded) {
                 //Change timer
-                _currentSeconds = (float) System.Math.Round(_currentTime, 1);
-                _timeText.SetText("Time: " + _currentSeconds + "s");
+                _currentSeconds = (float) System.Math.Round(_currentTime, 2);
+                _timeText.SetText("Time: " + _currentSeconds.ToString("00.00") + "s");
 
                 //Camera movement
                 if(_currentTime >= _delayForCamera) {
@@ -59,8 +59,8 @@ public class CameraFollowPlayer : MonoBehaviour {
                 else _vcam.Follow = _player2.transform;
 
                 //Change timer
-                _currentSeconds = (float) System.Math.Round(_currentTime, 1);
-                _timeText.SetText("Time: " + _currentSeconds + "s");
+                _currentSeconds = (float) System.Math.Round(_currentTime, 2);
+                _timeText.SetText("Time: " + _currentSeconds.ToString("00.00") + "s");
             }
             
             //Time is over or some player died

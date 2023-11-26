@@ -22,7 +22,7 @@ public class PlayerName : MonoBehaviour {
             if(_playerName.Length > 0) _playerName = _playerName.Substring(0, _playerName.Length-1);
         }
         else if(newChar == "aceitar") {
-            _score = _cameraFollowPlayer._currentSeconds;
+            _score = (float) System.Math.Round(_cameraFollowPlayer._currentSeconds, 2);
             _saveManager.UpdateHighScores(_playerName, _score);
             SceneManager.LoadScene("Main Menu");
         }
