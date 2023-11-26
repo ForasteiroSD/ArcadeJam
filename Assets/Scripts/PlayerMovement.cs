@@ -27,15 +27,13 @@ public class PlayerMovement : MonoBehaviour {
     private int _lookingDirection; //-1 -> left, 1 -> right
     public int lookingDirection => _lookingDirection;
     private Coroutine _adrenalineRoutine;
-    public AudioSource SomJeff;
-    public AudioSource SomNicole;
+    public AudioSource SomPulo;
     public AudioSource SomMola;
 
     private void Start()
     {
         SomMola = GameObject.Find("SomMola").GetComponent<AudioSource>();
-        SomJeff = GameObject.Find("SomJeff").GetComponent<AudioSource>();
-        SomNicole = GameObject.Find("SomNicole").GetComponent<AudioSource>();
+        SomPulo = GameObject.Find("SomPulo").GetComponent<AudioSource>();
     }
     
     private void Awake() {
@@ -150,10 +148,10 @@ public class PlayerMovement : MonoBehaviour {
 
         if (_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1)))
         {
-            SomJeff.Play();
+            SomPulo.Play();
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1) {
-            SomNicole.Play();
+            SomPulo.Play();
         }
 
         _anim.SetTrigger("JUMP");
