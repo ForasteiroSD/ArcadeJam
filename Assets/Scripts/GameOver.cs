@@ -18,6 +18,8 @@ public class GameOver : MonoBehaviour
     private float _currentSeconds;
     private AudioSource SomVitoria;
     private AudioSource Music;
+    private AudioSource SomHorda;
+    private AudioSource SomHelicoptero;
 
     private void Start() {
         _cameraFollowPlayer = Camera.main.GetComponent<CameraFollowPlayer>();
@@ -25,9 +27,13 @@ public class GameOver : MonoBehaviour
         _isSinglePlayer = GameObject.Find("Zombies").GetComponent<ZombiesThrowBoost>().isSinglePlayer;
         SomVitoria = GameObject.Find("SomVitoria").GetComponent<AudioSource>();
         Music = GameObject.Find("Music").GetComponent<AudioSource>();
+        SomHorda = GameObject.Find("SomHorda").GetComponent<AudioSource>();
+        SomHelicoptero = GameObject.Find("SomHelicoptero").GetComponent<AudioSource>();
     }
     private void OnCollisionEnter2D(Collision2D collision) {
         Music.Pause();
+        SomHorda.Pause();
+        SomHelicoptero.Pause();
         
         if (_isSinglePlayer) {
             Destroy(collision.gameObject);
