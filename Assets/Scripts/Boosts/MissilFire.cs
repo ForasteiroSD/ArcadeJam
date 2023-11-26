@@ -37,7 +37,7 @@ public class MissilFire : MonoBehaviour
 
     public void Fire()
     {
-        Vector3 spawnPosition = transform.position + new Vector3(0, 0.3f, 0);
+        Vector3 spawnPosition = transform.position + new Vector3(0, 0.33f, 0);
         GameObject instantiatedPrefab = Instantiate(projectile, spawnPosition, Quaternion.identity);
         MIssil prefabScript = instantiatedPrefab.GetComponent<MIssil>();
 
@@ -55,7 +55,7 @@ public class MissilFire : MonoBehaviour
                 prefabScript.SetPlayerShotting(aim.GetComponent<GameObject>());
             }
         }
-        // _canShoot = false;
+        _canShoot = false;
     }
 
 }
