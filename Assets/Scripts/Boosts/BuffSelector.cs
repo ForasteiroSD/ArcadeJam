@@ -60,11 +60,11 @@ public class BuffSelector : MonoBehaviour
             }}
         else
         {
-             if (Input.GetKeyDown(KeyCode.J))
+             if (Input.GetKeyDown(KeyCode.U))
             {
                 SelectBuff(randomBuff1); // Player chooses Buff 1
             }
-            else if (Input.GetKeyDown(KeyCode.K))
+            else if (Input.GetKeyDown(KeyCode.O))
             {
                 SelectBuff(randomBuff2); // Player chooses Buff 2
             }

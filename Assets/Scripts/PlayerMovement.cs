@@ -65,10 +65,10 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         //Double jump
-        if(_doubleJump && !_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) DoubleJump();
+        if(_doubleJump && !_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.I) && !_isPlayer1))) DoubleJump();
         
         //Normal jump
-        if(_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1))) Jump();
+        if(_canJump && !_stuned && ((Input.GetKeyDown(KeyCode.W) && _isPlayer1) || (Input.GetKeyDown(KeyCode.I) && !_isPlayer1))) Jump();
 
         //Start falling
         if(_isJumping) {
@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour {
                 _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y/2);
                 _rb.gravityScale = _fallGravityScale;
             }
-            else if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.UpArrow) && !_isPlayer1) {
+            else if(_rb.velocity.y >= 1.7f && Input.GetKeyUp(KeyCode.I) && !_isPlayer1) {
                 _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y/2);
                 _rb.gravityScale = _fallGravityScale;
             }
