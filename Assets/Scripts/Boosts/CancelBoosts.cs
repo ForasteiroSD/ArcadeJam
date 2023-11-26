@@ -9,5 +9,6 @@ public static class CancelBoosts {
         player.GetComponent<Punch>().CancelBaseballBat();
         player.GetComponent<Taser>().CancelTaser();
         player.GetComponent<MissilFire>().desableFire();
+        player.GetComponent<ZarabataFire>().desableFire();
     }
 }
