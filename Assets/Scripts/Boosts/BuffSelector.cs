@@ -77,11 +77,11 @@ public class BuffSelector : MonoBehaviour
         // LEMBRANDO QUE O RANGE(INCLUSIVO, EXCLUSIVO) 
         if (!isSinglePlayer){
         // Generate two random buffs and activate them
-        randomBuff1 = Random.Range(1, 6); // Assuming you have two buffs (Buff 1 and Buff 2)
-        randomBuff2 = Random.Range(1, 6);
+        randomBuff1 = Random.Range(1, 5); // Assuming you have two buffs (Buff 1 and Buff 2)
+        randomBuff2 = Random.Range(1, 5);
         while (randomBuff1 == randomBuff2)
         {
-            randomBuff2 = Random.Range(1, 6);
+            randomBuff2 = Random.Range(1, 5);
         }
         // Debug.Log(randomBuff1);
         // Debug.Log(randomBuff2);
@@ -89,11 +89,11 @@ public class BuffSelector : MonoBehaviour
         ActivateBuff(randomBuff2, spriteRenderer2);
         }
         else{
-            randomBuff1 = Random.Range(1, 5); // Assuming you have two buffs (Buff 1 and Buff 2)
-            randomBuff2 = Random.Range(1, 5);
+            randomBuff1 = Random.Range(1, 4); // Assuming you have two buffs (Buff 1 and Buff 2)
+            randomBuff2 = Random.Range(1, 4);
             while (randomBuff1 == randomBuff2)
             {
-                randomBuff2 = Random.Range(1, 5);
+                randomBuff2 = Random.Range(1, 4);
             }
             // Debug.Log(randomBuff1);
             // Debug.Log(randomBuff2);
@@ -118,9 +118,6 @@ public class BuffSelector : MonoBehaviour
                 spriteRenderer.sprite = _baseballBat;
                 break;
             case 4:
-                spriteRenderer.sprite = _taser;
-                break;
-            case 5:
                 spriteRenderer.sprite = _missil;
                 break;
             default:
@@ -150,11 +147,6 @@ public class BuffSelector : MonoBehaviour
                 ActivateBuff(0, spriteRenderer2);
                 break;
             case 4:
-                taserColliderInstance.taser_choosed(_colliderPlayer);
-                ActivateBuff(0, spriteRenderer1);
-                ActivateBuff(0, spriteRenderer2);
-                break;
-            case 5:
                 missilShotterInstance.enableFire();
                 ActivateBuff(0, spriteRenderer1);
                 ActivateBuff(0, spriteRenderer2);

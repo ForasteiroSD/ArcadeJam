@@ -457,7 +457,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0005874634, y: 0.009280741}
+  m_Offset: {x: -0.0005874634, y: 0.016351074}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -468,7 +468,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.020643, y: 2.0045462}
+  m_Size: {x: 1.020643, y: 1.9904053}
   m_EdgeRadius: 0
 --- !u!114 &4420263374584055437
 MonoBehaviour:
@@ -490,8 +490,7 @@ MonoBehaviour:
   _timeToJump: 0.1
   _canMove: 1
   _doubleJump: 0
-  SomJeff: {fileID: 0}
-  SomNicole: {fileID: 0}
+  SomPulo: {fileID: 0}
   SomMola: {fileID: 0}
 --- !u!114 &7820216570959691702
 MonoBehaviour:
@@ -663,6 +662,7 @@ MonoBehaviour:
   projectile: {fileID: 4775075715087459385, guid: f0e0d689cd17f1c4697294856f750f5c, type: 3}
   aim: {fileID: 1003177023825501833, guid: 24cff0f9563687740af43d54495a657b, type: 3}
   _isPlayer1: 0
+  _canShoot: 0
 --- !u!1 &5607540360923834928
 GameObject:
   m_ObjectHideFlags: 0
