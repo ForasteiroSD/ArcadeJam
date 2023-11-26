@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour
         SomVitoria = GameObject.Find("SomVitoria").GetComponent<AudioSource>();
         Music = GameObject.Find("Music").GetComponent<AudioSource>();
         SomHorda = GameObject.Find("SomHorda").GetComponent<AudioSource>();
-        SomHelicoptero = GameObject.Find("SomHelicoptero").GetComponent<AudioSource>();
+        SomHelicoptero = GameObject.Find("Helicoptero").GetComponent<AudioSource>();
     }
     private void OnCollisionEnter2D(Collision2D collision) {
         Music.Pause();
