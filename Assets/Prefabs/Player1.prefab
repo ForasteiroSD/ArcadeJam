@@ -660,9 +660,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479dba5e268a8f44bbd4ca442992b3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 4775075715087459385, guid: f0e0d689cd17f1c4697294856f750f5c, type: 3}
+  projectile: {fileID: 117479022634903436, guid: 3f7ad0dc5bfad464dba61dcf7d1380b1, type: 3}
   aim: {fileID: 1003177023825501833, guid: 6612b354b0580064b863b158254be64c, type: 3}
   _isPlayer1: 1
+  _canShoot: 0
 --- !u!1 &5607540360923834928
 GameObject:
   m_ObjectHideFlags: 0

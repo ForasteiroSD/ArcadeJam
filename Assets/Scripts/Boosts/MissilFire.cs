@@ -37,15 +37,23 @@ public class MissilFire : MonoBehaviour
 
     public void Fire()
     {
-        Vector3 spawnPosition = transform.position + new Vector3(0, 1, 0);
+        Vector3 spawnPosition = transform.position + new Vector3(0, 0.3f, 0);
         GameObject instantiatedPrefab = Instantiate(projectile, spawnPosition, Quaternion.identity);
         MIssil prefabScript = instantiatedPrefab.GetComponent<MIssil>();
 
         // Set variables or call methods on the script
         if (prefabScript != null)
         {
-            prefabScript.SetTarget(aim); // Set an initial value
-            prefabScript.SetPlayerShotting(gameObject);
+            if (aim.position.y > gameObject.transform.position.y )
+            {
+                prefabScript.SetTarget(aim); // Set an initial value
+                prefabScript.SetPlayerShotting(gameObject);
+            }
+            else
+            {
+                prefabScript.SetTarget(gameObject.transform); // Set an initial value
+                prefabScript.SetPlayerShotting(aim.GetComponent<GameObject>());
+            }
         }
         // _canShoot = false;
     }

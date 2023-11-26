@@ -9,8 +9,10 @@ public class MIssil : MonoBehaviour
     [SerializeField] float _timeStun = 5f;
     [SerializeField] float _forceExplosion;
     private Rigidbody2D rb;
-    public Vector2 direction;
+
     public GameObject PlayerShotting;
+    private Vector3 direction;
+  
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,10 +22,14 @@ public class MIssil : MonoBehaviour
     {
         if (target != null)
         {
-            float step = speed * Time.deltaTime;
-
-            // move sprite towards the target location
-            transform.position = Vector3.MoveTowards(transform.position, target, step);
+            
+            direction = target.transform.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            rb.rotation = angle;
+            direction.Normalize();
+            
+            Debug.Log(direction);   
+            rb.MovePosition((Vector2)transform.position + ((Vector2) direction * speed * Time.deltaTime));
         }
 
         // if (direction.y < 0)
@@ -43,11 +49,10 @@ public class MIssil : MonoBehaviour
     }
     
     private void OnTriggerEnter2D(Collider2D collider) {
-        if(collider.tag == "Player") {
+        if(collider.tag == "Player" && collider.gameObject != PlayerShotting) {
             collider.gameObject.GetComponent<StunController>().Stun(collider.gameObject, _timeStun);
             collider.GetComponent<PlayerMovement>().GetPunched(direction.y, _forceExplosion);
-            Destroy(this.gameObject);
-            
+            Destroy(this.gameObject);   
         }
         else if (collider.name != "CameraLimit")
         {
