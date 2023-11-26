@@ -150,7 +150,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             SomPulo.Play();
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow) && !_isPlayer1) {
+        else if (Input.GetKeyDown(KeyCode.I) && !_isPlayer1) {
             SomPulo.Play();
         }
 

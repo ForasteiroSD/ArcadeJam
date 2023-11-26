@@ -9846,8 +9846,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0026012363, y: -0.0000015053275}
-  m_Size: {x: 0.39907467, y: 0.07044674}
+  m_Offset: {x: 0.0123324115, y: 0.00053866813}
+  m_Size: {x: 0.33320025, y: 0.042361204}
   m_Direction: 1
 --- !u!114 &1335731183760854567
 MonoBehaviour:
@@ -9862,7 +9862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
-  _timeStun: 5
-  _forceExplosion: 2
+  speed: 10
+  _timeStun: 3
+  _forceExplosion: 1
+  _somExplodindo: {fileID: 0}
   PlayerShotting: {fileID: 0}

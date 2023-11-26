@@ -8,6 +8,7 @@ public class MIssil : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField] float _timeStun = 5f;
     [SerializeField] float _forceExplosion;
+    [SerializeField] AudioSource _somExplodindo;
     private Rigidbody2D rb;
 
     public GameObject PlayerShotting;
@@ -22,7 +23,6 @@ public class MIssil : MonoBehaviour
     {
         if (target != null)
         {
-            
             direction = target.transform.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             rb.rotation = angle;
@@ -49,6 +49,10 @@ public class MIssil : MonoBehaviour
     }
     
     private void OnTriggerEnter2D(Collider2D collider) {
+        _somExplodindo = GameObject.Find("SomExplodindo").GetComponent<AudioSource>();
+        _somExplodindo.Play();
+
+        Debug.Log(collider.gameObject.name);
         if(collider.tag == "Player" && collider.gameObject != PlayerShotting) {
             collider.gameObject.GetComponent<StunController>().Stun(collider.gameObject, _timeStun);
             collider.GetComponent<PlayerMovement>().GetPunched(direction.y, _forceExplosion);
@@ -58,7 +62,6 @@ public class MIssil : MonoBehaviour
         {
             Debug.Log("f");
             Destroy(this.gameObject);
-
         }
     }
 }

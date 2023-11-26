@@ -412,7 +412,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000059604645, y: -0.007519603}
+  m_Offset: {x: -0.062471986, y: -0.14528114}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -423,7 +423,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9808775, y: 2.0022924}
+  m_Size: {x: 0.721846, y: 1.6304578}
   m_EdgeRadius: 0
 --- !u!61 &7542735514143330293
 BoxCollider2D:
@@ -457,7 +457,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0005874634, y: 0.016351074}
+  m_Offset: {x: -0.06305951, y: -0.12454647}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -468,7 +468,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.020643, y: 1.9904053}
+  m_Size: {x: 0.761611, y: 1.6280199}
   m_EdgeRadius: 0
 --- !u!114 &4420263374584055437
 MonoBehaviour:
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479dba5e268a8f44bbd4ca442992b3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 117479022634903436, guid: 3f7ad0dc5bfad464dba61dcf7d1380b1, type: 3}
+  projectile: {fileID: 4775075715087459385, guid: f0e0d689cd17f1c4697294856f750f5c, type: 3}
   aim: {fileID: 1003177023825501833, guid: 24cff0f9563687740af43d54495a657b, type: 3}
   _isPlayer1: 0
   _canShoot: 0
@@ -727,7 +727,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007771462, y: -0.7866013}
+  m_Offset: {x: 0.0005874261, y: -0.7138623}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -738,5 +738,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.51092994, y: 0.14123511}
+  m_Size: {x: 0.46423346, y: 0.12507057}
   m_EdgeRadius: 0

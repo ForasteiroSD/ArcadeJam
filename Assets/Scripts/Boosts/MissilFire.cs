@@ -9,10 +9,11 @@ public class MissilFire : MonoBehaviour
     [SerializeField] bool _isPlayer1;
     // Start is called before the first frame update
     [SerializeField] bool _canShoot;
+    [SerializeField] AudioSource _somLancando;
 
     public void enableFire()
     {
-        if(GetComponent<Collider>().gameObject.name == "Player1") GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "missil");
+        if(this.gameObject.name == "Player1") GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "missil");
             else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "missil");
         _canShoot = true;
     }
@@ -41,21 +42,29 @@ public class MissilFire : MonoBehaviour
         GameObject instantiatedPrefab = Instantiate(projectile, spawnPosition, Quaternion.identity);
         MIssil prefabScript = instantiatedPrefab.GetComponent<MIssil>();
 
+        _somLancando = GameObject.Find("SomLancando").GetComponent<AudioSource>();
+        _somLancando.Play();
+
         // Set variables or call methods on the script
         if (prefabScript != null)
         {
-            if (aim.position.y > gameObject.transform.position.y )
+            if (aim.position.y + 2 >= gameObject.transform.position.y)
             {
+                Debug.Log("If 1");
                 prefabScript.SetTarget(aim); // Set an initial value
                 prefabScript.SetPlayerShotting(gameObject);
             }
             else
             {
+                Debug.Log("If 2");
                 prefabScript.SetTarget(gameObject.transform); // Set an initial value
                 prefabScript.SetPlayerShotting(aim.GetComponent<GameObject>());
             }
         }
         _canShoot = false;
+
+        if(_isPlayer1) GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "none");
+        else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "none");
     }
 
 }
