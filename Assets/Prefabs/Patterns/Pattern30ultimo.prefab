@@ -1522,7 +1522,7 @@ MonoBehaviour:
   - {x: 1.25, y: -1.25, z: 0}
   m_ShapePathHash: -1891209927
   m_Mesh: {fileID: 0}
-  m_InstanceId: 72472
+  m_InstanceId: 43946
   m_LocalBounds:
     m_Center: {x: 0.35388684, y: 2.7426171, z: 0}
     m_Extent: {x: 0.9624684, y: 3.9926171, z: 0}
@@ -3687,7 +3687,7 @@ MonoBehaviour:
   - {x: 1.25, y: -1.25, z: 0}
   m_ShapePathHash: -1891209927
   m_Mesh: {fileID: 0}
-  m_InstanceId: 72446
+  m_InstanceId: 43920
   m_LocalBounds:
     m_Center: {x: 0.35388684, y: 2.7426171, z: 0}
     m_Extent: {x: 0.9624684, y: 3.9926171, z: 0}
@@ -4000,6 +4000,26 @@ PrefabInstance:
     - target: {fileID: 1218706512198475708, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279896816037655432, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: MaxDistance
+      value: 21.33788
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279896816037655432, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: MinDistance
+      value: 12.136936
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279896816037655432, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c07068344d8a0a439e66b079b90b987, type: 3}
+    - target: {fileID: 1279896816037655432, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279896816037655432, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6988609150494183778, guid: 69c57838a0ca47d4b82906186c08ee6e, type: 3}
       propertyPath: m_Name
