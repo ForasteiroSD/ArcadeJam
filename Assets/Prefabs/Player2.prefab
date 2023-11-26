@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 1365650111081090138}
   - component: {fileID: 8153819423326702875}
   - component: {fileID: 6097519872190650403}
+  - component: {fileID: 8607224084346845600}
   m_Layer: 6
   m_Name: Player2
   m_TagString: Player
@@ -645,6 +646,7 @@ MonoBehaviour:
   _baseballBat: {fileID: 469784555, guid: 21ca96773b1d4f747a86d117d1da249b, type: 3}
   _taser: {fileID: 21300000, guid: 046ef837be862fe4583cde2e924828cc, type: 3}
   _missil: {fileID: -1155150935, guid: 21ca96773b1d4f747a86d117d1da249b, type: 3}
+  _zarabatana: {fileID: -1236282671, guid: 21ca96773b1d4f747a86d117d1da249b, type: 3}
   none: {fileID: 0}
   spriteRenderer1: {fileID: 8419648679967579925}
   spriteRenderer2: {fileID: 7676227126269382283}
@@ -662,6 +664,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 117479022634903436, guid: 3f7ad0dc5bfad464dba61dcf7d1380b1, type: 3}
   aim: {fileID: 1003177023825501833, guid: 24cff0f9563687740af43d54495a657b, type: 3}
+  _isPlayer1: 0
+  _canShoot: 0
+--- !u!114 &8607224084346845600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429288475628548564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aafb2aa542caf2340a319889c020cb19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 2573674410921578906, guid: 46c795c9a6f178240ad34ddd33702615, type: 3}
+  aim: {fileID: 0}
   _isPlayer1: 0
   _canShoot: 0
 --- !u!1 &5607540360923834928

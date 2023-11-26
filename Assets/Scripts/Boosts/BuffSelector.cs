@@ -15,6 +15,7 @@ public class BuffSelector : MonoBehaviour
     [SerializeField] Sprite _baseballBat; //Buff 3
     [SerializeField] Sprite _taser; // Buff 4
     [SerializeField] Sprite _missil; // Buff 5
+    [SerializeField] Sprite _zarabatana;  // Buff 6
     [SerializeField] Sprite none;
     
     [SerializeField] SpriteRenderer spriteRenderer1; 
@@ -27,6 +28,7 @@ public class BuffSelector : MonoBehaviour
     private TaserCollider taserColliderInstance;
     private DoubleJump doubleJumpInstance;
     private MissilFire missilShotterInstance;
+    private ZarabataFire ZarabataShotterInstance;
 
     void Start()
     {
@@ -37,6 +39,7 @@ public class BuffSelector : MonoBehaviour
         taserColliderInstance = GetComponent<TaserCollider>();
         doubleJumpInstance = GetComponent<DoubleJump>();
         missilShotterInstance = GetComponent<MissilFire>();
+        ZarabataShotterInstance = GetComponent<ZarabataFire>();
     }
 
     void Update()
@@ -77,11 +80,11 @@ public class BuffSelector : MonoBehaviour
         // LEMBRANDO QUE O RANGE(INCLUSIVO, EXCLUSIVO) 
         if (!isSinglePlayer){
         // Generate two random buffs and activate them
-        randomBuff1 = Random.Range(1, 6); // Assuming you have two buffs (Buff 1 and Buff 2)
-        randomBuff2 = Random.Range(1, 6);
+        randomBuff1 = Random.Range(1, 7); // Assuming you have two buffs (Buff 1 and Buff 2)
+        randomBuff2 = Random.Range(1, 7);
         while (randomBuff1 == randomBuff2)
         {
-            randomBuff2 = Random.Range(1, 6);
+            randomBuff2 = Random.Range(1, 7);
         }
         // Debug.Log(randomBuff1);
         // Debug.Log(randomBuff2);
@@ -123,6 +126,9 @@ public class BuffSelector : MonoBehaviour
             case 5:
                 spriteRenderer.sprite = _missil;
                 break;
+            case 6:
+                spriteRenderer.sprite = _zarabatana;
+                break;
             default:
                 spriteRenderer.sprite = none;
                 break;
@@ -159,6 +165,12 @@ public class BuffSelector : MonoBehaviour
                 ActivateBuff(0, spriteRenderer1);
                 ActivateBuff(0, spriteRenderer2);
                 break;
+            case 6:
+                ZarabataShotterInstance.enableFire();
+                ActivateBuff(0, spriteRenderer1);
+                ActivateBuff(0, spriteRenderer2);
+                break;
+
             default:
                 Debug.LogError("Invalid buffNumber");
                 break;

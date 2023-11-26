@@ -201,6 +201,15 @@ public class PlayerMovement : MonoBehaviour {
         _stuned = false;
     }
 
+    public void Invert(float timeStuned) {
+        _directionX = - _directionX;
+    }
+
+    IEnumerator CancelInvert(float timeStuned) {
+        yield return new WaitForSeconds(timeStuned);
+        _directionX = - _directionX; 
+    }
+
     private void ResetBoostIcon() {
         if(_isPlayer1) GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(1, "none");
         else GameObject.Find("ChangeBoostIcon").GetComponent<ChangeBoostIcon>().ChangeIcon(2, "none");
