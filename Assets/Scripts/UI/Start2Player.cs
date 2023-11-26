@@ -6,15 +6,19 @@ public class Start2Player : MonoBehaviour
 {
     public Animator transition;
     [SerializeField] private float transitionTime = 1f;
-    private static string selectedCharacterPlayer1;
-    private static string selectedCharacterPlayer2;
+    public static string selectedCharacterPlayer1;
+    public static string selectedCharacterPlayer2;
+
+    public void Start() {
+        selectedCharacterPlayer1 = null;
+        selectedCharacterPlayer2 = null;
+    }
 
     public void SelectCharacterPlayer1(string character)
     {
         // Debug.Log("Player2 Selecionou");
         selectedCharacterPlayer1 = character;
         TryLoadMultiplayerScene(selectedCharacterPlayer1,selectedCharacterPlayer2);
-
     }
 
     public void SelectCharacterPlayer2(string character)

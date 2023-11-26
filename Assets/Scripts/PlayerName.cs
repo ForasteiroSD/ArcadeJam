@@ -18,12 +18,11 @@ public class PlayerName : MonoBehaviour {
     }
 
     public void UpdatePlayerName(string newChar) {
-        //Delete
         if(newChar == "delete") {
             if(_playerName.Length > 0) _playerName = _playerName.Substring(0, _playerName.Length-1);
         }
         else if(newChar == "aceitar") {
-            _score = (_cameraFollowPlayer._currentMinutes * 60) + _cameraFollowPlayer._currentSeconds;
+            _score = (float) System.Math.Round(_cameraFollowPlayer._currentSeconds, 2);
             _saveManager.UpdateHighScores(_playerName, _score);
             SceneManager.LoadScene("Main Menu");
         }
