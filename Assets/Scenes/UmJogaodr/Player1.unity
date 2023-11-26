@@ -8264,6 +8264,7 @@ MonoBehaviour:
   anim_Nick: {fileID: 9100000, guid: 7dab90ca2b515c348a0305520ff42298, type: 2}
   anim_Poli: {fileID: 9100000, guid: 7cebd72c3a71ad0468f1d43d800ff04a, type: 2}
   anim_Tim: {fileID: 9100000, guid: 3cca30159f5248742871972e4e086605, type: 2}
+  anim_Cat: {fileID: 9100000, guid: 2f187b1e14d63b74aa78ff83682f9396, type: 2}
   player1: {fileID: 253024259}
   player2: {fileID: 0}
   _isSinglePlayer: 1
