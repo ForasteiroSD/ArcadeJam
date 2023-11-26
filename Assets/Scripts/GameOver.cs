@@ -16,13 +16,19 @@ public class GameOver : MonoBehaviour
     private CameraFollowPlayer _cameraFollowPlayer;
     private float _currentMinutes;
     private float _currentSeconds;
+    private AudioSource SomVitoria;
+    private AudioSource Music;
 
     private void Start() {
         _cameraFollowPlayer = Camera.main.GetComponent<CameraFollowPlayer>();
         // _imageBackground = FindInActiveObjectByName("Image").GetComponent<Image>();
         _isSinglePlayer = GameObject.Find("Zombies").GetComponent<ZombiesThrowBoost>().isSinglePlayer;
+        SomVitoria = GameObject.Find("SomVitoria").GetComponent<AudioSource>();
+        Music = GameObject.Find("Music").GetComponent<AudioSource>();
     }
     private void OnCollisionEnter2D(Collision2D collision) {
+        Music.Pause();
+        
         if (_isSinglePlayer) {
             Destroy(collision.gameObject);
             // _imageBackground.sprite = _winImage;
@@ -30,6 +36,7 @@ public class GameOver : MonoBehaviour
             _currentSeconds = _cameraFollowPlayer._currentSeconds;
             _Score.SetText("Voce Venceu!! \n Seu Score foi: " + _currentSeconds.ToString("00.00") + "s");
 
+            SomVitoria.Play();
             _canva.SetActive(true);
             _startButton.Select();
             // GameObject.Find("Manager-GameOver").GetComponent<ShowScore>().ShowScoreText();
